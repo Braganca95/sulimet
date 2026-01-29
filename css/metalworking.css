@@ -1,0 +1,783 @@
+/* ===== Metalworking Page Styles ===== */
+
+/* Hero Section */
+.metalworking-hero {
+    padding: 8rem 0 4rem;
+    background: #fcfcfc;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
+/* Category Tabs */
+.category-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.category-tab {
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 0.125rem solid transparent;
+    background: transparent;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: capitalize;
+}
+
+.category-tab.active {
+    color: var(--text-color);
+    border-bottom-color: var(--primary-color);
+    font-weight: 700;
+}
+
+.category-tab:hover:not(.active) {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 90%;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    max-width: 25rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Hero Showcase */
+.hero-showcase {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-showcase-image {
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.hero-showcase-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Capabilities Section */
+.capabilities {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.capabilities .section-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.capability-card {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0.625rem;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.capability-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--shadow-hover);
+    background: rgba(255, 255, 255, 1);
+}
+
+.capability-image {
+    width: 100%;
+    height: 12.5rem;
+    overflow: hidden;
+}
+
+.capability-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.capability-card:hover .capability-image img {
+    transform: scale(1.05);
+}
+
+.capability-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.capability-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.capability-content p {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.capability-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.capability-specs li {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* More Technologies Link */
+.more-technologies {
+    text-align: center;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.more-technologies a {
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.more-technologies a:hover {
+    color: var(--primary-color);
+}
+
+.more-technologies svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.more-technologies:hover svg {
+    color: var(--primary-color);
+    transform: translateY(0.1875rem);
+}
+
+/* Service Split Sections */
+.cad-cam,
+.quality-control,
+.welding,
+.printing-3d {
+    padding: 5rem 0;
+    background: #fcfcfc;
+}
+
+.quality-control,
+.printing-3d {
+    background: var(--bg-light);
+}
+
+.service-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.service-split.reverse {
+    direction: rtl;
+}
+
+.service-split.reverse > * {
+    direction: ltr;
+}
+
+.service-text {
+    padding: 2rem 0;
+}
+
+.service-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+}
+
+.service-text p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.service-image {
+    width: 100%;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.625rem;
+    box-shadow: var(--shadow);
+}
+
+/* Dual Images for Welding */
+.service-images-dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.service-images-dual img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.625rem;
+    box-shadow: var(--shadow);
+}
+
+/* Certification Section */
+.certification {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.certification .section-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.certification .section-subtitle {
+    font-size: 1rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    max-width: 56.25rem;
+    margin: 0 auto;
+}
+
+.certification-badge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.badge-circle {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    border: 0.25rem solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    background: #fcfcfc;
+}
+
+.badge-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0.5rem 1.5rem rgba(207, 19, 43, 0.3);
+}
+
+.sgs-badge {
+    background: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.sgs-badge svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: white;
+    stroke: white;
+}
+
+.sgs-badge:hover {
+    box-shadow: 0 0.5rem 1.5rem rgba(76, 175, 80, 0.3);
+}
+
+.badge-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+}
+
+.badge-text {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* Materials Section */
+.materials {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.section-title-large {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+}
+
+.material-column h3 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.material-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.material-list li {
+    font-size: 0.875rem;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* Contacts Section */
+.contacts-section {
+    padding: 5rem 0;
+    background: #fcfcfc;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.0625rem 1fr;
+    gap: 4rem;
+    max-width: 68.75rem;
+    margin: 3rem auto 0;
+    align-items: start;
+    position: relative;
+}
+
+.contacts-grid::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 0.125rem;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+}
+
+.contact-block {
+    padding: 0 2rem;
+}
+
+.contact-company {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.contact-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-details-list p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contact-details-list a {
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.contact-details-list a:hover {
+    color: var(--primary-color);
+}
+
+.contact-address {
+    margin-top: 0.5rem;
+    color: var(--text-light) !important;
+}
+
+/* Footer Metalworking */
+.footer-metalworking {
+    background: var(--bg-light);
+    padding: 3rem 0 2rem;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.footer-column a {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.footer-column a:hover {
+    color: var(--primary-color);
+    padding-left: 0.25rem;
+}
+
+/* Footer Social Icons */
+.footer-social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.footer-social a {
+    width: 2rem;
+    height: 2rem;
+    background: var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--primary-gradient);
+    transform: translateY(-0.125rem);
+}
+
+.footer-social svg {
+    width: 1rem;
+    height: 1rem;
+    color: var(--text-white);
+    fill: var(--text-white);
+}
+
+/* Footer Certifications */
+.footer-certifications {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    border-top: 0.0625rem solid #e0e0e0;
+}
+
+.footer-certifications img {
+    height: 3rem;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-certifications img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 64rem) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        max-width: 20rem;
+    }
+
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .capabilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .service-split {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .service-split.reverse {
+        direction: ltr;
+    }
+
+    .certification-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .materials-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contacts-grid::before {
+        display: none;
+    }
+
+    .footer-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 48rem) {
+    .metalworking-hero {
+        padding: 6rem 0 3rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .category-tabs {
+        flex-wrap: wrap;
+    }
+
+    .category-tab {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .hero-showcase-image {
+        height: 15rem;
+    }
+
+    .capabilities {
+        padding: 3rem 0;
+    }
+
+    .capabilities .section-title,
+    .certification .section-title {
+        font-size: 1.875rem;
+    }
+
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .cad-cam,
+    .quality-control,
+    .welding,
+    .printing-3d {
+        padding: 3rem 0;
+    }
+
+    .service-title {
+        font-size: 1.5rem;
+    }
+
+    .service-images-dual {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .certification-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .badge-circle {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .badge-text {
+        font-size: 0.75rem;
+    }
+
+    .section-title-large {
+        font-size: 2rem;
+    }
+
+    .materials-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .materials,
+    .contacts-section {
+        padding: 3rem 0;
+    }
+
+    .contact-block {
+        padding: 0;
+    }
+
+    .contact-company {
+        font-size: 1.25rem;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-certifications {
+        gap: 1rem;
+    }
+
+    .footer-certifications img {
+        height: 2rem;
+    }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 30rem) {
+    .hero-title {
+        font-size: 1.625rem;
+    }
+
+    .hero-image img {
+        max-width: 15rem;
+    }
+
+    .section-title-large {
+        font-size: 1.5rem;
+    }
+
+    .service-title {
+        font-size: 1.25rem;
+    }
+
+    .certification-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .badge-circle {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+}

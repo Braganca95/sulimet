@@ -1,0 +1,26 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if using npx serve)
+node_modules/
+
+# Environment
+.env
+.env.local
+
+# Claude Code
+.claude/
+
+# Temp files
+*.tmp
+*.log
+nul
