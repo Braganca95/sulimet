@@ -335,7 +335,12 @@ const translations = {
 };
 
 // Current language
-let currentLang = localStorage.getItem('sulimet-lang') || 'en';
+let currentLang = 'en';
+try {
+    currentLang = localStorage.getItem('sulimet-lang') || 'en';
+} catch (e) {
+    // localStorage may be unavailable in iOS private browsing (older Safari)
+}
 
 // Get translation
 function t(key) {
@@ -366,7 +371,11 @@ function updateTranslations() {
 // Switch language
 function switchLanguage(lang) {
     currentLang = lang;
-    localStorage.setItem('sulimet-lang', lang);
+    try {
+        localStorage.setItem('sulimet-lang', lang);
+    } catch (e) {
+        // localStorage may be unavailable in iOS private browsing (older Safari)
+    }
     updateTranslations();
 }
 
