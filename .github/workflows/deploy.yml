@@ -1,0 +1,58 @@
+# Deploy static site to GitHub Pages with Git LFS support
+# GitHub Pages does not natively resolve LFS pointers, so this workflow
+# checks out the full LFS files and uploads them as a Pages artifact.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only allow one deployment at a time, cancel in-progress runs
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository with LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # Verify LFS files were pulled (not just pointers)
+      - name: Verify LFS files
+        run: |
+          echo "Checking LFS files are actual binaries, not pointers..."
+          for f in "assets/images/home video pt1.mp4" "assets/images/home video pt2.mp4"; do
+            SIZE=$(stat --format=%s "$f")
+            echo "  $f: $SIZE bytes"
+            if [ "$SIZE" -lt 1000 ]; then
+              echo "ERROR: $f appears to be an LFS pointer (too small). Aborting."
+              exit 1
+            fi
+          done
+          echo "All LFS files verified."
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
