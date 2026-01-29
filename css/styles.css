@@ -57,6 +57,7 @@ body {
     color: var(--text-color);
     background-color: #fcfcfc;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -142,9 +143,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-white);
 }
 
-.btn-primary:hover {
-    transform: translateY(-0.1875rem);
-    box-shadow: 0 0.625rem 1.875rem rgba(207, 19, 43, 0.4);
+@media (hover: hover) {
+    .btn-primary:hover {
+        transform: translateY(-0.1875rem);
+        box-shadow: 0 0.625rem 1.875rem rgba(207, 19, 43, 0.4);
+    }
 }
 
 /* ===== Header ===== */
@@ -155,6 +158,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     z-index: 1000;
     padding: 0.75rem 0;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
     background: #fcfcfc;
     box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
     transition: var(--transition);
@@ -265,6 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     position: relative;
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -570,9 +576,11 @@ h1, h2, h3, h4, h5, h6 {
     flex-shrink: 0;
 }
 
-.carousel-btn:hover {
-    background: var(--primary-gradient);
-    border-color: transparent;
+@media (hover: hover) {
+    .carousel-btn:hover {
+        background: var(--primary-gradient);
+        border-color: transparent;
+    }
 }
 
 .carousel-btn svg {
@@ -859,7 +867,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 0.125rem solid transparent;
     border-radius: 0.625rem;
     font-family: var(--font-primary);
-    font-size: 0.9375rem;
+    font-size: 1rem;
     background: var(--text-white);
     transition: var(--transition);
 }
@@ -883,6 +891,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
     background: #fcfcfc;
     padding: 5rem 0 1.875rem;
+    padding-bottom: max(1.875rem, env(safe-area-inset-bottom));
     border-top: 0.0625rem solid #e0e0e0;
     margin: clamp(1rem, 2vw, 2rem) 0;
     width: 100%;
@@ -930,10 +939,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition);
 }
 
-.footer-links a:hover,
-.footer-services a:hover {
-    color: var(--primary-color);
-    padding-left: 0.3125rem;
+@media (hover: hover) {
+    .footer-links a:hover,
+    .footer-services a:hover {
+        color: var(--primary-color);
+        padding-left: 0.3125rem;
+    }
 }
 
 .social-links {
@@ -942,8 +953,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-links a {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
     background: rgba(0, 0, 0, 0.05);
     border-radius: 50%;
     display: flex;
@@ -952,13 +963,15 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition);
 }
 
-.social-links a:hover {
-    background: var(--primary-gradient);
-    transform: translateY(-0.1875rem);
-}
+@media (hover: hover) {
+    .social-links a:hover {
+        background: var(--primary-gradient);
+        transform: translateY(-0.1875rem);
+    }
 
-.social-links a:hover svg {
-    fill: var(--text-white);
+    .social-links a:hover svg {
+        fill: var(--text-white);
+    }
 }
 
 .social-links svg {
@@ -1014,6 +1027,7 @@ h1, h2, h3, h4, h5, h6 {
         right: -100%;
         width: 70%;
         height: 100vh;
+        height: 100dvh;
         background: var(--secondary-color);
         padding: 6.25rem 2.5rem;
         transition: var(--transition);

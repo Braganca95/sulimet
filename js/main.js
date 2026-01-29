@@ -18,7 +18,7 @@ function handleHeaderScroll() {
     }
 }
 
-window.addEventListener('scroll', handleHeaderScroll);
+window.addEventListener('scroll', handleHeaderScroll, { passive: true });
 
 // ===== Mobile Navigation =====
 navToggle.addEventListener('click', () => {
@@ -55,7 +55,7 @@ function updateActiveNavLink() {
     });
 }
 
-window.addEventListener('scroll', updateActiveNavLink);
+window.addEventListener('scroll', updateActiveNavLink, { passive: true });
 
 // ===== Services Carousel =====
 let currentServiceSlide = 0;
@@ -391,9 +391,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const heroBg = document.querySelector('.hero-bg');
 if (heroBg) {
     window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
+        const scrolled = Math.max(0, window.pageYOffset);
         heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
-    });
+    }, { passive: true });
 }
 
 // ===== Initialize =====
