@@ -78,8 +78,14 @@ function positionCarouselArrows() {
 }
 
 function updateServiceItemsPerView() {
-    // Always show 3 items regardless of screen size
-    serviceItemsPerView = 3;
+    const width = window.innerWidth;
+    if (width <= 768) {
+        serviceItemsPerView = 1;
+    } else if (width <= 1024) {
+        serviceItemsPerView = 2;
+    } else {
+        serviceItemsPerView = 3;
+    }
     totalServiceSlides = Math.ceil(serviceItems.length - serviceItemsPerView + 1);
     if (totalServiceSlides < 1) totalServiceSlides = 1;
     if (currentServiceSlide >= totalServiceSlides) {
@@ -104,8 +110,11 @@ function createServicesCarouselDots() {
 }
 
 function updateServicesCarousel() {
-    const itemWidth = serviceItems[0].offsetWidth + 30; // Including gap
-    const translateX = currentServiceSlide * itemWidth;
+    const wrapper = document.querySelector('.services-wrapper');
+    const gap = 30; // 1.875rem in px
+    const wrapperWidth = wrapper ? wrapper.offsetWidth : 0;
+    const itemWidth = (wrapperWidth - gap * (serviceItemsPerView - 1)) / serviceItemsPerView;
+    const translateX = currentServiceSlide * (itemWidth + gap);
     servicesTrack.style.transform = `translateX(-${translateX}px)`;
 
     // Update dots
