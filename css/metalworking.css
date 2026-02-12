@@ -462,8 +462,7 @@
     display: grid;
     grid-template-columns: 1fr 0.0625rem 1fr;
     gap: 4rem;
-    max-width: 68.75rem;
-    margin: 3rem auto 0;
+    margin-top: 3rem;
     align-items: start;
     position: relative;
 }
@@ -564,8 +563,8 @@
 }
 
 .footer-columns {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
     gap: 4rem;
     margin-bottom: 3rem;
 }
@@ -726,7 +725,7 @@
     }
 
     .footer-columns {
-        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap;
         gap: 2rem;
     }
 }
@@ -840,7 +839,7 @@
     }
 
     .footer-columns {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 2rem;
         text-align: center;
     }
