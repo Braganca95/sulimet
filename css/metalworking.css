@@ -1,5 +1,40 @@
 /* ===== Metalworking Page Styles ===== */
 
+/* Page-wide container override */
+.metalworking-hero .container,
+.capabilities .container,
+.services-wrapper .container,
+.certification .container,
+.materials .container,
+.contacts-section .container,
+.footer-metalworking .container {
+    max-width: none;
+    padding: 0 5rem;
+}
+
+/* Page-wide typography */
+.service-title,
+.capabilities .section-title,
+.certification-text .section-title,
+.section-title-large {
+    color: #cf132b;
+    font-size: 3.125rem;
+}
+
+.service-text p,
+.capability-specs li,
+.hero-description,
+.certification-text .section-subtitle,
+.contact-details-list p,
+.contact-address,
+.material-list li,
+.sales-contact p,
+.category-column p {
+    font-size: 1.5625rem;
+    line-height: 2.5rem;
+    color: #3f3a34;
+}
+
 /* Hero Section */
 .metalworking-hero {
     padding: 8rem 0 4rem;
@@ -639,6 +674,36 @@
 
 /* ===== Responsive Design - Tablet ===== */
 @media (max-width: 64rem) {
+    .metalworking-hero .container,
+    .capabilities .container,
+    .services-wrapper .container,
+    .certification .container,
+    .materials .container,
+    .contacts-section .container,
+    .footer-metalworking .container {
+        padding: 0 2.5rem;
+    }
+
+    .service-title,
+    .capabilities .section-title,
+    .certification-text .section-title,
+    .section-title-large {
+        font-size: 2.25rem;
+    }
+
+    .service-text p,
+    .capability-specs li,
+    .hero-description,
+    .certification-text .section-subtitle,
+    .contact-details-list p,
+    .contact-address,
+    .material-list li,
+    .sales-contact p,
+    .category-column p {
+        font-size: 1.125rem;
+        line-height: 1.8rem;
+    }
+
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -698,6 +763,36 @@
 
 /* ===== Responsive Design - Mobile ===== */
 @media (max-width: 48rem) {
+    .metalworking-hero .container,
+    .capabilities .container,
+    .services-wrapper .container,
+    .certification .container,
+    .materials .container,
+    .contacts-section .container,
+    .footer-metalworking .container {
+        padding: 0 1.25rem;
+    }
+
+    .service-title,
+    .capabilities .section-title,
+    .certification-text .section-title,
+    .section-title-large {
+        font-size: 1.75rem;
+    }
+
+    .service-text p,
+    .capability-specs li,
+    .hero-description,
+    .certification-text .section-subtitle,
+    .contact-details-list p,
+    .contact-address,
+    .material-list li,
+    .sales-contact p,
+    .category-column p {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
     .metalworking-hero {
         padding: 6rem 0 3rem;
     }
