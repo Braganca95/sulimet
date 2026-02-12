@@ -1,22 +1,6 @@
 // ===== Metalworking Page JavaScript =====
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Category tabs functionality
-    const categoryTabs = document.querySelectorAll('.category-tab');
-
-    categoryTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Remove active class from all tabs
-            categoryTabs.forEach(t => t.classList.remove('active'));
-            // Add active class to clicked tab
-            tab.classList.add('active');
-
-            // Here you could add logic to filter/show different content based on category
-            const category = tab.getAttribute('data-category');
-            console.log('Selected category:', category);
-        });
-    });
-
     // Fade-in animations for capability cards
     const observerOptions = {
         threshold: 0.1,

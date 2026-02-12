@@ -23,36 +23,32 @@
     letter-spacing: 0.125rem;
 }
 
-/* Category Tabs */
-.category-tabs {
-    display: flex;
-    gap: 0.5rem;
+/* Category Columns */
+.category-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.category-tab {
+.category-title {
     font-family: var(--font-primary);
-    font-size: 0.875rem;
-    font-weight: 600;
-    padding: 0.5rem 0;
-    border: none;
-    border-bottom: 0.125rem solid transparent;
-    background: transparent;
-    color: var(--text-light);
-    cursor: pointer;
-    transition: var(--transition);
-    text-transform: capitalize;
-}
-
-.category-tab.active {
-    color: var(--text-color);
-    border-bottom-color: var(--primary-color);
+    font-size: 0.9rem;
     font-weight: 700;
+    font-style: italic;
+    color: var(--text-color);
+    text-transform: capitalize;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 0.75rem;
+    display: inline-block;
 }
 
-.category-tab:hover:not(.active) {
-    color: var(--primary-color);
-    border-bottom-color: var(--primary-color);
+.category-column p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
 }
 
 .hero-description {
@@ -72,7 +68,6 @@
     width: 100%;
     height: auto;
     max-width: 25rem;
-    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -258,6 +253,18 @@
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.0625rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.service-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3.75rem;
+    height: 3px;
+    background: var(--primary-color);
 }
 
 .service-text p {
@@ -297,95 +304,105 @@
     background: var(--bg-light);
 }
 
-.certification .section-title {
+.certification-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.certification-text .section-title {
     font-family: var(--font-display);
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--text-color);
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.75rem;
 }
 
-.certification .section-subtitle {
+.certification-text .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3.75rem;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.certification-text .section-subtitle {
     font-size: 1rem;
     color: var(--text-light);
-    text-align: center;
-    margin-bottom: 3rem;
+    text-align: left;
+    line-height: 1.8;
 }
 
-.certification-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2rem;
-    max-width: 56.25rem;
-    margin: 0 auto;
+.certification-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
 }
 
-.certification-badge {
+.cert-iso-badge {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem;
 }
 
-.badge-circle {
-    width: 6.25rem;
-    height: 6.25rem;
+.cert-iso-label {
+    font-family: var(--font-display);
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.cert-iso-standard {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.cert-sgs-badge {
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
-    border: 0.25rem solid var(--primary-color);
+    background: #4CAF50;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--transition);
-    background: #fcfcfc;
 }
 
-.badge-circle:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0.5rem 1.5rem rgba(207, 19, 43, 0.3);
-}
-
-.sgs-badge {
-    background: #4CAF50;
-    border-color: #4CAF50;
-}
-
-.sgs-badge svg {
-    width: 2.5rem;
-    height: 2.5rem;
+.cert-sgs-text {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
     color: white;
-    stroke: white;
-}
-
-.sgs-badge:hover {
-    box-shadow: 0 0.5rem 1.5rem rgba(76, 175, 80, 0.3);
-}
-
-.badge-label {
-    font-family: var(--font-display);
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.0625rem;
-}
-
-.badge-text {
-    font-family: var(--font-display);
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-align: center;
-    line-height: 1.4;
-    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 /* Materials Section */
 .materials {
     padding: 5rem 0;
-    background: var(--bg-light);
+    background: var(--bg-dark);
+}
+
+.materials .section-title-large {
+    color: var(--text-white);
 }
 
 .section-title-large {
@@ -426,10 +443,18 @@
     line-height: 1.6;
 }
 
+.materials .material-list li {
+    color: rgba(255, 255, 255, 0.85);
+}
+
 /* Contacts Section */
 .contacts-section {
     padding: 5rem 0;
-    background: #fcfcfc;
+    background: var(--bg-dark);
+}
+
+.contacts-section .section-title-large {
+    color: var(--text-white);
 }
 
 .contacts-grid {
@@ -474,13 +499,13 @@
 
 .contact-details-list p {
     font-size: 1rem;
-    color: var(--text-color);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
     margin: 0;
 }
 
 .contact-details-list a {
-    color: var(--text-color);
+    color: rgba(255, 255, 255, 0.85);
     transition: var(--transition);
 }
 
@@ -490,12 +515,50 @@
 
 .contact-address {
     margin-top: 0.5rem;
-    color: var(--text-light) !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Sales Contact */
+.sales-contact {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sales-contact h4 {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05rem;
+}
+
+.sales-name {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.sales-contact p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 0.5rem;
+    line-height: 1.6;
+}
+
+.sales-contact a {
+    color: rgba(255, 255, 255, 0.85);
+    transition: var(--transition);
+}
+
+.sales-contact a:hover {
+    color: var(--primary-color);
 }
 
 /* Footer Metalworking */
 .footer-metalworking {
-    background: var(--bg-light);
+    background: var(--bg-dark);
     padding: 3rem 0 2rem;
 }
 
@@ -510,7 +573,7 @@
     font-family: var(--font-display);
     font-size: 1rem;
     font-weight: 700;
-    color: var(--text-color);
+    color: rgba(255, 255, 255, 0.95);
     margin-bottom: 1.25rem;
     text-transform: uppercase;
 }
@@ -526,7 +589,7 @@
 
 .footer-column a {
     font-size: 0.875rem;
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.6);
     transition: var(--transition);
 }
 
@@ -545,7 +608,7 @@
 .footer-social a {
     width: 2rem;
     height: 2rem;
-    background: var(--text-color);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -573,7 +636,7 @@
     gap: 2rem;
     flex-wrap: wrap;
     padding-top: 2rem;
-    border-top: 0.0625rem solid #e0e0e0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-certifications img {
@@ -582,6 +645,7 @@
     object-fit: contain;
     opacity: 0.8;
     transition: var(--transition);
+    filter: brightness(0) invert(1);
 }
 
 .footer-certifications img:hover {
@@ -589,7 +653,7 @@
     transform: scale(1.05);
 }
 
-/* Responsive Design - Tablet */
+/* ===== Responsive Design - Tablet ===== */
 @media (max-width: 64rem) {
     .hero-grid {
         grid-template-columns: 1fr;
@@ -622,8 +686,9 @@
         direction: ltr;
     }
 
-    .certification-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .certification-split {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .materials-grid {
@@ -646,7 +711,7 @@
     }
 }
 
-/* Responsive Design - Mobile */
+/* ===== Responsive Design - Mobile ===== */
 @media (max-width: 48rem) {
     .metalworking-hero {
         padding: 6rem 0 3rem;
@@ -656,13 +721,9 @@
         font-size: 2rem;
     }
 
-    .category-tabs {
-        flex-wrap: wrap;
-    }
-
-    .category-tab {
-        font-size: 0.75rem;
-        padding: 0.5rem 1rem;
+    .category-columns {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .hero-showcase-image {
@@ -674,7 +735,7 @@
     }
 
     .capabilities .section-title,
-    .certification .section-title {
+    .certification-text .section-title {
         font-size: 1.875rem;
     }
 
@@ -699,18 +760,22 @@
         gap: 1rem;
     }
 
-    .certification-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+    .certification-logos {
+        justify-content: flex-start;
     }
 
-    .badge-circle {
+    .cert-iso-badge {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .cert-iso-standard {
+        font-size: 0.85rem;
+    }
+
+    .cert-sgs-badge {
         width: 5rem;
         height: 5rem;
-    }
-
-    .badge-text {
-        font-size: 0.75rem;
     }
 
     .section-title-large {
@@ -754,7 +819,7 @@
     }
 }
 
-/* Responsive Design - Small Mobile */
+/* ===== Responsive Design - Small Mobile ===== */
 @media (max-width: 30rem) {
     .hero-title {
         font-size: 1.625rem;
@@ -772,12 +837,21 @@
         font-size: 1.25rem;
     }
 
-    .certification-grid {
-        grid-template-columns: 1fr;
+    .cert-iso-badge {
+        width: 5rem;
+        height: 5rem;
     }
 
-    .badge-circle {
-        width: 4.5rem;
-        height: 4.5rem;
+    .cert-iso-standard {
+        font-size: 0.75rem;
+    }
+
+    .cert-sgs-badge {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .cert-sgs-text {
+        font-size: 1rem;
     }
 }

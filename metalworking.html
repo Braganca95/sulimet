@@ -149,11 +149,20 @@
                     <div class="hero-text">
                         <h1 class="hero-title" data-i18n="metalworking.hero.title">Metalworking</h1>
 
-                        <!-- Category Tabs -->
-                        <div class="category-tabs">
-                            <button class="category-tab active" data-category="automotive" data-i18n="metalworking.categories.automotive">Automotive</button>
-                            <button class="category-tab" data-category="food" data-i18n="metalworking.categories.food">Food</button>
-                            <button class="category-tab" data-category="industrial" data-i18n="metalworking.categories.industrial">Industrial</button>
+                        <!-- Category Columns -->
+                        <div class="category-columns">
+                            <div class="category-column">
+                                <h3 class="category-title" data-i18n="metalworking.categories.automotive">Automotive</h3>
+                                <p data-i18n="metalworking.categories.automotive.desc">Precision components for automotive OEMs and Tier 1 suppliers.</p>
+                            </div>
+                            <div class="category-column">
+                                <h3 class="category-title" data-i18n="metalworking.categories.food">Food</h3>
+                                <p data-i18n="metalworking.categories.food.desc">Food-grade machined parts meeting strict hygiene standards.</p>
+                            </div>
+                            <div class="category-column">
+                                <h3 class="category-title" data-i18n="metalworking.categories.industrial">Industrial</h3>
+                                <p data-i18n="metalworking.categories.industrial.desc">Heavy-duty components for industrial equipment and machinery.</p>
+                            </div>
                         </div>
 
                         <p class="hero-description" data-i18n="metalworking.hero.description">
@@ -269,59 +278,21 @@
         <!-- Certification Section -->
         <section class="certification">
             <div class="container">
-                <h2 class="section-title" data-i18n="metalworking.certification.title">CERTIFICATION</h2>
-                <p class="section-subtitle" data-i18n="metalworking.certification.subtitle">
-                    Our facilities in Portugal and Morocco hold internationally recognized quality, environmental and safety certifications.
-                </p>
-
-                <div class="certification-grid">
-                    <div class="certification-badge">
-                        <div class="badge-circle sgs-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                        </div>
-                        <span class="badge-label">SGS</span>
+                <div class="certification-split">
+                    <div class="certification-text">
+                        <h2 class="section-title" data-i18n="metalworking.certification.title">CERTIFICATION</h2>
+                        <p class="section-subtitle" data-i18n="metalworking.certification.subtitle">
+                            Our facilities are IATF 16949 and ISO 9001:2015 certified (approval no. 44 100 170400). Audited and approved by SGS.
+                        </p>
                     </div>
-                    <div class="certification-badge">
-                        <div class="badge-circle sgs-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
+                    <div class="certification-logos">
+                        <div class="cert-iso-badge">
+                            <span class="cert-iso-label">CERTIFIED COMPANY</span>
+                            <span class="cert-iso-standard">ISO<br>9001:2015</span>
                         </div>
-                        <span class="badge-label">SGS</span>
-                    </div>
-                    <div class="certification-badge">
-                        <div class="badge-circle sgs-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
+                        <div class="cert-sgs-badge">
+                            <span class="cert-sgs-text">SGS</span>
                         </div>
-                        <span class="badge-label">SGS</span>
-                    </div>
-                    <div class="certification-badge">
-                        <div class="badge-circle sgs-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                        </div>
-                        <span class="badge-label">SGS</span>
-                    </div>
-                    <div class="certification-badge">
-                        <div class="badge-circle sgs-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                        </div>
-                        <span class="badge-label">SGS</span>
-                    </div>
-                    <div class="certification-badge">
-                        <div class="badge-circle sgs-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                        </div>
-                        <span class="badge-label">SGS</span>
                     </div>
                 </div>
             </div>
@@ -449,6 +420,12 @@
                             <p><a href="tel:+351227634196">+351 227 634 196</a></p>
                             <p class="contact-address" data-i18n="metalworking.contacts.portugal.address">R. Zona Industrial, 773, Canedo, Aveiro, Portugal, 4525-062</p>
                         </div>
+                        <div class="sales-contact">
+                            <h4 data-i18n="metalworking.contacts.sales.title">Sales Contact</h4>
+                            <p class="sales-name" data-i18n="metalworking.contacts.sales.name">David Carvalho</p>
+                            <p><a href="mailto:david.carvalho@sulimet.com">david.carvalho@sulimet.com</a></p>
+                            <p><a href="tel:+351227634196">+351 227 634 196</a></p>
+                        </div>
                     </div>
                     <div></div>
                     <div class="contact-block">
@@ -457,6 +434,12 @@
                             <p><a href="mailto:geral@sulimet.com">geral@sulimet.com</a></p>
                             <p><a href="tel:+212039399990">+212 039 399 990</a></p>
                             <p class="contact-address" data-i18n="metalworking.contacts.morocco.address">Ilot 13 Lot n.&ordm;3, Tanger Med Free Zone, Tanger, Tanger-T&eacute;touan-Al Hoce&iuml;ma, Morocco, 90000</p>
+                        </div>
+                        <div class="sales-contact">
+                            <h4 data-i18n="metalworking.contacts.sales.title">Sales Contact</h4>
+                            <p class="sales-name" data-i18n="metalworking.contacts.sales.name">David Carvalho</p>
+                            <p><a href="mailto:david.carvalho@sulimet.com">david.carvalho@sulimet.com</a></p>
+                            <p><a href="tel:+212039399990">+212 039 399 990</a></p>
                         </div>
                     </div>
                 </div>

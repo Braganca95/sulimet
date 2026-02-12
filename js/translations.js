@@ -103,8 +103,11 @@ const translations = {
         "metalworking.hero.title": "Metalworking",
         "metalworking.hero.description": "Precision metalworking solutions for demanding industries. From CNC machining to Swiss turning, we deliver quality-certified components with tolerances as tight as \u00b10.01mm.",
         "metalworking.categories.automotive": "Automotive",
+        "metalworking.categories.automotive.desc": "Precision components for automotive OEMs and Tier 1 suppliers.",
         "metalworking.categories.food": "Food",
+        "metalworking.categories.food.desc": "Food-grade machined parts meeting strict hygiene standards.",
         "metalworking.categories.industrial": "Industrial",
+        "metalworking.categories.industrial.desc": "Heavy-duty components for industrial equipment and machinery.",
 
         // Capabilities
         "metalworking.capabilities.title": "Capabilities",
@@ -128,7 +131,7 @@ const translations = {
         "metalworking.quality.title": "QUALITY CONTROL",
         "metalworking.quality.description": "Every component undergoes rigorous inspection using advanced metrology equipment. Our quality management system, certified to ISO 9001 and IATF 16949, ensures full traceability and consistent precision across every production run.",
         "metalworking.certification.title": "CERTIFICATION",
-        "metalworking.certification.subtitle": "Our facilities in Portugal and Morocco hold internationally recognized quality, environmental and safety certifications.",
+        "metalworking.certification.subtitle": "Our facilities are IATF 16949 and ISO 9001:2015 certified (approval no. 44 100 170400). Audited and approved by SGS.",
         "metalworking.welding.title": "WELDING",
         "metalworking.welding.description": "We offer MIG, TIG and spot welding capabilities for steel, stainless steel and aluminium assemblies. Our certified welders deliver strong, clean joints that meet the structural and aesthetic requirements of the automotive, food and construction industries.",
         "metalworking.printing3d.title": "3D PRINTING",
@@ -148,6 +151,8 @@ const translations = {
         "metalworking.contacts.portugal.address": "R. Zona Industrial, 773, Canedo, Aveiro, Portugal, 4525-062",
         "metalworking.contacts.morocco.company": "Sulimet Maroc, Sarl",
         "metalworking.contacts.morocco.address": "Ilot 13 Lot n.°3, Tanger Med Free Zone, Tanger, Tanger-Tétouan-Al Hoceima, Morocco, 90000",
+        "metalworking.contacts.sales.title": "Sales Contact",
+        "metalworking.contacts.sales.name": "David Carvalho",
 
         // Footer
         "metalworking.footer.about.title": "About",
@@ -269,8 +274,11 @@ const translations = {
         "metalworking.hero.title": "Metalomecânica",
         "metalworking.hero.description": "Soluções de metalomecânica de precisão para indústrias exigentes. Da maquinação CNC ao torneamento suíço, entregamos componentes certificados com tolerâncias até \u00b10,01mm.",
         "metalworking.categories.automotive": "Automóvel",
+        "metalworking.categories.automotive.desc": "Componentes de precisão para OEMs automóveis e fornecedores Tier 1.",
         "metalworking.categories.food": "Alimentar",
+        "metalworking.categories.food.desc": "Peças maquinadas de grau alimentar com rigorosos padrões de higiene.",
         "metalworking.categories.industrial": "Industrial",
+        "metalworking.categories.industrial.desc": "Componentes robustos para equipamentos e maquinaria industrial.",
 
         // Capabilities
         "metalworking.capabilities.title": "Capacidades",
@@ -294,7 +302,7 @@ const translations = {
         "metalworking.quality.title": "CONTROLO QUALIDADE",
         "metalworking.quality.description": "Cada componente é submetido a inspeção rigorosa com equipamento avançado de metrologia. O nosso sistema de gestão de qualidade, certificado ISO 9001 e IATF 16949, garante rastreabilidade total e precisão consistente em cada lote de produção.",
         "metalworking.certification.title": "CERTIFICAÇÃO",
-        "metalworking.certification.subtitle": "As nossas instalações em Portugal e Marrocos possuem certificações internacionais de qualidade, ambiente e segurança.",
+        "metalworking.certification.subtitle": "As nossas instalações possuem certificação IATF 16949 e ISO 9001:2015 (n.º de aprovação 44 100 170400). Auditadas e aprovadas pela SGS.",
         "metalworking.welding.title": "SOLDADURA",
         "metalworking.welding.description": "Oferecemos capacidades de soldadura MIG, TIG e por pontos para conjuntos em aço, aço inoxidável e alumínio. Os nossos soldadores certificados produzem juntas resistentes e limpas que cumprem os requisitos das indústrias automóvel, alimentar e construção.",
         "metalworking.printing3d.title": "IMPRESSÃO 3D",
@@ -314,6 +322,8 @@ const translations = {
         "metalworking.contacts.portugal.address": "R. Zona Industrial, 773, Canedo, Aveiro, Portugal, 4525-062",
         "metalworking.contacts.morocco.company": "Sulimet Maroc, Sarl",
         "metalworking.contacts.morocco.address": "Ilot 13 Lot n.°3, Tanger Med Free Zone, Tanger, Tanger-Tétouan-Al Hoceima, Morocco, 90000",
+        "metalworking.contacts.sales.title": "Contacto Comercial",
+        "metalworking.contacts.sales.name": "David Carvalho",
 
         // Footer
         "metalworking.footer.about.title": "Sobre",
