@@ -13,13 +13,12 @@
 }
 
 /* Page-wide typography */
-main h2 {
+.body-title {
     color: #cf132b;
     font-size: 3.125rem;
 }
 
-main h2 + p,
-main h2 + div > p {
+.body-title + p {
     font-size: 1.5625rem;
     line-height: 2.5rem;
     color: #3f3a34;
@@ -674,12 +673,11 @@ main h2 + div > p {
         padding: 0 2.5rem;
     }
 
-    main h2 {
+    .body-title {
         font-size: 2.25rem;
     }
 
-    main h2 + p,
-    main h2 + div > p {
+    .body-title + p {
         font-size: 1.125rem;
         line-height: 1.8rem;
     }
@@ -753,12 +751,11 @@ main h2 + div > p {
         padding: 0 1.25rem;
     }
 
-    main h2 {
+    .body-title {
         font-size: 1.75rem;
     }
 
-    main h2 + p,
-    main h2 + div > p {
+    .body-title + p {
         font-size: 1rem;
         line-height: 1.6rem;
     }
