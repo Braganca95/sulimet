@@ -221,11 +221,6 @@
     background: #fcfcfc;
 }
 
-.quality-control,
-.welding {
-    background: var(--bg-light);
-}
-
 .service-split {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -398,11 +393,7 @@
 /* Materials Section */
 .materials {
     padding: 5rem 0;
-    background: var(--bg-dark);
-}
-
-.materials .section-title-large {
-    color: var(--text-white);
+    background: #fcfcfc;
 }
 
 .section-title-large {
@@ -443,18 +434,11 @@
     line-height: 1.6;
 }
 
-.materials .material-list li {
-    color: rgba(255, 255, 255, 0.85);
-}
 
 /* Contacts Section */
 .contacts-section {
     padding: 5rem 0;
-    background: var(--bg-dark);
-}
-
-.contacts-section .section-title-large {
-    color: var(--text-white);
+    background: #fcfcfc;
 }
 
 .contacts-grid {
@@ -499,13 +483,13 @@
 
 .contact-details-list p {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--text-color);
     line-height: 1.6;
     margin: 0;
 }
 
 .contact-details-list a {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--text-color);
     transition: var(--transition);
 }
 
@@ -515,14 +499,14 @@
 
 .contact-address {
     margin-top: 0.5rem;
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: var(--text-light) !important;
 }
 
 /* Sales Contact */
 .sales-contact {
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid #e0e0e0;
 }
 
 .sales-contact h4 {
@@ -537,18 +521,18 @@
 
 .sales-name {
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.95) !important;
+    color: var(--text-color) !important;
 }
 
 .sales-contact p {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--text-color);
     margin: 0 0 0.5rem;
     line-height: 1.6;
 }
 
 .sales-contact a {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--text-color);
     transition: var(--transition);
 }
 
