@@ -13,23 +13,13 @@
 }
 
 /* Page-wide typography */
-.service-title,
-.capabilities .section-title,
-.certification-text .section-title,
-.section-title-large {
+main h2 {
     color: #cf132b;
     font-size: 3.125rem;
 }
 
-.service-text p,
-.capability-specs li,
-.hero-description,
-.certification-text .section-subtitle,
-.contact-details-list p,
-.contact-address,
-.material-list li,
-.sales-contact p,
-.category-column p {
+main h2 + p,
+main h2 + div > p {
     font-size: 1.5625rem;
     line-height: 2.5rem;
     color: #3f3a34;
@@ -684,22 +674,12 @@
         padding: 0 2.5rem;
     }
 
-    .service-title,
-    .capabilities .section-title,
-    .certification-text .section-title,
-    .section-title-large {
+    main h2 {
         font-size: 2.25rem;
     }
 
-    .service-text p,
-    .capability-specs li,
-    .hero-description,
-    .certification-text .section-subtitle,
-    .contact-details-list p,
-    .contact-address,
-    .material-list li,
-    .sales-contact p,
-    .category-column p {
+    main h2 + p,
+    main h2 + div > p {
         font-size: 1.125rem;
         line-height: 1.8rem;
     }
@@ -773,22 +753,12 @@
         padding: 0 1.25rem;
     }
 
-    .service-title,
-    .capabilities .section-title,
-    .certification-text .section-title,
-    .section-title-large {
+    main h2 {
         font-size: 1.75rem;
     }
 
-    .service-text p,
-    .capability-specs li,
-    .hero-description,
-    .certification-text .section-subtitle,
-    .contact-details-list p,
-    .contact-address,
-    .material-list li,
-    .sales-contact p,
-    .category-column p {
+    main h2 + p,
+    main h2 + div > p {
         font-size: 1rem;
         line-height: 1.6rem;
     }
