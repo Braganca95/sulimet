@@ -345,7 +345,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== About Section ===== */
 .about {
-    padding: 3.125rem 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0 3.125rem;
     background: var(--bg-light);
     margin: 0;
     width: 100%;
@@ -421,7 +425,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Services Section ===== */
 .services {
-    padding: 3.125rem 0;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0 2.5rem;
     background: #5b5b5a;
     overflow: hidden;
     margin: 0;
@@ -429,6 +437,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .services .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
     width: 100%;
     max-width: 100%;
     padding: 0 clamp(1.25rem, 5vw, 6rem);
@@ -440,7 +453,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .services-header {
-    margin-bottom: clamp(1.5rem, 4vw, 3.75rem);
+    flex-shrink: 0;
+    margin-bottom: clamp(1rem, 2vw, 2rem);
 }
 
 .services .service-divider {
@@ -449,13 +463,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-carousel {
     position: relative;
-    margin-top: 1.875rem;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
 .services-wrapper {
     overflow: hidden;
     flex: 1;
+    min-height: 0;
     width: 100%;
 }
 
@@ -464,11 +482,14 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.875rem;
     transition: transform 0.5s ease;
     width: 100%;
+    height: 100%;
 }
 
 .service-item {
     flex: 0 0 calc((100% - 3.75rem) / 3);
     min-width: calc((100% - 3.75rem) / 3);
+    display: flex;
+    flex-direction: column;
     background: transparent;
     border-radius: 0;
     overflow: hidden;
@@ -476,22 +497,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-image {
+    flex: 1;
+    min-height: 0;
     width: 100%;
     overflow: hidden;
 }
 
 .service-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
 .service-content {
-    padding: 1.5625rem 0;
+    flex-shrink: 0;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
 .service-year {
@@ -590,10 +615,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-dots {
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     gap: 0.625rem;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .carousel-dot {
@@ -612,31 +639,52 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Global Section ===== */
 .global {
-    padding: 3.125rem 0;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0 2.5rem;
     background: var(--bg-light);
+    overflow: hidden;
     margin: 0;
     width: 100%;
 }
 
 .global .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
     max-width: none;
     margin: 0;
+    width: 100%;
+}
+
+.global-stats {
+    flex-shrink: 0;
 }
 
 .global-map {
+    flex: 1;
+    min-height: 0;
     position: relative;
-    margin: 3.75rem auto 0;
+    margin: 1.5rem auto 0;
+    aspect-ratio: 2 / 1;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .global-map img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: fill;
+    display: block;
 }
 
 .map-dot {
     position: absolute;
-    width: 2rem;
-    height: 2rem;
+    width: 1.25rem;
+    height: 1.25rem;
     transform: translate(-50%, -50%);
     cursor: pointer;
     z-index: 1;
@@ -646,8 +694,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
     background: var(--primary-color);
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -658,8 +706,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 2rem;
-    height: 2rem;
+    width: 1.25rem;
+    height: 1.25rem;
     background: rgba(207, 19, 43, 0.4);
     border-radius: 50%;
     transform: translate(-50%, -50%);

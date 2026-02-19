@@ -27,18 +27,23 @@ GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`). Deploys on pus
 ## Architecture
 
 **Script Load Order (Critical):**
-Scripts must load in this exact order — `translations.js` defines globals that `main.js` and page-specific scripts depend on:
+Scripts must load in this exact order — `translations.js` defines globals that other scripts depend on:
 1. `js/translations.js` — i18n system, defines `translations` object, `t()`, `switchLanguage()`, `updateTranslations()`
-2. `js/main.js` — shared interactivity (carousel, animations, form, notifications)
-3. Page-specific: `js/metalworking.js` on `metalworking.html` only
+2. `js/main.js` — index.html only: carousel, counters, contact form, parallax, notifications
+3. `js/metalworking.js` — metalworking.html only: staggered fade-in, smooth scroll
+
+Each page loads `translations.js` first, then its own page-specific script. `main.js` and `metalworking.js` are never loaded together.
 
 **CSS Architecture:**
 - CSS variables defined in `:root` in `css/styles.css` — colors, fonts, transitions, shadows
 - `css/metalworking.css` extends `styles.css` for the metalworking page
+- All sizing uses `rem` units (not `px`), with `clamp()` for fluid responsive values
 - Primary brand gradient: `linear-gradient(90deg, #CF132B 0%, #7B0B1A 100%)`
+- Brand text color: `#3f3a34` (used in value cards, stats, body text)
 - Sections alternate between `--bg-light` (#f8f9fa) and white backgrounds
-- Responsive breakpoints: 1024px (tablets), 768px (mobile landscape), 480px (mobile portrait)
-- Custom font: Microgramma loaded from `assets/fonts/`
+- Responsive breakpoints: 64rem/1024px (tablets), 48rem/768px (mobile landscape), 30rem/480px (mobile portrait)
+- Fonts: Microgramma (local, `assets/fonts/`) for headings (`--font-display`), Montserrat + Michroma from Google Fonts for body (`--font-primary`)
+- Metalworking page uses `.body-title` class for section H2s (red, `3.125rem`) with adjacent `p` styling
 
 **i18n System:**
 - HTML elements use `data-i18n="key.path"` attributes (e.g., `data-i18n="nav.about"`)
@@ -59,9 +64,10 @@ Scripts must load in this exact order — `translations.js` defines globals that
 - Hero parallax: background video translates at 0.5x scroll speed.
 
 **Metalworking Page:**
+- Loads both `css/styles.css` and `css/metalworking.css` (metalworking.css overrides container max-width to `none` with `5rem` padding)
 - Category tabs (`.category-tab[data-category]`) — Automotive, Food, Industrial
 - Service split sections use `.reverse` class for alternating image/text layouts
-- Has its own footer with different layout and certification logos
+- Has its own footer (`.footer-metalworking`) with different layout and certification logos
 - Fade-in uses staggered delay (`index * 100ms`) unlike index.html's instant reveal
 
 **SEO Setup:**
