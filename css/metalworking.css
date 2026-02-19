@@ -26,23 +26,35 @@
 
 /* Hero Section */
 .metalworking-hero {
-    padding: 8rem 0 4rem;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0 0;
     background: #fcfcfc;
+    overflow: hidden;
 }
 
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: stretch;
+    height: calc(100dvh - 4rem);
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 3.125rem;
     font-weight: 800;
     color: var(--text-color);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
 }
@@ -56,30 +68,28 @@
 }
 
 .category-title {
-    font-family: var(--font-primary);
-    font-size: 0.9rem;
+    font-family: 'Microgramma', var(--font-display);
+    font-size: 1.5625rem;
     font-weight: 700;
-    font-style: italic;
-    color: var(--text-color);
+    font-style: normal;
+    color: #3f3a34;
     text-transform: capitalize;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--primary-color);
     margin-bottom: 0.75rem;
     display: inline-block;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.category-title:hover {
+    color: #cf132b;
+    text-decoration: underline;
 }
 
 .category-column p {
-    font-size: 0.8rem;
+    font-size: 1.125rem;
     color: var(--text-light);
-    line-height: 1.6;
+    line-height: 2.1875rem;
     margin: 0;
-}
-
-.hero-description {
-    font-size: 1rem;
-    color: var(--text-light);
-    line-height: 1.8;
-    max-width: 90%;
 }
 
 .hero-image {
@@ -89,10 +99,10 @@
 }
 
 .hero-image img {
-    width: 100%;
-    height: auto;
-    max-width: 25rem;
-    object-fit: cover;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 /* Hero Showcase */
@@ -126,6 +136,7 @@
     margin-bottom: 3rem;
     text-align: left;
     text-transform: uppercase;
+    color: #3f3a34;
 }
 
 .capabilities-grid {
@@ -678,10 +689,6 @@
 
     .hero-image img {
         max-width: 20rem;
-    }
-
-    .hero-description {
-        max-width: 100%;
     }
 
     .capabilities-grid {
