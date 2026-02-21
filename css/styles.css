@@ -454,7 +454,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-header {
     flex-shrink: 0;
-    margin-bottom: clamp(1rem, 2vw, 2rem);
 }
 
 .services .service-divider {
@@ -498,8 +497,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-image {
-    flex: 1;
-    min-height: 0;
+    aspect-ratio: 525 / 400;
+    flex-shrink: 0;
     width: 100%;
     overflow: hidden;
 }
@@ -539,7 +538,7 @@ h1, h2, h3, h4, h5, h6 {
 .service-description {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: clamp(1rem, 1.8vw, 1.5625rem);
+    font-size: clamp(0.75rem, 1.5vw, 1.5625rem);
     color: #fff;
     line-height: 1.5;
 }

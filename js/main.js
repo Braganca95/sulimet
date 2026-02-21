@@ -63,20 +63,6 @@ const serviceItems = document.querySelectorAll('.service-item');
 let serviceItemsPerView = 3;
 let totalServiceSlides = Math.ceil(serviceItems.length / serviceItemsPerView);
 
-function positionCarouselArrows() {
-    const firstDivider = document.querySelector('.service-item .service-divider');
-    if (firstDivider && servicesPrevBtn && servicesNextBtn) {
-        const carousel = document.querySelector('.services-carousel');
-        const carouselTop = carousel.getBoundingClientRect().top;
-        const dividerRect = firstDivider.getBoundingClientRect();
-        const dividerCenter = dividerRect.top + dividerRect.height / 2 - carouselTop;
-        const btnHeight = servicesPrevBtn.offsetHeight;
-        const topPos = dividerCenter - btnHeight / 2;
-        servicesPrevBtn.style.top = topPos + 'px';
-        servicesNextBtn.style.top = topPos + 'px';
-    }
-}
-
 function updateServiceItemsPerView() {
     const width = window.innerWidth;
     if (width <= 768) {
@@ -93,7 +79,6 @@ function updateServiceItemsPerView() {
     }
     updateServicesCarousel();
     createServicesCarouselDots();
-    positionCarouselArrows();
 }
 
 function createServicesCarouselDots() {
@@ -104,7 +89,10 @@ function createServicesCarouselDots() {
         if (i === currentServiceSlide) {
             dot.classList.add('active');
         }
-        dot.addEventListener('click', () => goToServiceSlide(i));
+        dot.addEventListener('click', () => {
+            goToServiceSlide(i);
+            resetServicesAutoPlay();
+        });
         servicesCarouselDots.appendChild(dot);
     }
 }
@@ -140,8 +128,8 @@ function goToServiceSlide(index) {
 }
 
 if (servicesPrevBtn && servicesNextBtn) {
-    servicesPrevBtn.addEventListener('click', prevServiceSlide);
-    servicesNextBtn.addEventListener('click', nextServiceSlide);
+    servicesPrevBtn.addEventListener('click', () => { prevServiceSlide(); resetServicesAutoPlay(); });
+    servicesNextBtn.addEventListener('click', () => { nextServiceSlide(); resetServicesAutoPlay(); });
 }
 
 // Touch/Swipe support for services carousel
@@ -151,6 +139,7 @@ let servicesTouchEndX = 0;
 if (servicesTrack) {
     servicesTrack.addEventListener('touchstart', (e) => {
         servicesTouchStartX = e.changedTouches[0].screenX;
+        resetServicesAutoPlay();
     }, { passive: true });
 
     servicesTrack.addEventListener('touchend', (e) => {
@@ -172,8 +161,32 @@ function handleServicesSwipe() {
     }
 }
 
+// ===== Services Carousel Auto-Play =====
+const SERVICES_AUTOPLAY_MS = 1500;
+let servicesAutoPlayInterval = null;
+let servicesAutoPlayResumeTimeout = null;
+
+function startServicesAutoPlay() {
+    if (servicesAutoPlayInterval) return;
+    servicesAutoPlayInterval = setInterval(nextServiceSlide, SERVICES_AUTOPLAY_MS);
+}
+
+function stopServicesAutoPlay() {
+    clearInterval(servicesAutoPlayInterval);
+    servicesAutoPlayInterval = null;
+}
+
+function resetServicesAutoPlay() {
+    stopServicesAutoPlay();
+    clearTimeout(servicesAutoPlayResumeTimeout);
+    servicesAutoPlayResumeTimeout = setTimeout(startServicesAutoPlay, SERVICES_AUTOPLAY_MS);
+}
+
 // Initialize services carousel
-window.addEventListener('load', updateServiceItemsPerView);
+window.addEventListener('load', () => {
+    updateServiceItemsPerView();
+    startServicesAutoPlay();
+});
 window.addEventListener('resize', updateServiceItemsPerView);
 
 // ===== Counter Animation =====
