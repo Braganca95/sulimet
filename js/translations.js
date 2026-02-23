@@ -14,11 +14,11 @@ const translations = {
         "about.title": "About Us",
         "about.description": "The Sulimet Group is composed of <strong>four companies</strong> operating in <strong>two countries</strong>, <strong>Portugal</strong> and <strong>Morocco</strong>.<br><br>We specialize in <strong>wiring harnesses</strong> and <strong>metal parts</strong>, serving markets including automotive, food and the construction industry.",
         "about.mission.title": "Mission",
-        "about.mission.text": "To provide innovative and high-quality industrial solutions, contributing to the success of our partners and clients.",
+        "about.mission.text": "Design, develop and produce high-quality products using advanced technological expertise, ensuring the continuous satisfaction of our customers worldwide.",
         "about.vision.title": "Vision",
-        "about.vision.text": "To be a reference in the industrial solutions market, recognized for excellence, innovation and commitment to sustainability.",
+        "about.vision.text": "Create added value through advanced, high-quality industrial solutions that exceed customer expectations and adapt to evolving technologies and global markets.",
         "about.values.title": "Values",
-        "about.values.text": "Quality, integrity, innovation, customer commitment and social and environmental responsibility.",
+        "about.values.text": "We are guided by ethics, respect, humility, honesty, professionalism, innovation, quality and responsibility, ensuring sustainable and trustworthy practices.",
 
         // Services Section
         "services.title": "Our History",
@@ -34,7 +34,7 @@ const translations = {
 
         // Stats Section
         "stats.parts": "Parts Manufactured<br>in 2025",
-        "stats.area": "Production<br>area",
+        "stats.area": "Workers",
         "stats.projects": "Number of projects",
 
         // History Section
@@ -185,11 +185,11 @@ const translations = {
         "about.title": "Sobre Nós",
         "about.description": "O Grupo Sulimet é composto por <strong>quatro empresas</strong> a operar em <strong>dois países</strong>, <strong>Portugal</strong> e <strong>Marrocos</strong>.<br><br>Especializamo-nos em <strong>cablagens</strong> e <strong>peças metálicas</strong>, servindo mercados como automóvel, alimentar e construção civil.",
         "about.mission.title": "Missão",
-        "about.mission.text": "Fornecer soluções industriais inovadoras e de alta qualidade, contribuindo para o sucesso dos nossos parceiros e clientes.",
+        "about.mission.text": "Conceber, desenvolver e produzir produtos de alta qualidade utilizando conhecimentos tecnológicos avançados, garantindo a satisfação contínua dos nossos clientes em todo o mundo.",
         "about.vision.title": "Visão",
-        "about.vision.text": "Ser referência no mercado de soluções industriais, reconhecida pela excelência, inovação e compromisso com a sustentabilidade.",
+        "about.vision.text": "Criar valor acrescentado através de soluções industriais avançadas e de alta qualidade que superam as expectativas dos clientes e se adaptam às tecnologias em evolução e aos mercados globais.",
         "about.values.title": "Valores",
-        "about.values.text": "Qualidade, integridade, inovação, compromisso com o cliente e responsabilidade social e ambiental.",
+        "about.values.text": "Somos guiados pela ética, respeito, humildade, honestidade, profissionalismo, inovação, qualidade e responsabilidade, garantindo práticas sustentáveis e de confiança.",
 
         // Services Section
         "services.title": "A Nossa História",
@@ -205,7 +205,7 @@ const translations = {
 
         // Stats Section
         "stats.parts": "Peças Fabricadas<br>em 2025",
-        "stats.area": "Área de<br>produção",
+        "stats.area": "Trabalhadores",
         "stats.projects": "Número de projetos",
 
         // History Section
