@@ -195,7 +195,7 @@ function animateCounters() {
 
     counters.forEach(counter => {
         const target = parseInt(counter.getAttribute('data-target'));
-        const duration = 4000; // 4 seconds
+        const duration = 6000; // 6 seconds
         const increment = target / (duration / 16);
         let current = 0;
 
