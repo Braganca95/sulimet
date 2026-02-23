@@ -34,7 +34,7 @@ const translations = {
 
         // Stats Section
         "stats.parts": "Parts Manufactured<br>in 2025",
-        "stats.area": "Production area",
+        "stats.area": "Production<br>area",
         "stats.projects": "Number of projects",
 
         // History Section
@@ -205,7 +205,7 @@ const translations = {
 
         // Stats Section
         "stats.parts": "Peças Fabricadas<br>em 2025",
-        "stats.area": "Área de produção",
+        "stats.area": "Área de<br>produção",
         "stats.projects": "Número de projetos",
 
         // History Section
