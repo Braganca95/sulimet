@@ -429,7 +429,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100dvh;
     display: flex;
     flex-direction: column;
-    padding: 4rem 0 2.5rem;
+    padding: 4rem 0 1rem;
     background: #5b5b5a;
     overflow: hidden;
     margin: 0;
@@ -493,6 +493,7 @@ h1, h2, h3, h4, h5, h6 {
     background: transparent;
     border-radius: 0;
     overflow: hidden;
+    padding-top: clamp(3rem, 6vw, 6rem);
     transition: var(--transition);
 }
 
@@ -613,8 +614,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     gap: 0.625rem;
-    margin-top: 1rem;
-    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding-bottom: 0.25rem;
 }
 
 .carousel-dot {

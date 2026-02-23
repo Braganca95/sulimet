@@ -162,7 +162,7 @@ function handleServicesSwipe() {
 }
 
 // ===== Services Carousel Auto-Play =====
-const SERVICES_AUTOPLAY_MS = 1500;
+const SERVICES_AUTOPLAY_MS = 5000;
 let servicesAutoPlayInterval = null;
 let servicesAutoPlayResumeTimeout = null;
 
