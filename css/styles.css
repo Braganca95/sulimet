@@ -348,8 +348,8 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 100vh;
     min-height: 100dvh;
     display: flex;
-    align-items: center;
-    padding: 4rem 0 3.125rem;
+    align-items: flex-start;
+    padding: clamp(2rem, 10dvh, 7rem) 0 3.125rem;
     background: var(--bg-light);
     margin: 0;
     width: 100%;
@@ -438,7 +438,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100dvh;
     display: flex;
     flex-direction: column;
-    padding: clamp(4rem, 20dvh, 14rem) 0 1rem;
+    padding: clamp(2rem, 10dvh, 7rem) 0 1rem;
     background: #5b5b5a;
     overflow: hidden;
     margin: 0;
