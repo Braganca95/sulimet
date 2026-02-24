@@ -145,7 +145,7 @@
 .annotation-bracket-v {
     position: absolute;
     top: 7%;
-    left: 1%;
+    left: calc(-3rem - 2.5px); /* moved to align with dot/arm left endpoint at -3rem */
     width: 0;
     height: 63%;
     border-left: 5px solid #E84060;
@@ -815,6 +815,10 @@
     }
 
     /* Fallback positions at tablet — reset negative offsets */
+    .annotation-bracket-v {
+        left: 1%;
+    }
+
     .annotation-arm-bottom {
         top: 70%;
         left: 1%;
