@@ -190,10 +190,10 @@
     line-height: 1.5;
 }
 
-/* Label 1: aligned with dot at bracket top */
+/* Label 1: clear gap from bracket/dot */
 .annotation-label-1 {
     top: 7%;
-    left: 5%;
+    left: 15%;
 }
 
 
@@ -213,10 +213,10 @@
     left: 92%;
 }
 
-/* Label 2: starts at dot position */
+/* Label 2: 2.5rem gap from dot center (dot is at 92%) */
 .annotation-label-2 {
     top: 41%;
-    left: 95%;
+    left: calc(92% + 2.5rem);
 }
 
 /* Hero Showcase */
