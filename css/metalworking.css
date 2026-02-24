@@ -166,17 +166,17 @@
     border-top: 5px solid #E84060;
 }
 
-/* Bottom arm: 90° angle going right from the bracket bottom over the image */
+/* Arm at bracket bottom — extended LEFT outside image to reach the dot */
 .annotation-arm-bottom {
     top: 70%;
-    left: 1%;
-    width: 25%;
+    left: -3rem;
+    width: calc(3rem + 1% + 2.5px); /* bridges from -3rem to bracket center */
 }
 
-/* Dot at the beginning of label-1 text */
+/* Dot at left end of arm, outside image */
 .annotation-dot-top {
-    top: 7%;
-    left: calc(1% + 2.5px); /* 2.5px = half of 5px border-left, centers dot on the line */
+    top: 70%;
+    left: -3rem;
 }
 
 
@@ -190,11 +190,12 @@
     line-height: 1.5;
 }
 
-/* Label 1: outside image to the LEFT — right edge anchored at bracket, text grows leftward */
+/* Label 1: to the RIGHT of dot, just outside image to the left */
 .annotation-label-1 {
-    top: calc(7% - 1.5rem);
-    right: calc(100% - 1%);
-    text-align: right;
+    top: calc(70% - 1.5rem);
+    left: calc(-3rem + 0.75rem);
+    right: auto;
+    text-align: left;
     white-space: nowrap;
 }
 
@@ -813,11 +814,22 @@
         right: -2.5rem;
     }
 
-    /* Labels fall back to inside/near image at tablet */
+    /* Fallback positions at tablet — no negative overflow */
+    .annotation-arm-bottom {
+        top: 70%;
+        left: 1%;
+        width: 20%;
+    }
+
+    .annotation-dot-top {
+        top: 7%;
+        left: calc(1% + 2.5px);
+    }
+
     .annotation-label-1 {
         top: 7%;
-        right: auto;
         left: 8%;
+        right: auto;
         text-align: left;
         white-space: normal;
     }
