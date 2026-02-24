@@ -94,7 +94,7 @@
 
 .hero-image {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
     height: 100%;
@@ -193,7 +193,7 @@
 /* Label 1: aligned with dot at bracket top */
 .annotation-label-1 {
     top: 7%;
-    left: 2%;
+    left: 5%;
 }
 
 
@@ -216,7 +216,7 @@
 /* Label 2: starts at dot position */
 .annotation-label-2 {
     top: 41%;
-    left: 93%;
+    left: 95%;
 }
 
 /* Hero Showcase */
