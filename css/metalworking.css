@@ -166,9 +166,9 @@
     border-top: 5px solid #E84060;
 }
 
-/* Bottom arm: extended left so its endpoint aligns with the dot at left:-3rem */
+/* Arm connecting dot (outside image) to bracket top */
 .annotation-arm-bottom {
-    top: 70%;
+    top: 7%;
     left: -3rem;
     width: calc(3rem + 1% + 2.5px);
 }
@@ -816,7 +816,7 @@
 
     /* Fallback positions at tablet — reset negative offsets */
     .annotation-arm-bottom {
-        top: 70%;
+        top: 7%;
         left: 1%;
         width: 20%;
     }
