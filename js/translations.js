@@ -103,11 +103,11 @@ const translations = {
         "metalworking.hero.title": "Metalworking",
         "metalworking.hero.description": "Precision metalworking solutions for demanding industries. From CNC machining to Swiss turning, we deliver quality-certified components with tolerances as tight as \u00b10.01mm.",
         "metalworking.categories.automotive": "Automotive",
-        "metalworking.categories.automotive.desc": "Precision components for automotive OEMs and Tier 1 suppliers.",
+        "metalworking.categories.automotive.desc": "High-precision components, focusing on reliability, durability and safety to meet the sector's most demanding standards.",
         "metalworking.categories.food": "Food",
-        "metalworking.categories.food.desc": "Food-grade machined parts meeting strict hygiene standards.",
+        "metalworking.categories.food.desc": "Designed for hygiene, precision and durability, meeting the strict safety and quality standards of the food sector.",
         "metalworking.categories.industrial": "Industrial",
-        "metalworking.categories.industrial.desc": "Heavy-duty components for industrial equipment and machinery.",
+        "metalworking.categories.industrial.desc": "Robust and precise components designed to withstand heavy use and demanding operational conditions.",
 
         // Capabilities
         "metalworking.capabilities.title": "Capabilities",
@@ -274,11 +274,11 @@ const translations = {
         "metalworking.hero.title": "Metalomecânica",
         "metalworking.hero.description": "Soluções de metalomecânica de precisão para indústrias exigentes. Da maquinação CNC ao torneamento suíço, entregamos componentes certificados com tolerâncias até \u00b10,01mm.",
         "metalworking.categories.automotive": "Automóvel",
-        "metalworking.categories.automotive.desc": "Componentes de precisão para OEMs automóveis e fornecedores Tier 1.",
+        "metalworking.categories.automotive.desc": "Componentes de alta precisão, com foco em fiabilidade, durabilidade e segurança para cumprir os padrões mais exigentes do setor.",
         "metalworking.categories.food": "Alimentar",
-        "metalworking.categories.food.desc": "Peças maquinadas de grau alimentar com rigorosos padrões de higiene.",
+        "metalworking.categories.food.desc": "Concebidos para higiene, precisão e durabilidade, cumprindo os rigorosos padrões de segurança e qualidade do setor alimentar.",
         "metalworking.categories.industrial": "Industrial",
-        "metalworking.categories.industrial.desc": "Componentes robustos para equipamentos e maquinaria industrial.",
+        "metalworking.categories.industrial.desc": "Componentes robustos e precisos, concebidos para suportar uso intensivo e condições operacionais exigentes.",
 
         // Capabilities
         "metalworking.capabilities.title": "Capacidades",

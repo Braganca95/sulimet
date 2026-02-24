@@ -79,6 +79,9 @@ Each page loads `translations.js` first, then its own page-specific script. `mai
 **Git LFS:**
 `.mp4` video files are tracked via Git LFS (`.gitattributes`). The deploy workflow verifies LFS files are actual binaries, not pointers.
 
+**Non-web files at root:**
+`meltaworking.pdf`, `meltaworking_compressed.pdf`, and `item_description.txt` are reference/source documents — not served as part of the site and not linked from any HTML page. Do not remove them, but do not add links to them without explicit instruction.
+
 ## Adding New Content
 
 **Adding Translatable Text:**

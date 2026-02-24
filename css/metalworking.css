@@ -46,7 +46,7 @@
 .hero-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .hero-title {
@@ -54,7 +54,7 @@
     font-size: 3.125rem;
     font-weight: 800;
     color: var(--text-color);
-    margin-bottom: 3rem;
+    margin-bottom: 0;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
 }
@@ -96,13 +96,121 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    height: 100%;
 }
 
-.hero-image img {
+.hero-img {
+    position: absolute;
     width: auto;
-    height: 100%;
-    max-width: 100%;
+    height: 80%;
+    max-width: 80%;
     object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hero-img.hero-img-active {
+    opacity: 1;
+}
+
+.category-column {
+    cursor: pointer;
+}
+
+/* Hero Annotations — inside .hero-image, positioned relative to it */
+.hero-annotations {
+    position: absolute;
+    inset: 0;
+    right: -5rem; /* extend into container right padding so label clears the image */
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.hero-annotations.hero-annotations-active {
+    opacity: 1;
+}
+
+.annotation-bracket-v {
+    position: absolute;
+    top: 22%;
+    left: 1%;
+    width: 0;
+    height: 48%;
+    border-left: 3px solid #CF132B;
+}
+
+
+.annotation-dot {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #CF132B;
+    transform: translate(-50%, -50%);
+}
+
+.annotation-arm {
+    position: absolute;
+    border-top: 3px solid #CF132B;
+}
+
+/* Bottom arm: 90° angle going right from the bracket bottom over the image */
+.annotation-arm-bottom {
+    top: 70%;
+    left: 1%;
+    width: 25%;
+}
+
+/* Dot at the text start (beginning of label-1) */
+.annotation-dot-top {
+    top: 22%;
+    left: 1%;
+}
+
+
+
+.annotation-label {
+    position: absolute;
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #3f3a34;
+    line-height: 1.5;
+}
+
+/* Label 1: top-left, above the bracket dot */
+.annotation-label-1 {
+    top: 7%;
+    left: 2%;
+}
+
+.annotation-line {
+    position: absolute;
+    border-top: 3px solid #CF132B;
+}
+
+/* Annotation 2: ~45° diagonal from upper area of image down to dot-2 */
+.annotation-line-2 {
+    top: 26%;
+    left: 62%;
+    width: 43%;
+    transform-origin: left center;
+    transform: rotate(45deg);
+}
+
+/* Dot at the right end of line-2, outside the image */
+.annotation-dot-2 {
+    top: 48%;
+    left: 92%;
+}
+
+/* Label 2: right of image at middle height */
+.annotation-label-2 {
+    top: 41%;
+    left: 93%;
 }
 
 /* Hero Showcase */
@@ -147,22 +255,31 @@
 }
 
 .capability-card {
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 0.625rem;
+    position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 600px;
     transition: var(--transition);
 }
 
-.capability-card:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: var(--shadow-hover);
-    background: rgba(255, 255, 255, 1);
+.capability-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(252, 252, 252, 0.6);
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.capability-card:hover::before {
+    background: rgba(252, 252, 252, 0.45);
 }
 
 .capability-image {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: 12.5rem;
-    overflow: hidden;
+    height: 100%;
 }
 
 .capability-image img {
@@ -177,21 +294,27 @@
 }
 
 .capability-content {
+    position: relative;
+    z-index: 2;
     padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     text-align: left;
 }
 
 .capability-content h3 {
     font-family: var(--font-display);
     font-size: 1.25rem;
-    color: var(--text-color);
+    color: #3f3a34;
     margin-bottom: 0.75rem;
     text-transform: uppercase;
 }
 
 .capability-content p {
     font-size: 0.875rem;
-    color: var(--text-light);
+    color: #3f3a34;
     line-height: 1.6;
 }
 
@@ -206,7 +329,7 @@
 
 .capability-specs li {
     font-size: 0.875rem;
-    color: var(--text-light);
+    color: #3f3a34;
     line-height: 1.6;
 }
 
@@ -416,8 +539,15 @@
 
 /* Materials Section */
 .materials {
+    min-height: 100dvh;
     padding: 5rem 0;
-    background: #fcfcfc;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/images/materials-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .section-title-large {
@@ -691,9 +821,17 @@
         max-width: 20rem;
     }
 
+    .hero-annotations {
+        display: none;
+    }
+
     .capabilities-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+    }
+
+    .capability-card {
+        height: 480px;
     }
 
     .service-split {
@@ -781,6 +919,10 @@
     .capabilities-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .capability-card {
+        height: 380px;
     }
 
     .cad-cam,
@@ -888,6 +1030,10 @@
     .cert-sgs-badge {
         width: 4rem;
         height: 4rem;
+    }
+
+    .capability-card {
+        height: 300px;
     }
 
     .cert-sgs-text {

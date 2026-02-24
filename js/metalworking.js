@@ -1,6 +1,25 @@
 // ===== Metalworking Page JavaScript =====
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Hero image swap on category hover
+    const imgFront    = document.getElementById('hero-img-front');
+    const imgBack     = document.getElementById('hero-img-back');
+    const annotations = document.getElementById('hero-annotations');
+
+    document.querySelectorAll('.category-column').forEach(col => {
+        col.addEventListener('mouseenter', () => {
+            const isAutomotive = col.dataset.category === 'automotive';
+            imgFront.classList.toggle('hero-img-active', isAutomotive);
+            imgBack.classList.toggle('hero-img-active', !isAutomotive);
+            annotations.classList.toggle('hero-annotations-active', isAutomotive);
+        });
+        col.addEventListener('mouseleave', () => {
+            imgFront.classList.add('hero-img-active');
+            imgBack.classList.remove('hero-img-active');
+            annotations.classList.add('hero-annotations-active');
+        });
+    });
+
     // Fade-in animations for capability cards
     const observerOptions = {
         threshold: 0.1,
