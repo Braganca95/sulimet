@@ -166,11 +166,11 @@
     border-top: 5px solid #E84060;
 }
 
-/* Bottom arm: 90° angle going right from the bracket bottom over the image */
+/* Arm connecting dot (outside image) to bracket top */
 .annotation-arm-bottom {
-    top: 70%;
-    left: 1%;
-    width: 25%;
+    top: 7%;
+    left: -3rem;
+    width: calc(3rem + 1% + 2.5px);
 }
 
 /* Dot outside image to the LEFT, at bracket-top height */
@@ -815,6 +815,12 @@
     }
 
     /* Fallback positions at tablet — reset negative offsets */
+    .annotation-arm-bottom {
+        top: 7%;
+        left: 1%;
+        width: 20%;
+    }
+
     .annotation-dot-top {
         left: calc(1% + 2.5px);
     }
