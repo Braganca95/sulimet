@@ -427,7 +427,7 @@
 /* Certification Section */
 .certification {
     padding: 5rem 0;
-    background: var(--bg-light);
+    background: #fcfcfc;
 }
 
 .certification-split {
@@ -459,9 +459,6 @@
     gap: 3rem;
 }
 
-.certification-logos img {
-    mix-blend-mode: multiply;
-}
 
 .cert-iso-badge {
     width: 8rem;
