@@ -1,6 +1,7 @@
 /* ===== Metalworking Page Styles ===== */
 
 /* Page-wide container override */
+.metalworking-hero .container,
 .capabilities .container,
 .services-wrapper .container,
 .certification .container,
@@ -9,11 +10,6 @@
 .footer-metalworking .container {
     max-width: none;
     padding: 0 5rem;
-}
-
-.metalworking-hero .container {
-    max-width: none;
-    padding: 0 5rem 0 2rem;
 }
 
 /* Page-wide typography */
@@ -42,7 +38,7 @@
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 7rem;
+    gap: 4rem;
     align-items: stretch;
     height: calc(100dvh - 4rem);
 }
@@ -389,8 +385,8 @@
 
 .service-split {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 0.75fr 1fr;
+    gap: 7rem;
     align-items: center;
 }
 
