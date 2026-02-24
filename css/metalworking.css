@@ -100,11 +100,20 @@
     height: 100%;
 }
 
-.hero-img {
-    position: absolute;
-    width: auto;
+/* Stage matches the image's exact rendered dimensions so annotations track it */
+.hero-annotation-stage {
+    position: relative;
     height: 80%;
     max-width: 80%;
+    aspect-ratio: 1015 / 1415;
+    overflow: visible;
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -794,7 +803,7 @@
         min-height: 40vh;
     }
 
-    .hero-image img {
+    .hero-annotation-stage {
         max-width: 20rem;
     }
 
@@ -1006,7 +1015,7 @@
         font-size: 1.625rem;
     }
 
-    .hero-image img {
+    .hero-annotation-stage {
         max-width: 15rem;
     }
 
