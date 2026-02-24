@@ -166,11 +166,11 @@
     border-top: 5px solid #E84060;
 }
 
-/* Left arm: horizontal line going LEFT from bracket top to outside image */
+/* Bottom arm: 90° angle going right from the bracket bottom over the image */
 .annotation-arm-bottom {
-    top: 7%;
-    left: -4.5rem;
-    width: calc(4.5rem + 1% + 2.5px);
+    top: 70%;
+    left: 1%;
+    width: 25%;
 }
 
 /* Dot at the beginning of label-1 text */
@@ -813,13 +813,7 @@
         right: -2.5rem;
     }
 
-    /* Reset arm to right-going at bottom, labels stay inside/near image at tablet */
-    .annotation-arm-bottom {
-        top: 70%;
-        left: 1%;
-        width: 20%;
-    }
-
+    /* Labels fall back to inside/near image at tablet */
     .annotation-label-1 {
         top: 7%;
         right: auto;
