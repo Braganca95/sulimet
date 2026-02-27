@@ -169,7 +169,75 @@ const translations = {
         "metalworking.footer.info.privacy": "Privacy policy",
         "metalworking.footer.info.compete": "Compete 2030",
         "metalworking.footer.info.contact": "Contact us",
-        "metalworking.footer.info.downloads": "Downloads"
+        "metalworking.footer.info.downloads": "Downloads",
+
+        // Electrical Systems Page — Hero
+        "electrical.hero.title": "Electrical Systems",
+        "electrical.hero.product.title": "Wire Harness",
+        "electrical.hero.product.description": "The companies Sulimet Wiring Harness and Sulimet C\u00e2blage focus on the production of wiring harnesses for both the automotive sector and various industrial applications.",
+
+        // Capabilities
+        "electrical.capabilities.title": "Capabilities",
+        "electrical.capabilities.prototyping.title": "PROTOTYPING",
+        "electrical.capabilities.prototyping.description": "Our engineering teams rely on advanced electrical design and simulation tools to develop accurate and reliable wiring solutions. Through a fast and flexible prototyping process, we validate connectivity, fit and functionality, ensuring seamless integration into our clients' production lines.",
+        "electrical.capabilities.quality.title": "QUALITY CONTROL",
+        "electrical.capabilities.quality.description": "To ensure maximum reliability, every wiring harness undergoes rigorous inspection and project-specific testing. Our quality laboratories validate new designs by assessing electrical performance, durability and material compliance, ensuring results that meet and often surpass industry standards.",
+        "electrical.capabilities.maintenance.title": "MAINTENANCE",
+        "electrical.capabilities.maintenance.description": "Our maintenance teams ensure the reliability of all production equipment through preventive routines and continuous monitoring. By combining technical expertise with real-time diagnostics, we minimize downtime, optimize performance and maintain stable conditions for high-quality wiring harness manufacturing.",
+        "electrical.capabilities.production.title": "PRODUCTION",
+        "electrical.capabilities.production.description": "Our production lines operate with advanced equipment and integrated traceability systems that ensure consistency and reliability in every wiring harness we manufacture. This technological environment supports continuous improvement, enabling adjustments in real time and driving efficiency through lean-based processes.",
+
+        // Certifications
+        "electrical.certification.title": "CERTIFICATIONS",
+        "electrical.certification.subtitle": "Our facilities comply with international quality standards, ensuring consistent and reliable production across all our units in Portugal and Morocco.",
+
+        // Manufacturing Technologies
+        "electrical.manufacturing.title": "Manufacturing Technologies",
+        "electrical.manufacturing.tech1.caption": "Automatic cable cutting<br>and crimping",
+        "electrical.manufacturing.tech2.caption": "Mechanical crimping",
+        "electrical.manufacturing.tech3.caption": "Splice ultrasonic welding",
+        "electrical.manufacturing.more": "More manufacturing technologies",
+        "electrical.manufacturing.list1.1": "Terminal ultrasonic welding",
+        "electrical.manufacturing.list1.2": "Selection dispenser",
+        "electrical.manufacturing.list1.3": "Wire twisting",
+        "electrical.manufacturing.list1.4": "PCB welding",
+        "electrical.manufacturing.list1.5": "Assembly lines",
+        "electrical.manufacturing.list1.6": "Electrical checking",
+        "electrical.manufacturing.list2.1": "Sealing verification",
+        "electrical.manufacturing.list2.2": "Subsets already assembled of electrical wiring with plastic parts",
+        "electrical.manufacturing.list2.3": "Assembly lines",
+        "electrical.manufacturing.list2.4": "Automatic coaxial cable cutting and stripping",
+        "electrical.manufacturing.list2.5": "Automatic unitary seals positioning",
+        "electrical.manufacturing.list3.1": "Ultrasonic conforming of cable ends",
+        "electrical.manufacturing.list3.2": "Thermo-shrinkable sealing sleeve application",
+        "electrical.manufacturing.list3.3": "Cable ends tinning",
+        "electrical.manufacturing.list3.4": "Components with highly innovative plastic compounds",
+
+        // Contacts
+        "electrical.contacts.title": "CONTACTS",
+        "electrical.contacts.portugal.company": "Sulimet Wiring Harness",
+        "electrical.contacts.portugal.address": "R. Zona Industrial, 773, Canedo, Aveiro, Portugal, 4525-062",
+        "electrical.contacts.morocco.company": "Sulimet C\u00e2blage",
+        "electrical.contacts.morocco.address": "Ilot 13 Lot n.\u00b03, Tanger Med Free Zone, Tanger, Tanger-T\u00e9touan-Al Hoce\u00efma, Morocco, 90000",
+        "electrical.contacts.sales.title": "Sales Contact",
+        "electrical.contacts.sales.name": "\u00c2ntonio Guedes",
+
+        // Footer
+        "electrical.footer.about.title": "About",
+        "electrical.footer.about.who": "Who we are",
+        "electrical.footer.about.history": "History",
+        "electrical.footer.about.contact": "Contact us",
+        "electrical.footer.about.downloads": "Downloads",
+        "electrical.footer.capabilities.title": "Capabilities",
+        "electrical.footer.capabilities.prototyping": "Prototyping",
+        "electrical.footer.capabilities.quality": "Quality Control",
+        "electrical.footer.capabilities.contact": "Contact us",
+        "electrical.footer.capabilities.downloads": "Downloads",
+        "electrical.footer.info.title": "Info",
+        "electrical.footer.info.privacy": "Privacy policy",
+        "electrical.footer.info.compete": "Compete 2030",
+        "electrical.footer.info.contact": "Contact us",
+        "electrical.footer.info.downloads": "Downloads"
     },
     pt: {
         // Navigation
@@ -340,7 +408,75 @@ const translations = {
         "metalworking.footer.info.privacy": "Política de privacidade",
         "metalworking.footer.info.compete": "Compete 2030",
         "metalworking.footer.info.contact": "Contacte-nos",
-        "metalworking.footer.info.downloads": "Downloads"
+        "metalworking.footer.info.downloads": "Downloads",
+
+        // Electrical Systems Page — Hero
+        "electrical.hero.title": "Sistemas El\u00e9tricos",
+        "electrical.hero.product.title": "Cablagem",
+        "electrical.hero.product.description": "As empresas Sulimet Wiring Harness e Sulimet C\u00e2blage focam-se na produ\u00e7\u00e3o de cablagens para o setor autom\u00f3vel e para diversas aplica\u00e7\u00f5es industriais.",
+
+        // Capabilities
+        "electrical.capabilities.title": "Capacidades",
+        "electrical.capabilities.prototyping.title": "PROTOTIPAGEM",
+        "electrical.capabilities.prototyping.description": "As nossas equipas de engenharia recorrem a ferramentas avan\u00e7adas de design e simula\u00e7\u00e3o el\u00e9trica para desenvolver solu\u00e7\u00f5es de cablagem precisas e fi\u00e1veis. Atrav\u00e9s de um processo de prototipagem r\u00e1pido e flex\u00edvel, validamos a conectividade, a montagem e a funcionalidade, garantindo uma integra\u00e7\u00e3o perfeita nas linhas de produ\u00e7\u00e3o dos nossos clientes.",
+        "electrical.capabilities.quality.title": "CONTROLO DE QUALIDADE",
+        "electrical.capabilities.quality.description": "Para garantir a m\u00e1xima fiabilidade, cada cablagem \u00e9 submetida a inspe\u00e7\u00e3o rigorosa e a testes espec\u00edficos de projeto. Os nossos laborat\u00f3rios de qualidade validam novos designs avaliando o desempenho el\u00e9trico, a durabilidade e a conformidade dos materiais, assegurando resultados que cumprem e frequentemente superam os padr\u00f5es da ind\u00fastria.",
+        "electrical.capabilities.maintenance.title": "MANUTEN\u00c7\u00c3O",
+        "electrical.capabilities.maintenance.description": "As nossas equipas de manuten\u00e7\u00e3o garantem a fiabilidade de todos os equipamentos de produ\u00e7\u00e3o atrav\u00e9s de rotinas preventivas e monitoriza\u00e7\u00e3o cont\u00ednua. Combinando conhecimento t\u00e9cnico com diagn\u00f3sticos em tempo real, minimizamos paragens, otimizamos o desempenho e mantemos condi\u00e7\u00f5es est\u00e1veis para a produ\u00e7\u00e3o de cablagens de alta qualidade.",
+        "electrical.capabilities.production.title": "PRODU\u00c7\u00c3O",
+        "electrical.capabilities.production.description": "As nossas linhas de produ\u00e7\u00e3o operam com equipamentos avan\u00e7ados e sistemas de rastreabilidade integrados que garantem consist\u00eancia e fiabilidade em cada cablagem que fabricamos. Este ambiente tecnol\u00f3gico suporta a melhoria cont\u00ednua, permitindo ajustes em tempo real e impulsionando a efici\u00eancia atrav\u00e9s de processos lean.",
+
+        // Certifications
+        "electrical.certification.title": "CERTIFICA\u00c7\u00d5ES",
+        "electrical.certification.subtitle": "As nossas instala\u00e7\u00f5es cumprem os padr\u00f5es internacionais de qualidade, garantindo uma produ\u00e7\u00e3o consistente e fi\u00e1vel em todas as nossas unidades em Portugal e Marrocos.",
+
+        // Manufacturing Technologies
+        "electrical.manufacturing.title": "Tecnologias de Fabrico",
+        "electrical.manufacturing.tech1.caption": "Corte e crimpagem<br>autom\u00e1tica de cabos",
+        "electrical.manufacturing.tech2.caption": "Crimpagem mec\u00e2nica",
+        "electrical.manufacturing.tech3.caption": "Soldadura ultrass\u00f3nica de splices",
+        "electrical.manufacturing.more": "Mais tecnologias de fabrico",
+        "electrical.manufacturing.list1.1": "Soldadura ultrass\u00f3nica de terminais",
+        "electrical.manufacturing.list1.2": "Dispensador de sele\u00e7\u00e3o",
+        "electrical.manufacturing.list1.3": "Tor\u00e7\u00e3o de fios",
+        "electrical.manufacturing.list1.4": "Soldadura de PCB",
+        "electrical.manufacturing.list1.5": "Linhas de montagem",
+        "electrical.manufacturing.list1.6": "Verifica\u00e7\u00e3o el\u00e9trica",
+        "electrical.manufacturing.list2.1": "Verifica\u00e7\u00e3o de selagem",
+        "electrical.manufacturing.list2.2": "Subconjuntos de cablagem el\u00e9trica j\u00e1 montados com pe\u00e7as pl\u00e1sticas",
+        "electrical.manufacturing.list2.3": "Linhas de montagem",
+        "electrical.manufacturing.list2.4": "Corte e decapagem autom\u00e1tica de cabo coaxial",
+        "electrical.manufacturing.list2.5": "Posicionamento autom\u00e1tico de vedantes unit\u00e1rios",
+        "electrical.manufacturing.list3.1": "Conforma\u00e7\u00e3o ultrass\u00f3nica de extremidades de cabo",
+        "electrical.manufacturing.list3.2": "Aplica\u00e7\u00e3o de manga termorretract\u00edl de selagem",
+        "electrical.manufacturing.list3.3": "Estanhagem de extremidades de cabo",
+        "electrical.manufacturing.list3.4": "Componentes com compostos pl\u00e1sticos altamente inovadores",
+
+        // Contacts
+        "electrical.contacts.title": "CONTACTOS",
+        "electrical.contacts.portugal.company": "Sulimet Wiring Harness",
+        "electrical.contacts.portugal.address": "R. Zona Industrial, 773, Canedo, Aveiro, Portugal, 4525-062",
+        "electrical.contacts.morocco.company": "Sulimet C\u00e2blage",
+        "electrical.contacts.morocco.address": "Ilot 13 Lot n.\u00b03, Tanger Med Free Zone, Tanger, Tanger-T\u00e9touan-Al Hoce\u00efma, Marrocos, 90000",
+        "electrical.contacts.sales.title": "Contacto Comercial",
+        "electrical.contacts.sales.name": "\u00c2ntonio Guedes",
+
+        // Footer
+        "electrical.footer.about.title": "Sobre",
+        "electrical.footer.about.who": "Quem somos",
+        "electrical.footer.about.history": "Hist\u00f3ria",
+        "electrical.footer.about.contact": "Contacte-nos",
+        "electrical.footer.about.downloads": "Downloads",
+        "electrical.footer.capabilities.title": "Capacidades",
+        "electrical.footer.capabilities.prototyping": "Prototipagem",
+        "electrical.footer.capabilities.quality": "Controlo de Qualidade",
+        "electrical.footer.capabilities.contact": "Contacte-nos",
+        "electrical.footer.capabilities.downloads": "Downloads",
+        "electrical.footer.info.title": "Info",
+        "electrical.footer.info.privacy": "Pol\u00edtica de privacidade",
+        "electrical.footer.info.compete": "Compete 2030",
+        "electrical.footer.info.contact": "Contacte-nos",
+        "electrical.footer.info.downloads": "Downloads"
     }
 };
 

@@ -1,0 +1,864 @@
+/* ===== Electrical Systems Page Styles ===== */
+
+/* Page-wide container override */
+.capabilities-electrical .container,
+.electrical-services-wrapper .container,
+.electrical-certification .container,
+.manufacturing-tech .container,
+.contacts-section .container,
+.footer-metalworking .container {
+    max-width: none;
+    padding: 0 5rem;
+}
+
+/* ===== Shared Typography ===== */
+
+/* Red section titles (prototyping, quality control, etc.) */
+.body-title {
+    color: #cf132b;
+    font-size: 3.125rem;
+}
+
+.body-title + p {
+    font-size: 1.5625rem;
+    line-height: 2.5rem;
+    color: #3f3a34;
+}
+
+/* Dark section title (capabilities, manufacturing, contacts) */
+.electrical-section-title {
+    font-family: var(--font-display);
+    font-size: 3.125rem;
+    font-weight: 800;
+    color: #3f3a34;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    margin: 0;
+}
+
+/* ===== Hero Section ===== */
+.electrical-hero {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    padding-top: 4rem; /* header height */
+    background: #fcfcfc;
+    overflow: hidden;
+}
+
+.electrical-hero-header {
+    padding: 2rem 5rem 1.5rem;
+    flex-shrink: 0;
+}
+
+.electrical-hero-title {
+    font-family: var(--font-display);
+    font-size: 3.125rem;
+    font-weight: 800;
+    color: #3f3a34;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    margin: 0;
+}
+
+.electrical-hero-image {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.electrical-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Semi-transparent overlay panel — left side of image */
+.electrical-hero-panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 39.375rem; /* 630px */
+    background: rgba(219, 219, 219, 0.75);
+    padding: 2.5rem 3rem 3rem;
+}
+
+.panel-product-title {
+    font-family: var(--font-display);
+    font-size: 3.125rem;
+    font-weight: 800;
+    color: #3f3a34;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 1.25rem;
+}
+
+.panel-product-text {
+    font-family: var(--font-primary);
+    font-size: 1.5625rem;
+    font-weight: 600; /* SemiBold */
+    line-height: 3.125rem;
+    color: #3f3a34;
+    margin: 0;
+}
+
+/* Vertical dots — right side of hero image */
+.electrical-hero-dots {
+    position: absolute;
+    right: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    align-items: center;
+}
+
+.hero-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.hero-dot.active {
+    background: #ffffff;
+    width: 0.625rem;
+    height: 0.625rem;
+}
+
+/* ===== Showcase / Video Section ===== */
+.hero-showcase-electrical {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-showcase-electrical-media {
+    width: 100%;
+    height: 40rem;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.hero-showcase-electrical-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== Capabilities Header ===== */
+.capabilities-electrical {
+    padding: 5rem 0 3rem;
+    background: var(--bg-light);
+}
+
+/* ===== Service Splits ===== */
+.electrical-services-wrapper {
+    background: #fcfcfc;
+}
+
+.electrical-service {
+    padding: 5rem 0;
+    background: #fcfcfc;
+}
+
+.service-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* Alternate image/text order for even sections */
+.electrical-services-wrapper > :nth-child(even) .service-split > :first-child {
+    order: 2;
+}
+
+.electrical-services-wrapper > :nth-child(even) .service-split > :last-child {
+    order: 1;
+}
+
+.service-text {
+    padding: 2rem 0;
+}
+
+.service-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+}
+
+.service-image {
+    width: 100%;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.375rem;
+    box-shadow: var(--shadow);
+}
+
+/* ===== Certifications Section ===== */
+.electrical-certification {
+    padding: 5rem 0;
+    background: #fcfcfc;
+}
+
+.certification-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.certification-text .section-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.certification-text .section-subtitle {
+    font-size: 1rem;
+    color: var(--text-light);
+    text-align: left;
+    line-height: 1.8;
+}
+
+.certification-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.certification-logos img {
+    height: 6rem;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ===== Manufacturing Technologies ===== */
+.manufacturing-tech {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.manufacturing-title {
+    line-height: 3.75rem; /* 60pt */
+    margin-bottom: 3rem;
+}
+
+.tech-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tech-video-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-video-media {
+    width: 100%;
+    height: 37.5rem; /* 600px */
+    overflow: hidden;
+    background: #1a1a1a;
+    border-radius: 0.25rem;
+}
+
+.tech-video-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tech-video-caption {
+    font-family: var(--font-primary);
+    font-size: 1.5625rem; /* 25pt */
+    font-weight: 800; /* Extrabold */
+    line-height: 1.875rem; /* 30pt */
+    color: #3f3a34;
+    padding: 1.25rem 0 0.5rem;
+    margin: 0;
+}
+
+/* More technologies link (reuses metalworking pattern) */
+.more-technologies {
+    text-align: center;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.more-technologies a {
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.more-technologies a:hover {
+    color: var(--primary-color);
+}
+
+.more-technologies svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.more-technologies:hover svg {
+    color: var(--primary-color);
+    transform: translateY(0.1875rem);
+}
+
+/* Technology list grid */
+.tech-list-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-list li {
+    font-family: var(--font-primary);
+    font-size: 1.25rem; /* 20pt */
+    font-weight: 500; /* Medium */
+    color: #3f3a34;
+    line-height: 1.7;
+    margin-bottom: 0.875rem;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.tech-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background: #cf132b;
+    flex-shrink: 0;
+}
+
+/* ===== Contacts Section ===== */
+.contacts-section {
+    padding: 5rem 0;
+    background: #fcfcfc;
+}
+
+/* Override title color for electrical (dark, not red) */
+.electrical-contacts-title {
+    font-family: var(--font-display);
+    font-size: 3.125rem;
+    font-weight: 800;
+    color: #3f3a34;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    margin-bottom: 3rem;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.0625rem 1fr;
+    gap: 4rem;
+    align-items: start;
+    position: relative;
+}
+
+.contacts-grid::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 0.125rem;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+}
+
+.contact-block {
+    padding: 0 2rem;
+}
+
+/* Company names: red, 35pt — per mockup spec */
+.contact-company {
+    font-family: var(--font-display);
+    font-size: 2.1875rem; /* 35pt */
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.contact-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.contact-details-list p {
+    font-size: 1.5625rem; /* 25pt */
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 2.8125rem; /* 45pt */
+    margin: 0;
+}
+
+.contact-details-list a {
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.contact-details-list a:hover {
+    color: var(--primary-color);
+}
+
+.contact-address {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    color: var(--text-light) !important;
+}
+
+/* Sales Contact */
+.sales-contact {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.sales-contact h4 {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05rem;
+}
+
+.sales-name {
+    font-weight: 600;
+    color: var(--text-color) !important;
+}
+
+.sales-contact p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0 0 0.5rem;
+    line-height: 1.6;
+}
+
+.sales-contact a {
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.sales-contact a:hover {
+    color: var(--primary-color);
+}
+
+/* ===== Footer (reuse metalworking footer styles) ===== */
+.footer-metalworking {
+    background: #fcfcfc;
+    padding: 3rem 0 2rem;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.footer-column a {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.footer-column a:hover {
+    color: var(--primary-color);
+    padding-left: 0.25rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.footer-social a {
+    width: 2rem;
+    height: 2rem;
+    background: var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--primary-gradient);
+    transform: translateY(-0.125rem);
+}
+
+.footer-social svg {
+    width: 1rem;
+    height: 1rem;
+    color: var(--text-white);
+    fill: var(--text-white);
+}
+
+.footer-certifications {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-certifications img {
+    height: 3rem;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-certifications img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* ===== Fade-in animation ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Responsive — Tablet (64rem / 1024px) ===== */
+@media (max-width: 64rem) {
+    .capabilities-electrical .container,
+    .electrical-services-wrapper .container,
+    .electrical-certification .container,
+    .manufacturing-tech .container,
+    .contacts-section .container,
+    .footer-metalworking .container {
+        padding: 0 2.5rem;
+    }
+
+    .electrical-hero-header {
+        padding: 2rem 2.5rem 1.5rem;
+    }
+
+    .electrical-hero-title {
+        font-size: 2.25rem;
+    }
+
+    .electrical-hero-panel {
+        width: 28rem;
+        padding: 2rem 2.5rem;
+    }
+
+    .panel-product-title {
+        font-size: 2.25rem;
+    }
+
+    .panel-product-text {
+        font-size: 1.125rem;
+        line-height: 2rem;
+    }
+
+    .electrical-section-title {
+        font-size: 2.25rem;
+    }
+
+    .body-title {
+        font-size: 2.25rem;
+    }
+
+    .body-title + p {
+        font-size: 1.125rem;
+        line-height: 1.8rem;
+    }
+
+    .hero-showcase-electrical-media {
+        height: 25rem;
+    }
+
+    .service-split {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .electrical-services-wrapper > :nth-child(even) .service-split > :first-child,
+    .electrical-services-wrapper > :nth-child(even) .service-split > :last-child {
+        order: unset;
+    }
+
+    .certification-split {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .tech-videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .tech-video-media {
+        height: 25rem;
+    }
+
+    .tech-list-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contacts-grid::before {
+        display: none;
+    }
+
+    .contact-block {
+        padding: 0;
+    }
+
+    .footer-columns {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+/* ===== Responsive — Mobile (48rem / 768px) ===== */
+@media (max-width: 48rem) {
+    .capabilities-electrical .container,
+    .electrical-services-wrapper .container,
+    .electrical-certification .container,
+    .manufacturing-tech .container,
+    .contacts-section .container,
+    .footer-metalworking .container {
+        padding: 0 1.25rem;
+    }
+
+    .electrical-hero-header {
+        padding: 1.5rem 1.25rem 1rem;
+    }
+
+    .electrical-hero-title {
+        font-size: 1.75rem;
+    }
+
+    .electrical-hero-panel {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .panel-product-title {
+        font-size: 1.75rem;
+    }
+
+    .panel-product-text {
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+
+    .electrical-hero-dots {
+        display: none;
+    }
+
+    .electrical-section-title {
+        font-size: 1.75rem;
+    }
+
+    .body-title {
+        font-size: 1.75rem;
+    }
+
+    .body-title + p {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
+    .capabilities-electrical {
+        padding: 3rem 0 2rem;
+    }
+
+    .electrical-service {
+        padding: 3rem 0;
+    }
+
+    .hero-showcase-electrical-media {
+        height: 15rem;
+    }
+
+    .manufacturing-tech {
+        padding: 3rem 0;
+    }
+
+    .manufacturing-title {
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+    }
+
+    .tech-videos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .tech-video-media {
+        height: 18rem;
+    }
+
+    .tech-video-caption {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+
+    .tech-list-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .tech-list li {
+        font-size: 1rem;
+    }
+
+    .contacts-section {
+        padding: 3rem 0;
+    }
+
+    .electrical-contacts-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-company {
+        font-size: 1.5rem;
+    }
+
+    .contact-details-list p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .certification-logos {
+        gap: 1.25rem;
+    }
+
+    .certification-logos img {
+        height: 4rem;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-certifications {
+        gap: 1rem;
+    }
+
+    .footer-certifications img {
+        height: 2rem;
+    }
+}
+
+/* ===== Responsive — Small Mobile (30rem / 480px) ===== */
+@media (max-width: 30rem) {
+    .electrical-hero-title {
+        font-size: 1.5rem;
+    }
+
+    .panel-product-title {
+        font-size: 1.5rem;
+    }
+
+    .electrical-section-title {
+        font-size: 1.5rem;
+    }
+
+    .body-title {
+        font-size: 1.5rem;
+    }
+
+    .electrical-contacts-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-company {
+        font-size: 1.25rem;
+    }
+
+    .manufacturing-title {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
+}
