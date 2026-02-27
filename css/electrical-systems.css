@@ -104,13 +104,15 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 39.375rem;  /* 630px */
-    height: 49.0625rem; /* 785px */
+    width: 39.375rem;   /* 630px @ 1080p */
+    height: 49.0625rem; /* 785px @ 1080p */
     background: rgba(219, 219, 219, 0.75);
-    padding: 2.5rem 3rem 3rem;
+    padding: 2.5rem 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .panel-product-title {
