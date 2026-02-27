@@ -98,14 +98,19 @@
     user-select: none;
 }
 
-/* Semi-transparent overlay panel — left side of image */
+/* Semi-transparent overlay panel — left side of image, centred vertically */
 .electrical-hero-panel {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     left: 0;
-    width: 39.375rem; /* 630px */
+    transform: translateY(-50%);
+    width: 39.375rem;  /* 630px */
+    height: 49.0625rem; /* 785px */
     background: rgba(219, 219, 219, 0.75);
     padding: 2.5rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .panel-product-title {
