@@ -67,13 +67,34 @@
     overflow: hidden;
 }
 
-.electrical-hero-bg {
+/* ===== Hero Slider ===== */
+.hero-slider {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
+    display: block;
+    user-select: none;
 }
 
 /* Semi-transparent overlay panel — left side of image */
@@ -125,6 +146,9 @@
     background: rgba(255, 255, 255, 0.45);
     transition: var(--transition);
     flex-shrink: 0;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .hero-dot.active {
