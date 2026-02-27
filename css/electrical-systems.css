@@ -70,9 +70,10 @@
 /* ===== Hero Slider ===== */
 .hero-slider {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 19.6875rem; /* half of panel width (39.375rem ÷ 2) */
+    right: 0;
+    bottom: 0;
 }
 
 .hero-slide {
@@ -642,6 +643,11 @@
         padding: 2rem 2.5rem;
     }
 
+    /* slider starts at half of 28rem */
+    .hero-slider {
+        left: 14rem;
+    }
+
     .panel-product-title {
         font-size: 2.25rem;
     }
@@ -747,6 +753,11 @@
     .panel-product-text {
         font-size: 1rem;
         line-height: 1.75rem;
+    }
+
+    /* panel is full-width on mobile — slider fills full width too */
+    .hero-slider {
+        left: 0;
     }
 
     .electrical-hero-dots {
