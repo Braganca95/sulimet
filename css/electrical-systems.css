@@ -65,7 +65,7 @@
     position: relative;
     flex: 1;
     overflow: hidden;
-    margin: 10rem;
+    margin: 10rem 25rem;
 }
 
 /* ===== Hero Slider ===== */
@@ -73,8 +73,8 @@
     position: absolute;
     top: 0;
     left: 16rem; /* half of panel width (32rem ÷ 2) */
-    right: 0;
-    bottom: 0;
+    width: clamp(20rem, 72.9vw, 100rem);   /* 1400px @ 1920px viewport */
+    height: clamp(15rem, 57.3vw, 78.571rem); /* 1100px @ 1920px viewport, maintains 14:11 ratio */
 }
 
 .hero-slide {
@@ -643,7 +643,7 @@
     }
 
     .electrical-hero-image {
-        margin: 5rem;
+        margin: 5rem 12.5rem;
     }
 
     .electrical-hero-title {
@@ -750,7 +750,7 @@
     }
 
     .electrical-hero-image {
-        margin: 2rem;
+        margin: 2rem 5rem;
     }
 
     .electrical-hero-title {
