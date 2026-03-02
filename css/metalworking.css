@@ -773,6 +773,19 @@
     transform: scale(1.05);
 }
 
+/* ===== Responsive Design - Large Desktop ===== */
+@media (max-width: 96rem) {
+    .metalworking-hero .container,
+    .capabilities .container,
+    .services-wrapper .container,
+    .certification .container,
+    .materials .container,
+    .contacts-section .container,
+    .footer-metalworking .container {
+        padding: 0 15%;
+    }
+}
+
 /* ===== Responsive Design - Tablet ===== */
 @media (max-width: 64rem) {
     .metalworking-hero .container,

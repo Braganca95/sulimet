@@ -628,6 +628,22 @@
     transform: translateY(0);
 }
 
+/* ===== Responsive — Large Desktop (96rem / 1344px) ===== */
+@media (max-width: 96rem) {
+    .capabilities-electrical .container,
+    .electrical-services-wrapper .container,
+    .electrical-certification .container,
+    .manufacturing-tech .container,
+    .contacts-section .container,
+    .footer-metalworking .container {
+        padding: 0 15%;
+    }
+
+    .electrical-hero-header {
+        padding: 2rem 15% 1.5rem;
+    }
+}
+
 /* ===== Responsive — Tablet (64rem / 1024px) ===== */
 @media (max-width: 64rem) {
     .capabilities-electrical .container,
