@@ -149,21 +149,22 @@
 }
 
 .hero-dot {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.45);
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.9);
     transition: var(--transition);
     flex-shrink: 0;
-    border: none;
     padding: 0;
     cursor: pointer;
 }
 
 .hero-dot.active {
-    background: #ffffff;
-    width: 0.625rem;
-    height: 0.625rem;
+    background: #cf132b;
+    width: 0.875rem;
+    height: 0.875rem;
+    border-color: #cf132b;
 }
 
 /* ===== Showcase / Video Section ===== */
