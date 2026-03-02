@@ -99,7 +99,7 @@ function createServicesCarouselDots() {
 
 function updateServicesCarousel() {
     const wrapper = document.querySelector('.services-wrapper');
-    const gap = 30; // 1.875rem in px
+    const gap = 1.875 * parseFloat(getComputedStyle(document.documentElement).fontSize);
     const wrapperWidth = wrapper ? wrapper.offsetWidth : 0;
     const itemWidth = (wrapperWidth - gap * (serviceItemsPerView - 1)) / serviceItemsPerView;
     const translateX = currentServiceSlide * (itemWidth + gap);

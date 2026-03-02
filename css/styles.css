@@ -462,7 +462,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-header {
     flex-shrink: 0;
-    padding: 0 25%;
+    padding: 0 15%;
 }
 
 .services .service-divider {
@@ -477,7 +477,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: stretch;
     width: 100%;
     gap: clamp(0.5rem, 1vw, 1.5rem);
-    padding: 0 25%;
+    padding: 0 15%;
 }
 
 .services-wrapper {
@@ -1050,14 +1050,6 @@ h1, h2, h3, h4, h5, h6 {
     .about .container {
         padding-left: 15%;
         padding-right: 15%;
-    }
-
-    .services-header {
-        padding: 0 15%;
-    }
-
-    .services-carousel {
-        padding: 0 15%;
     }
 }
 
