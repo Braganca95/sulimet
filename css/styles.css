@@ -78,9 +78,8 @@ ul {
 
 .container {
     width: 100%;
-    max-width: 75rem;
     margin: 0 auto;
-    padding: 0 1.25rem;
+    padding: 0 25%;
 }
 
 /* ===== Typography ===== */
@@ -358,7 +357,7 @@ h1, h2, h3, h4, h5, h6 {
 .about .container {
     width: 100%;
     max-width: 100%;
-    padding: 0 clamp(1.25rem, 5vw, 6rem);
+    padding: 0 25%;
 }
 
 .about .section-title {
@@ -453,7 +452,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     width: 100%;
     max-width: 100%;
-    padding: 0 clamp(1.25rem, 5vw, 6rem);
+    padding: 0;
 }
 
 .services .section-title {
@@ -463,6 +462,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-header {
     flex-shrink: 0;
+    padding: 0 25%;
 }
 
 .services .service-divider {
@@ -477,6 +477,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: stretch;
     width: 100%;
     gap: clamp(0.5rem, 1vw, 1.5rem);
+    padding: 0 25%;
 }
 
 .services-wrapper {
@@ -783,7 +784,7 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.1fr) minmax(0, 1fr);
     gap: clamp(1.5rem, 4vw, 6rem);
-    padding: 0 clamp(1rem, 4vw, 5rem);
+    padding: 0;
 }
 
 .global-stat {
@@ -1045,6 +1046,20 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Responsive Design ===== */
 @media (max-width: 64rem) {
+    .container,
+    .about .container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .services-header {
+        padding: 0 10%;
+    }
+
+    .services-carousel {
+        padding: 0 10%;
+    }
+
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1064,6 +1079,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 48rem) {
+    .container,
+    .about .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .services-header {
+        padding: 0 5%;
+    }
+
+    .services-carousel {
+        padding: 0 5%;
+    }
+
     .hero-bg {
         flex-direction: column;
     }
@@ -1190,8 +1219,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 30rem) {
-    .container {
-        padding: 0 0.9375rem;
+    .container,
+    .about .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .services-header {
+        padding: 0 1.25rem;
+    }
+
+    .services-carousel {
+        padding: 0 1.25rem;
     }
 
     .btn {

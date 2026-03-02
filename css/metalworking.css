@@ -9,7 +9,7 @@
 .contacts-section .container,
 .footer-metalworking .container {
     max-width: none;
-    padding: 0 5rem;
+    padding: 0 25%;
 }
 
 /* Page-wide typography */
@@ -782,7 +782,7 @@
     .materials .container,
     .contacts-section .container,
     .footer-metalworking .container {
-        padding: 0 2.5rem;
+        padding: 0 10%;
     }
 
     .body-title {
@@ -895,7 +895,7 @@
     .materials .container,
     .contacts-section .container,
     .footer-metalworking .container {
-        padding: 0 1.25rem;
+        padding: 0 5%;
     }
 
     .body-title {
