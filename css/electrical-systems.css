@@ -72,7 +72,7 @@
 .hero-slider {
     position: absolute;
     top: 0;
-    left: 16rem; /* half of panel width (32rem ÷ 2) */
+    left: clamp(3.2rem, 11.65vw, 16rem); /* half of panel width, scales with viewport */
     width: clamp(20rem, 72.9vw, 100rem);   /* 1400px @ 1920px viewport */
     height: clamp(15rem, 57.3vw, 78.571rem); /* 1100px @ 1920px viewport, maintains 14:11 ratio */
 }
@@ -105,7 +105,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 32rem;
+    width: clamp(6.4rem, 23.3vw, 32rem); /* 32% of slider width, scales with viewport */
     height: 75%;        /* proportional to slider height */
     background: rgba(219, 219, 219, 0.75);
     padding: 2.5rem 3rem;
@@ -651,13 +651,7 @@
     }
 
     .electrical-hero-panel {
-        width: 28rem;
         padding: 2rem 2.5rem;
-    }
-
-    /* slider starts at half of 28rem */
-    .hero-slider {
-        left: 14rem;
     }
 
     .panel-product-title {
