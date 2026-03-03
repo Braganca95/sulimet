@@ -9,8 +9,9 @@
 .contacts-section .container,
 .footer-metalworking .container {
     max-width: none;
-    padding: 0 25%;
+    padding: 0 20%;
 }
+
 
 /* Page-wide typography */
 .body-title {
@@ -37,8 +38,8 @@
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16rem;
+    grid-template-columns: 3fr 1fr;
+    gap: 8rem;
     align-items: stretch;
     height: calc(100dvh - 4rem);
 }
@@ -62,9 +63,13 @@
 /* Category Columns */
 .category-columns {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 3rem;
     margin-bottom: 2rem;
+}
+
+.category-column {
+    min-width: 0;
 }
 
 .category-title {
@@ -103,8 +108,8 @@
 /* Stage matches the image's exact rendered dimensions so annotations track it */
 .hero-annotation-stage {
     position: relative;
-    height: 60%;
-    max-width: 60%;
+    height: 52%;
+    max-width: 52%;
     aspect-ratio: 1015 / 1415;
     overflow: visible;
 }
@@ -267,7 +272,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 600px;
+    height: 440px;
     transition: var(--transition);
 }
 

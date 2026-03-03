@@ -542,7 +542,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-year {
     font-family: 'Microgramma', var(--font-display);
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     color: #fff;
     text-align: left;
     margin-bottom: 0.5rem;
@@ -558,8 +558,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-description {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: clamp(0.75rem, 1.5vw, 1.5625rem);
+    font-weight: 400;
+    font-size: clamp(0.75rem, 1.1vw, 1.125rem);
     color: #fff;
     line-height: 1.5;
 }
@@ -634,7 +634,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     gap: 0.625rem;
-    margin-top: 0.5rem;
+    margin-top: 0.125rem;
     padding-bottom: 0.25rem;
 }
 
