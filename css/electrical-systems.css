@@ -53,7 +53,7 @@
 
 .electrical-hero-title {
     font-family: var(--font-display);
-    font-size: 3.125rem;
+    font-size: clamp(1.5rem, 1.95vw, 10rem);
     font-weight: 800;
     color: #3f3a34;
     text-transform: uppercase;
@@ -65,16 +65,18 @@
     position: relative;
     flex: 1;
     overflow: hidden;
-    margin: 10rem 25rem;
+    margin: 6.25vw 15.625vw;
 }
 
 /* ===== Hero Slider ===== */
 .hero-slider {
     position: absolute;
     top: 0;
-    left: clamp(3.2rem, 11.65vw, 16rem); /* half of panel width, scales with viewport */
-    width: clamp(20rem, 72.9vw, 100rem);   /* 1400px @ 1920px viewport */
-    height: clamp(15rem, 57.3vw, 78.571rem); /* 1100px @ 1920px viewport, maintains 14:11 ratio */
+    left: clamp(3.2rem, 11.65vw, 16rem);
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 100%;
 }
 
 .hero-slide {
@@ -658,14 +660,6 @@
         padding: 2rem 10% 1.5rem;
     }
 
-    .electrical-hero-image {
-        margin: 5rem 12.5rem;
-    }
-
-    .electrical-hero-title {
-        font-size: 2.25rem;
-    }
-
     .electrical-hero-panel {
         padding: 2rem 2.5rem;
     }
@@ -759,14 +753,6 @@
         padding: 1.5rem 5% 1rem;
     }
 
-    .electrical-hero-image {
-        margin: 2rem 5rem;
-    }
-
-    .electrical-hero-title {
-        font-size: 1.75rem;
-    }
-
     .electrical-hero-panel {
         width: 100%;
         padding: 1.5rem;
@@ -779,11 +765,6 @@
     .panel-product-text {
         font-size: 1rem;
         line-height: 1.75rem;
-    }
-
-    /* panel is full-width on mobile — slider fills full width too */
-    .hero-slider {
-        left: 0;
     }
 
     .electrical-hero-dots {
@@ -894,10 +875,6 @@
 
 /* ===== Responsive — Small Mobile (30rem / 480px) ===== */
 @media (max-width: 30rem) {
-    .electrical-hero-title {
-        font-size: 1.5rem;
-    }
-
     .panel-product-title {
         font-size: 1.5rem;
     }
