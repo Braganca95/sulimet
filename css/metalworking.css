@@ -30,8 +30,8 @@
     height: 100vh;
     height: 100dvh;
     display: flex;
-    align-items: center;
-    padding: 4rem 0 0;
+    align-items: flex-start;
+    padding: 7rem 0 0;
     background: #fcfcfc;
     overflow: hidden;
 }
@@ -41,16 +41,18 @@
     grid-template-columns: 3fr 1fr;
     gap: 8rem;
     align-items: stretch;
-    height: calc(100dvh - 4rem);
+    height: calc(100dvh - 7rem);
 }
 
 .hero-text {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+    position: relative;
 }
 
 .hero-title {
+    position: absolute;
+    top: 0;
     font-family: var(--font-display);
     font-size: 3.125rem;
     font-weight: 800;
@@ -287,7 +289,7 @@
 }
 
 .capability-card:hover::before {
-    background: rgba(252, 252, 252, 0.45);
+    opacity: 0;
 }
 
 .capability-image {
@@ -319,6 +321,11 @@
     flex-direction: column;
     justify-content: flex-end;
     text-align: left;
+    transition: var(--transition);
+}
+
+.capability-card:hover .capability-content {
+    opacity: 0;
 }
 
 .capability-content h3 {
@@ -468,7 +475,7 @@
 }
 
 .certification-text .section-subtitle {
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: var(--text-light);
     text-align: left;
     line-height: 1.8;
@@ -804,7 +811,7 @@
         grid-template-columns: 1fr;
         gap: 2rem;
         height: auto;
-        min-height: calc(100dvh - 4rem);
+        min-height: calc(100dvh - 7rem);
     }
 
     .hero-image {

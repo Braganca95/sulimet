@@ -20,6 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Capability card videos: pause by default, play on hover
+    document.querySelectorAll('.capability-card').forEach(card => {
+        const video = card.querySelector('video');
+        if (!video) return;
+        video.pause();
+        card.addEventListener('mouseenter', () => video.play());
+        card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+    });
+
     // Fade-in animations for capability cards
     const observerOptions = {
         threshold: 0.1,
