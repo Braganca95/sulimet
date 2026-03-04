@@ -79,7 +79,7 @@ ul {
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 25%;
+    padding: 0 20%;
 }
 
 /* ===== Typography ===== */
@@ -344,11 +344,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== About Section ===== */
 .about {
-    min-height: 100vh;
-    min-height: 100dvh;
     display: flex;
     align-items: flex-start;
-    padding: clamp(2rem, 10dvh, 7rem) 0 3.125rem;
+    padding: 7rem 0 4rem;
     background: var(--bg-light);
     margin: 0;
     width: 100%;
@@ -357,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
 .about .container {
     width: 100%;
     max-width: 100%;
-    padding: 0 25%;
+    padding: 0 20%;
 }
 
 .about .section-title {
@@ -433,23 +431,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Services Section ===== */
 .services {
-    height: 100vh;
-    height: 100dvh;
     display: flex;
     flex-direction: column;
-    padding: clamp(2rem, 10dvh, 7rem) 0 1rem;
+    padding: 5rem 0;
     background: #5b5b5a;
-    overflow: hidden;
     margin: 0;
     width: 100%;
 }
 
 .services .container {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    min-height: 0;
-    overflow: hidden;
     width: 100%;
     max-width: 100%;
     padding: 0;
@@ -480,11 +472,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .services-carousel {
-    flex: 1;
-    min-height: 0;
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: flex-start;
     width: 100%;
     gap: clamp(0.5rem, 1vw, 1.5rem);
     padding: 0 20%;
@@ -492,8 +482,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-wrapper {
     overflow: hidden;
-    flex: 1;
-    min-height: 0;
     width: 100%;
 }
 
@@ -502,7 +490,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.875rem;
     transition: transform 0.5s ease;
     width: 100%;
-    height: 100%;
 }
 
 .service-item {
@@ -569,6 +556,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: center;
     width: auto;
     height: auto;
     border: none;
@@ -1055,13 +1043,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===== Responsive Design ===== */
-@media (max-width: 96rem) {
-    .container,
-    .about .container {
-        padding-left: 15%;
-        padding-right: 15%;
-    }
-}
 
 @media (max-width: 64rem) {
     .container,

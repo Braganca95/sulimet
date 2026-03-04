@@ -6,9 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Sulimet is a static corporate website for an industrial solutions company (metalurgy/machining). Built with vanilla HTML, CSS, and JavaScript—no build tools, bundlers, or package managers.
 
-**Two Pages:**
+**Three Pages:**
 - `index.html` - Main homepage with hero, about, services/history timeline, global presence, contact
 - `metalworking.html` - Dedicated metalworking services page with capabilities, certifications, materials
+- `electrical-systems.html` - Dedicated electrical systems/wiring harnesses page with hero crossfade slider
 
 ## Development
 
@@ -31,12 +32,14 @@ Scripts must load in this exact order — `translations.js` defines globals that
 1. `js/translations.js` — i18n system, defines `translations` object, `t()`, `switchLanguage()`, `updateTranslations()`
 2. `js/main.js` — index.html only: carousel, counters, contact form, parallax, notifications
 3. `js/metalworking.js` — metalworking.html only: staggered fade-in, smooth scroll
+4. `js/electrical-systems.js` — electrical-systems.html only: hero crossfade slider, fade-in animations
 
-Each page loads `translations.js` first, then its own page-specific script. `main.js` and `metalworking.js` are never loaded together.
+Each page loads `translations.js` first, then its own page-specific script. Page scripts are never loaded together.
 
 **CSS Architecture:**
 - CSS variables defined in `:root` in `css/styles.css` — colors, fonts, transitions, shadows
 - `css/metalworking.css` extends `styles.css` for the metalworking page
+- `css/electrical-systems.css` extends `styles.css` for the electrical systems page
 - All sizing uses `rem` units (not `px`), with `clamp()` for fluid responsive values
 - Primary brand gradient: `linear-gradient(90deg, #CF132B 0%, #7B0B1A 100%)`
 - Brand text color: `#3f3a34` (used in value cards, stats, body text)

@@ -111,7 +111,7 @@
     padding: 2.5rem 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 6rem;
     align-items: center;
     text-align: center;
 }
@@ -123,14 +123,14 @@
     color: #3f3a34;
     text-transform: uppercase;
     letter-spacing: 0.0625rem;
-    margin-bottom: 1.25rem;
+    margin: 0;
 }
 
 .panel-product-text {
     font-family: var(--font-primary);
     font-size: 1.286rem; /* 18px */
     font-weight: 600; /* SemiBold */
-    line-height: 2rem;
+    line-height: 2.75rem;
     color: #3f3a34;
     margin: 0;
 }
@@ -207,7 +207,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
-    align-items: center;
 }
 
 /* Alternate image/text order for even sections */
@@ -220,7 +219,7 @@
 }
 
 .service-text {
-    padding: 2rem 0;
+    padding: 0;
 }
 
 .service-title {
