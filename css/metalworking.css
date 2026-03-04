@@ -395,7 +395,7 @@
 .service-split {
     display: flex;
     flex-direction: row;
-    gap: 5rem;
+    gap: 10%;
     align-items: flex-start;
 }
 
