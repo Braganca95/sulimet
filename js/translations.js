@@ -192,7 +192,7 @@ const translations = {
         "electrical.certification.subtitle": "Our facilities comply with international quality standards, ensuring consistent and reliable production across all our units in Portugal and Morocco.",
 
         // Manufacturing Technologies
-        "electrical.manufacturing.title": "Manufacturing Technologies",
+        "electrical.manufacturing.title": "Manufacturing<br>Technologies",
         "electrical.manufacturing.tech1.caption": "Swiss Turning",
         "electrical.manufacturing.tech2.caption": "Turning",
         "electrical.manufacturing.tech3.caption": "Milling",
@@ -431,7 +431,7 @@ const translations = {
         "electrical.certification.subtitle": "As nossas instala\u00e7\u00f5es cumprem os padr\u00f5es internacionais de qualidade, garantindo uma produ\u00e7\u00e3o consistente e fi\u00e1vel em todas as nossas unidades em Portugal e Marrocos.",
 
         // Manufacturing Technologies
-        "electrical.manufacturing.title": "Tecnologias de Fabrico",
+        "electrical.manufacturing.title": "Tecnologias de<br>Fabrico",
         "electrical.manufacturing.tech1.caption": "Torneamento Suiço",
         "electrical.manufacturing.tech2.caption": "Torneamento",
         "electrical.manufacturing.tech3.caption": "Milling",

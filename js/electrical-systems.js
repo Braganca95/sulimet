@@ -72,6 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
         startTimer();
     }
 
+    // ===== Manufacturing video cards: play on hover =====
+    document.querySelectorAll('.manufacturing-videos-grid .capability-card').forEach(card => {
+        const video = card.querySelector('video');
+        if (!video) return;
+        video.pause();
+        card.addEventListener('mouseenter', () => video.play());
+        card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+    });
+
     // ===== Fade-in animations =====
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
