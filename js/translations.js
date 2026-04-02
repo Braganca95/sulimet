@@ -63,7 +63,7 @@ const translations = {
         "global.map.portugal2.location": "Canedo, Santa Maria da Feira, Portugal",
         "global.map.morocco1.title": "Sulimet Maroc, Sarl",
         "global.map.morocco1.location": "Tangier, Morocco",
-        "global.map.morocco2.title": "Sulimet Wiring Maroc, Sarl",
+        "global.map.morocco2.title": "Sulimet Cablage, Sarl",
         "global.map.morocco2.location": "Tangier, Morocco",
 
         // Contact Section
@@ -112,17 +112,17 @@ const translations = {
         // Capabilities
         "metalworking.capabilities.title": "Capabilities",
         "metalworking.capabilities.swiss.title": "Swiss Turning",
-        "metalworking.capabilities.swiss.spec1": "8 CNC turning centers",
-        "metalworking.capabilities.swiss.spec2": "Machines up to 7 axis",
-        "metalworking.capabilities.swiss.spec3": "Capacity to work pieces from Ø3 to Ø55 (mm)",
+        "metalworking.capabilities.swiss.spec1": "5 CNC Swiss Turning Machines",
+        "metalworking.capabilities.swiss.spec2": "Machines up to 12 axis",
+        "metalworking.capabilities.swiss.spec3": "Capacity to work pieces from: Ø3 a Ø38 (mm)",
         "metalworking.capabilities.turning.title": "Turning",
-        "metalworking.capabilities.turning.spec1": "8 CNC turning centers",
-        "metalworking.capabilities.turning.spec2": "Machines up to 7 axis",
-        "metalworking.capabilities.turning.spec3": "Capacity to work pieces from Ø3 to Ø55 (mm)",
+        "metalworking.capabilities.turning.spec1": "3 CNC Turning Centers",
+        "metalworking.capabilities.turning.spec2": "Machines up to 12 axis",
+        "metalworking.capabilities.turning.spec3": "Capacity to work pieces from: Ø3 a Ø200 (mm)",
         "metalworking.capabilities.milling.title": "Milling",
-        "metalworking.capabilities.milling.spec1": "8 CNC turning centers",
-        "metalworking.capabilities.milling.spec2": "Machines up to 7 axis",
-        "metalworking.capabilities.milling.spec3": "Capacity to work pieces from Ø3 to Ø55 (mm)",
+        "metalworking.capabilities.milling.spec1": "3 CNC Milling Centers",
+        "metalworking.capabilities.milling.spec2": "Machines up to 4 axis",
+        "metalworking.capabilities.milling.spec3": "Capacity 1000x500x400",
         "metalworking.capabilities.more": "More technologies",
 
         // Services
@@ -142,7 +142,7 @@ const translations = {
         "metalworking.materials.stainless.title": "Stainless Steel",
         "metalworking.materials.carbon.title": "Carbon Steel",
         "metalworking.materials.aluminium.title": "Aluminium",
-        "metalworking.materials.brass.title": "Brass Alloys",
+        "metalworking.materials.brass.title": "Copper/Brass/Bronze Alloys",
         "metalworking.materials.others.title": "Others",
 
         // Contacts
@@ -302,7 +302,7 @@ const translations = {
         "global.map.portugal2.location": "Canedo, Santa Maria da Feira, Portugal",
         "global.map.morocco1.title": "Sulimet Maroc, Sarl",
         "global.map.morocco1.location": "Tânger, Marrocos",
-        "global.map.morocco2.title": "Sulimet Wiring Maroc, Sarl",
+        "global.map.morocco2.title": "Sulimet Cablage, Sarl",
         "global.map.morocco2.location": "Tânger, Marrocos",
 
         // Contact Section
@@ -351,17 +351,17 @@ const translations = {
         // Capabilities
         "metalworking.capabilities.title": "Capacidades",
         "metalworking.capabilities.swiss.title": "Torneamento Suíço",
-        "metalworking.capabilities.swiss.spec1": "8 centros de torneamento CNC",
-        "metalworking.capabilities.swiss.spec2": "Máquinas até 7 eixos",
-        "metalworking.capabilities.swiss.spec3": "Capacidade para peças de Ø3 a Ø55 (mm)",
+        "metalworking.capabilities.swiss.spec1": "5 Máquinas CNC de Torneamento Suíço",
+        "metalworking.capabilities.swiss.spec2": "Máquinas até 12 eixos",
+        "metalworking.capabilities.swiss.spec3": "Capacidade para peças de: Ø3 a Ø38 (mm)",
         "metalworking.capabilities.turning.title": "Torneamento",
-        "metalworking.capabilities.turning.spec1": "8 centros de torneamento CNC",
-        "metalworking.capabilities.turning.spec2": "Máquinas até 7 eixos",
-        "metalworking.capabilities.turning.spec3": "Capacidade para peças de Ø3 a Ø55 (mm)",
+        "metalworking.capabilities.turning.spec1": "3 Centros de Torneamento CNC",
+        "metalworking.capabilities.turning.spec2": "Máquinas até 12 eixos",
+        "metalworking.capabilities.turning.spec3": "Capacidade para peças de: Ø3 a Ø200 (mm)",
         "metalworking.capabilities.milling.title": "Fresagem",
-        "metalworking.capabilities.milling.spec1": "8 centros de torneamento CNC",
-        "metalworking.capabilities.milling.spec2": "Máquinas até 7 eixos",
-        "metalworking.capabilities.milling.spec3": "Capacidade para peças de Ø3 a Ø55 (mm)",
+        "metalworking.capabilities.milling.spec1": "3 Centros de Fresagem CNC",
+        "metalworking.capabilities.milling.spec2": "Máquinas até 4 eixos",
+        "metalworking.capabilities.milling.spec3": "Capacidade 1000x500x400",
         "metalworking.capabilities.more": "Mais tecnologias",
 
         // Services
@@ -381,7 +381,7 @@ const translations = {
         "metalworking.materials.stainless.title": "Aço Inoxidável",
         "metalworking.materials.carbon.title": "Aço Carbono",
         "metalworking.materials.aluminium.title": "Alumínio",
-        "metalworking.materials.brass.title": "Ligas de Latão",
+        "metalworking.materials.brass.title": "Ligas de Cobre/Latão/Bronze",
         "metalworking.materials.others.title": "Outros",
 
         // Contacts

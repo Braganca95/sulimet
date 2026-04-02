@@ -73,9 +73,16 @@ Each page loads `translations.js` first, then its own page-specific script. Page
 - Has its own footer (`.footer-metalworking`) with different layout and certification logos
 - Fade-in uses staggered delay (`index * 100ms`) unlike index.html's instant reveal
 
+**Electrical Systems Page:**
+- Loads both `css/styles.css` and `css/electrical-systems.css`
+- Hero crossfade slider: 5s auto-advance, 1s CSS fade transition, dot navigation, keyboard accessible (ArrowLeft/ArrowRight)
+- Has its own footer (`.footer-electrical`) similar to metalworking page
+- Fade-in animations use staggered delay like metalworking page
+- No dedicated `assets/electrical-systems/` directory — images referenced directly from `assets/images/`
+
 **SEO Setup:**
-- Both pages have Open Graph, Twitter Card, and hreflang meta tags
-- JSON-LD structured data (Organization on index, Service on metalworking)
+- All three pages have Open Graph, Twitter Card, and hreflang meta tags
+- JSON-LD structured data: Organization on index, Service + BreadcrumbList on metalworking and electrical-systems
 - `sitemap.xml` and `robots.txt` at root
 - Language variants use `?lang=pt` query parameter in hreflang
 
@@ -83,7 +90,7 @@ Each page loads `translations.js` first, then its own page-specific script. Page
 `.mp4` video files are tracked via Git LFS (`.gitattributes`). The deploy workflow verifies LFS files are actual binaries, not pointers.
 
 **Non-web files at root:**
-`meltaworking.pdf`, `meltaworking_compressed.pdf`, and `item_description.txt` are reference/source documents — not served as part of the site and not linked from any HTML page. Do not remove them, but do not add links to them without explicit instruction.
+`meltaworking.pdf`, `meltaworking_compressed.pdf`, `cablagens_compressed.pdf`, and `item_description.txt` are reference/source documents — not served as part of the site and not linked from any HTML page. Do not remove them, but do not add links to them without explicit instruction.
 
 ## Adding New Content
 
