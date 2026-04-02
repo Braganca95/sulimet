@@ -60,6 +60,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+body.nav-open {
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -684,8 +688,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .map-dot {
     position: absolute;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 2.75rem;
+    height: 2.75rem;
     transform: translate(-50%, -50%);
     cursor: pointer;
     z-index: 1;
@@ -771,7 +775,9 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-light);
 }
 
-.map-dot:hover .map-tooltip {
+.map-dot:hover .map-tooltip,
+.map-dot:focus-within .map-tooltip,
+.map-dot.active .map-tooltip {
     opacity: 1;
     visibility: visible;
 }
@@ -916,7 +922,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 0.125rem solid transparent;
     border-radius: 0.625rem;
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px; /* Prevents iOS Safari auto-zoom on focus (threshold is 16px) */
     background: var(--text-white);
     transition: var(--transition);
 }
@@ -1109,6 +1115,8 @@ h1, h2, h3, h4, h5, h6 {
         background: var(--secondary-color);
         padding: 6.25rem 2.5rem;
         transition: var(--transition);
+        overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     .nav.active {
@@ -1259,6 +1267,23 @@ h1, h2, h3, h4, h5, h6 {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .map-dot-ping {
+        animation: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 /* ===== Utility Classes ===== */

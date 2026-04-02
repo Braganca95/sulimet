@@ -20,13 +20,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Capability card videos: pause by default, play on hover
+    // Capability card videos: pause by default, play on hover/touch
+    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
     document.querySelectorAll('.capability-card').forEach(card => {
         const video = card.querySelector('video');
         if (!video) return;
         video.pause();
-        card.addEventListener('mouseenter', () => video.play());
-        card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+        if (isTouchDevice) {
+            const videoObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) { video.play(); }
+                    else { video.pause(); video.currentTime = 0; }
+                });
+            }, { threshold: 0.5 });
+            videoObserver.observe(card);
+        } else {
+            card.addEventListener('mouseenter', () => video.play());
+            card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+        }
     });
 
     // Fade-in animations for capability cards
@@ -61,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (target) {
                     const headerOffset = 100;
                     const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
                     window.scrollTo({
                         top: offsetPosition,

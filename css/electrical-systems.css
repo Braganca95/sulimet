@@ -40,6 +40,7 @@
 .electrical-hero {
     display: flex;
     flex-direction: column;
+    height: 100vh;
     height: 100dvh;
     padding-top: 4rem; /* header height */
     background: #fcfcfc;
@@ -988,5 +989,20 @@
     .manufacturing-title {
         font-size: 1.5rem;
         line-height: 2.25rem;
+    }
+}
+
+/* ===== Touch Device Overrides ===== */
+@media (pointer: coarse) {
+    .manufacturing-videos-grid .capability-card::before {
+        background: rgba(252, 252, 252, 0.3);
+    }
+
+    .manufacturing-videos-grid .capability-card .capability-content {
+        opacity: 1;
+    }
+
+    .more-technologies:hover svg {
+        transform: none;
     }
 }

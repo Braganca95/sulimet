@@ -72,13 +72,24 @@ document.addEventListener('DOMContentLoaded', () => {
         startTimer();
     }
 
-    // ===== Manufacturing video cards: play on hover =====
+    // ===== Manufacturing video cards: play on hover/touch =====
+    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
     document.querySelectorAll('.manufacturing-videos-grid .capability-card').forEach(card => {
         const video = card.querySelector('video');
         if (!video) return;
         video.pause();
-        card.addEventListener('mouseenter', () => video.play());
-        card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+        if (isTouchDevice) {
+            const videoObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) { video.play(); }
+                    else { video.pause(); video.currentTime = 0; }
+                });
+            }, { threshold: 0.5 });
+            videoObserver.observe(card);
+        } else {
+            card.addEventListener('mouseenter', () => video.play());
+            card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+        }
     });
 
     // ===== Fade-in animations =====
@@ -103,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
-                    const offsetPosition = target.getBoundingClientRect().top + window.pageYOffset - 100;
+                    const offsetPosition = target.getBoundingClientRect().top + window.scrollY - 100;
                     window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                 }
             }
@@ -115,8 +126,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav       = document.getElementById('nav');
     if (navToggle && nav) {
         navToggle.addEventListener('click', () => {
-            const isOpen = nav.classList.toggle('nav-open');
+            navToggle.classList.toggle('active');
+            const isOpen = nav.classList.toggle('active');
             navToggle.setAttribute('aria-expanded', isOpen);
+            document.body.classList.toggle('nav-open', isOpen);
         });
     }
 

@@ -23,7 +23,9 @@ window.addEventListener('scroll', handleHeaderScroll, { passive: true });
 // ===== Mobile Navigation =====
 navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active');
-    nav.classList.toggle('active');
+    const isOpen = nav.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
 });
 
 // Close mobile nav when clicking a link
@@ -31,6 +33,8 @@ navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navToggle.classList.remove('active');
         nav.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', false);
+        document.body.classList.remove('nav-open');
     });
 });
 
@@ -138,12 +142,12 @@ let servicesTouchEndX = 0;
 
 if (servicesTrack) {
     servicesTrack.addEventListener('touchstart', (e) => {
-        servicesTouchStartX = e.changedTouches[0].screenX;
+        servicesTouchStartX = e.changedTouches[0].clientX;
         resetServicesAutoPlay();
     }, { passive: true });
 
     servicesTrack.addEventListener('touchend', (e) => {
-        servicesTouchEndX = e.changedTouches[0].screenX;
+        servicesTouchEndX = e.changedTouches[0].clientX;
         handleServicesSwipe();
     }, { passive: true });
 }
@@ -382,6 +386,15 @@ function showNotification(message, type = 'success') {
     }, 5000);
 }
 
+// ===== Map Dot Touch Support =====
+document.querySelectorAll('.map-dot').forEach(dot => {
+    dot.addEventListener('click', (e) => {
+        const wasActive = dot.classList.contains('active');
+        document.querySelectorAll('.map-dot.active').forEach(d => d.classList.remove('active'));
+        if (!wasActive) dot.classList.add('active');
+    });
+});
+
 // ===== Smooth Scroll for Anchor Links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -390,7 +403,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (target) {
             const headerOffset = 80;
             const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
             window.scrollTo({
                 top: offsetPosition,
@@ -400,11 +413,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Parallax Effect for Hero =====
+// ===== Parallax Effect for Hero (disabled on touch devices — causes iOS Safari flicker) =====
 const heroBg = document.querySelector('.hero-bg');
-if (heroBg) {
+if (heroBg && !window.matchMedia('(pointer: coarse)').matches) {
     window.addEventListener('scroll', () => {
-        const scrolled = Math.max(0, window.pageYOffset);
+        const scrolled = Math.max(0, window.scrollY);
         heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
     }, { passive: true });
 }
