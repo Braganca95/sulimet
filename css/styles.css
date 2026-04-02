@@ -1281,6 +1281,24 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0);
 }
 
+/* ===== Funding Logo Bar ===== */
+.funding-bar {
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.funding-bar img {
+    max-width: 37.5rem;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* ===== Reduced Motion ===== */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
