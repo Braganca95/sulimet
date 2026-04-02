@@ -977,7 +977,18 @@
     }
 
     .hero-image {
-        min-height: 18rem;
+        min-height: 0 !important;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-annotation-stage {
+        position: relative;
+        width: 10rem;
+        max-width: none;
+        height: auto;
+        aspect-ratio: 1015 / 1415;
     }
 
     .hero-annotations {

@@ -1200,8 +1200,20 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
     }
 
+    .global {
+        height: auto;
+        overflow: visible;
+        padding: 3rem 0 2rem;
+    }
+
     .global-stats {
         grid-template-columns: 1fr;
+    }
+
+    .global-map {
+        aspect-ratio: auto;
+        height: auto;
+        min-height: 12rem;
     }
 
     .map-tooltip {

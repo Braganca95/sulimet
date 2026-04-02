@@ -805,6 +805,16 @@
         height: 25rem;
     }
 
+    .manufacturing-videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .manufacturing-videos-grid .capability-card {
+        height: 360px;
+    }
+
     .tech-list-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -894,6 +904,16 @@
     .manufacturing-title {
         font-size: 1.75rem;
         line-height: 2.5rem;
+    }
+
+    .manufacturing-videos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .manufacturing-videos-grid .capability-card {
+        height: 300px;
     }
 
     .tech-videos-grid {
