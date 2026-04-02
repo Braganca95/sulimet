@@ -193,9 +193,9 @@ const translations = {
 
         // Manufacturing Technologies
         "electrical.manufacturing.title": "Manufacturing<br>Technologies",
-        "electrical.manufacturing.tech1.caption": "Swiss Turning",
-        "electrical.manufacturing.tech2.caption": "Turning",
-        "electrical.manufacturing.tech3.caption": "Milling",
+        "electrical.manufacturing.tech1.caption": "Automatic Cable Cutting and Crimping",
+        "electrical.manufacturing.tech2.caption": "Mechanical Crimping",
+        "electrical.manufacturing.tech3.caption": "Splice Ultrasonic Welding",
         "electrical.manufacturing.more": "More manufacturing technologies",
         "electrical.manufacturing.list1.1": "Terminal ultrasonic welding",
         "electrical.manufacturing.list1.2": "Selection dispenser",
@@ -432,9 +432,9 @@ const translations = {
 
         // Manufacturing Technologies
         "electrical.manufacturing.title": "Tecnologias de<br>Fabrico",
-        "electrical.manufacturing.tech1.caption": "Torneamento Suiço",
-        "electrical.manufacturing.tech2.caption": "Torneamento",
-        "electrical.manufacturing.tech3.caption": "Milling",
+        "electrical.manufacturing.tech1.caption": "Corte e Cravação Automática de Cabos",
+        "electrical.manufacturing.tech2.caption": "Cravação Mecânica",
+        "electrical.manufacturing.tech3.caption": "Soldadura Ultrassónica de Splice",
         "electrical.manufacturing.more": "Mais tecnologias de fabrico",
         "electrical.manufacturing.list1.1": "Soldadura ultrass\u00f3nica de terminais",
         "electrical.manufacturing.list1.2": "Dispensador de sele\u00e7\u00e3o",
