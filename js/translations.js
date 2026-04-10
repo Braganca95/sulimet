@@ -122,7 +122,7 @@ const translations = {
         "metalworking.capabilities.milling.title": "Milling",
         "metalworking.capabilities.milling.spec1": "3 CNC Milling Centers",
         "metalworking.capabilities.milling.spec2": "Machines up to 4 axis",
-        "metalworking.capabilities.milling.spec3": "Capacity 1000x500x400",
+        "metalworking.capabilities.milling.spec3": "Capacity to work pieces from: 1000x500x400mm",
         "metalworking.capabilities.more": "More technologies",
 
         // Services
@@ -361,7 +361,7 @@ const translations = {
         "metalworking.capabilities.milling.title": "Fresagem",
         "metalworking.capabilities.milling.spec1": "3 Centros de Fresagem CNC",
         "metalworking.capabilities.milling.spec2": "Máquinas até 4 eixos",
-        "metalworking.capabilities.milling.spec3": "Capacidade 1000x500x400",
+        "metalworking.capabilities.milling.spec3": "Capacidade para trabalhar peças de: 1000x500x400mm",
         "metalworking.capabilities.more": "Mais tecnologias",
 
         // Services
