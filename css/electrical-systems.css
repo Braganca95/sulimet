@@ -23,7 +23,7 @@
     font-family: var(--font-primary);
     font-size: clamp(1rem, 1.8vw, 1.5625rem);
     font-weight: 600;
-    color: var(--text-light);
+    color: var(--text-color);
     max-width: none;
     margin: 0 0 3.125rem;
     text-align: left;
@@ -274,7 +274,7 @@
 
 .certification-text .section-subtitle {
     font-size: 1.5625rem;
-    color: var(--text-light);
+    color: var(--text-color);
     text-align: left;
     line-height: 1.8;
 }
