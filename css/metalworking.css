@@ -13,7 +13,7 @@
 
 .metalworking-hero .container {
     max-width: none;
-    padding: 0 10% 0 20%;
+    padding: 0 8% 0 12%;
 }
 
 
@@ -38,46 +38,57 @@
 .metalworking-hero {
     display: flex;
     align-items: flex-start;
-    padding: 11rem 0 2rem;
+    padding: 11rem 0 4rem;
     background: #fcfcfc;
     overflow: hidden;
 }
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-        "title      image"
-        "categories image";
-    column-gap: 10rem;
-    align-items: stretch;
+    grid-template-columns: 1fr;
+    row-gap: clamp(2.5rem, 4vw, 4rem);
+    align-items: start;
+}
+
+.hero-copy {
+    max-width: min(48%, 38rem);
+}
+
+.hero-slider-frame {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: clamp(30rem, 45vw, 40rem);
 }
 
 .hero-title {
-    grid-area: title;
     font-family: var(--font-display);
-    font-size: 3.125rem;
+    font-size: clamp(3.125rem, 4.5vw, 4.25rem);
     font-weight: 800;
     color: var(--text-color);
-    margin-bottom: 0;
+    margin: 0;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
-    padding-bottom: 35vh;
-    align-self: start;
+    line-height: 1.02;
 }
 
 /* Category Columns */
 .category-columns {
-    grid-area: categories;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 3rem;
-    margin: 0 0 10vh;
-    align-self: end;
+    gap: clamp(1.5rem, 2.5vw, 3rem);
+    width: 100%;
+    padding: clamp(15rem, 20vw, 19rem) clamp(18rem, 32vw, 31rem) 0 0;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    align-items: start;
 }
 
 .category-column {
     min-width: 0;
+    padding: 1.25rem 1rem 0 0;
+    transition: var(--transition);
 }
 
 .category-title {
@@ -106,24 +117,28 @@
 .category-column p {
     font-size: 1.125rem;
     color: var(--text-light);
-    line-height: 2.1875rem;
+    line-height: 1.95;
     margin: 0;
+    max-width: 15rem;
 }
 
 .hero-image {
-    grid-area: image;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    height: 100%;
+    align-items: flex-start;
+    width: min(35vw, 33rem);
+    z-index: 1;
 }
 
 /* Stage matches the image's exact rendered dimensions so annotations track it */
 .hero-annotation-stage {
     position: relative;
-    height: 72%;
-    max-width: 72%;
+    width: 100%;
+    max-width: none;
+    height: auto;
     aspect-ratio: 1015 / 1415;
     overflow: visible;
 }
@@ -956,31 +971,41 @@
         line-height: 1.8rem;
     }
 
+    .metalworking-hero {
+        padding: 9rem 0 3.5rem;
+    }
+
     .hero-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "title"
-            "image"
-            "categories";
-        gap: 2rem;
-        height: auto;
+        row-gap: 2rem;
+    }
+
+    .hero-copy {
+        max-width: min(100%, 32rem);
     }
 
     .hero-title {
-        padding-bottom: 0;
+        font-size: 2.75rem;
+    }
+
+    .hero-slider-frame {
+        min-height: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
     }
 
     .hero-image {
-        min-height: 40vh;
+        position: relative;
+        top: auto;
+        right: auto;
+        width: min(100%, 22rem);
+        justify-self: end;
     }
 
     .category-columns {
-        align-self: start;
-        margin: 0;
-    }
-
-    .hero-annotation-stage {
-        max-width: 20rem;
+        width: 100%;
+        padding: 0;
+        gap: 1.5rem;
     }
 
     .hero-annotations {
@@ -1082,25 +1107,27 @@
 
     .metalworking-hero {
         padding: 6rem 0 3rem;
-        height: auto;
     }
 
-    .hero-grid {
-        height: auto;
-        min-height: unset;
+    .hero-copy {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2.125rem;
+    }
+
+    .hero-slider-frame {
+        row-gap: 1.5rem;
     }
 
     .hero-image {
-        min-height: 0 !important;
-        height: auto;
         justify-content: center;
-        align-items: center;
+        width: min(100%, 17rem);
     }
 
     .hero-annotation-stage {
-        position: relative;
-        width: 10rem;
-        max-width: none;
+        width: 100%;
         height: auto;
         aspect-ratio: 1015 / 1415;
         overflow: hidden; /* annotations are hidden at this size; safe to clip scaled images */
@@ -1110,14 +1137,19 @@
         display: none;
     }
 
-    .hero-title {
-        font-size: 2rem;
-    }
-
     .category-columns {
         grid-template-columns: 1fr;
         gap: 1rem;
-        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .category-column {
+        padding: 0;
+    }
+
+    .category-column p {
+        max-width: none;
     }
 
     .hero-showcase-image {
@@ -1229,8 +1261,8 @@
         font-size: 1.625rem;
     }
 
-    .hero-annotation-stage {
-        max-width: 15rem;
+    .hero-image {
+        width: min(100%, 14rem);
     }
 
     .section-title-large {
