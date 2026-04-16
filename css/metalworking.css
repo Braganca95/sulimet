@@ -26,6 +26,7 @@
 .body-title + p {
     font-family: var(--font-primary);
     font-size: clamp(1rem, 1.8vw, 1.5625rem);
+    font-weight: 600;
     color: var(--text-light);
     max-width: none;
     margin: 0 0 3.125rem;
