@@ -220,7 +220,7 @@ const translations = {
         "electrical.contacts.morocco.company": "Sulimet C\u00e2blage",
         "electrical.contacts.morocco.address": "Ilot 13 Lot n.\u00b03, Tanger Med Free Zone, Tanger, Tanger-T\u00e9touan-Al Hoce\u00efma, Morocco, 90000",
         "electrical.contacts.sales.title": "Sales Contact",
-        "electrical.contacts.sales.name": "\u00c2ntonio Guedes",
+        "electrical.contacts.sales.name": "António Guedes",
 
         // Footer
         "electrical.footer.about.title": "About",
@@ -459,7 +459,7 @@ const translations = {
         "electrical.contacts.morocco.company": "Sulimet C\u00e2blage",
         "electrical.contacts.morocco.address": "Ilot 13 Lot n.\u00b03, Tanger Med Free Zone, Tanger, Tanger-T\u00e9touan-Al Hoce\u00efma, Marrocos, 90000",
         "electrical.contacts.sales.title": "Contacto Comercial",
-        "electrical.contacts.sales.name": "\u00c2ntonio Guedes",
+        "electrical.contacts.sales.name": "António Guedes",
 
         // Footer
         "electrical.footer.about.title": "Sobre",
