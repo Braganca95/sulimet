@@ -252,7 +252,7 @@
 
 /* ===== Certifications Section ===== */
 .electrical-certification {
-    padding: 5rem 0;
+    padding: 6rem 0;
     background: #fcfcfc;
 }
 
@@ -282,13 +282,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    gap: 3rem;
+    transform: scale(0.625);
+    transform-origin: center;
 }
 
 .certification-logos img {
-    height: 6rem;
-    width: auto;
+    display: block;
+    width: 100%;
+    max-width: 48rem;
+    height: auto;
     object-fit: contain;
 }
 
@@ -962,11 +965,13 @@
     }
 
     .certification-logos {
-        gap: 1.25rem;
+        justify-content: flex-start;
+        gap: 3rem;
     }
 
     .certification-logos img {
-        height: 4rem;
+        max-width: 100%;
+        height: auto;
     }
 
     .footer-columns {
