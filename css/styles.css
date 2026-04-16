@@ -97,7 +97,6 @@ h1, h2, h3, h4, h5, h6 {
 .section-title {
     font-size: clamp(1.625rem, 2.5vw + 0.5rem, 3rem);
     font-weight: 800;
-    margin-bottom: 1.25rem;
     text-align: center;
     text-transform: uppercase;
 }
@@ -435,9 +434,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Services Section ===== */
 .services {
+    --services-title-spacing: 5rem;
     display: flex;
     flex-direction: column;
-    padding: 5rem 0;
+    padding: var(--services-title-spacing) 0;
     background: #5b5b5a;
     margin: 0;
     width: 100%;
@@ -502,7 +502,7 @@ h1, h2, h3, h4, h5, h6 {
     background: transparent;
     border-radius: 0;
     overflow: hidden;
-    padding-top: clamp(3rem, 6vw, 6rem);
+    padding-top: var(--services-title-spacing);
     transition: var(--transition);
 }
 

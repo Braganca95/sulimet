@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
 
 ## Project Overview
 
@@ -68,8 +68,7 @@ Each page loads `translations.js` first, then its own page-specific script. Page
 
 **Metalworking Page:**
 - Loads both `css/styles.css` and `css/metalworking.css` (metalworking.css overrides container max-width to `none` with `5rem` padding)
-- Category columns (`.category-column[data-category]`) — Automotive, Food, Industrial. Click-based (also keyboard accessible: Enter/Space). `setActiveCategory(cat)` sets `stage.dataset.active`, toggles `.active` on `.category-column`, and manages `aria-pressed`.
-- Hero annotation stage has **three** images (`#hero-img-front` automotive, `#hero-img-food`, `#hero-img-industrial`) and **three** annotation overlays (`#hero-annotations`, `#hero-annotations-food`, `#hero-annotations-industrial`). Active image/overlay gets `.hero-img-active` / `.hero-annotations-active`. Defaults to `automotive` on load.
+- Category tabs (`.category-tab[data-category]`) — Automotive, Food, Industrial
 - Service split sections use `.reverse` class for alternating image/text layouts
 - Has its own footer (`.footer-metalworking`) with different layout and certification logos
 - Fade-in uses staggered delay (`index * 100ms`) unlike index.html's instant reveal

@@ -1,24 +1,51 @@
 // ===== Metalworking Page JavaScript =====
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Hero image swap on category hover
-    const imgFront    = document.getElementById('hero-img-front');
-    const imgBack     = document.getElementById('hero-img-back');
-    const annotations = document.getElementById('hero-annotations');
+    // Hero image swap on category click
+    const stage              = document.querySelector('.hero-annotation-stage');
+    const imgFront           = document.getElementById('hero-img-front');
+    const imgBack            = document.getElementById('hero-img-back');
+    const imgFood            = document.getElementById('hero-img-food');
+    const imgIndustrial      = document.getElementById('hero-img-industrial');
+    const annotations        = document.getElementById('hero-annotations');
+    const annotationsFood    = document.getElementById('hero-annotations-food');
+    const annotationsIndustrial = document.getElementById('hero-annotations-industrial');
+    const categoryColumns    = document.querySelectorAll('.category-column');
 
-    document.querySelectorAll('.category-column').forEach(col => {
-        col.addEventListener('mouseenter', () => {
-            const isAutomotive = col.dataset.category === 'automotive';
-            imgFront.classList.toggle('hero-img-active', isAutomotive);
-            imgBack.classList.toggle('hero-img-active', !isAutomotive);
-            annotations.classList.toggle('hero-annotations-active', isAutomotive);
+    function setActiveCategory(cat) {
+        stage.dataset.active = cat;
+        imgFront.classList.toggle('hero-img-active', cat === 'automotive');
+        imgBack.classList.remove('hero-img-active');
+        imgFood.classList.toggle('hero-img-active', cat === 'food');
+        imgIndustrial.classList.toggle('hero-img-active', cat === 'industrial');
+        annotations.classList.toggle('hero-annotations-active', cat === 'automotive');
+        annotationsFood.classList.toggle('hero-annotations-active', cat === 'food');
+        annotationsIndustrial.classList.toggle('hero-annotations-active', cat === 'industrial');
+
+        categoryColumns.forEach(col => {
+            const isActive = col.dataset.category === cat;
+            col.classList.toggle('active', isActive);
+            col.setAttribute('aria-pressed', String(isActive));
         });
-        col.addEventListener('mouseleave', () => {
-            imgFront.classList.add('hero-img-active');
-            imgBack.classList.remove('hero-img-active');
-            annotations.classList.add('hero-annotations-active');
+    }
+
+    categoryColumns.forEach(col => {
+        col.tabIndex = 0;
+        col.setAttribute('role', 'button');
+
+        col.addEventListener('click', () => {
+            setActiveCategory(col.dataset.category);
+        });
+
+        col.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                setActiveCategory(col.dataset.category);
+            }
         });
     });
+
+    setActiveCategory('automotive');
 
     // Capability card videos: pause by default, play on hover/touch
     const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;

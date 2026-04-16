@@ -24,9 +24,13 @@
 }
 
 .body-title + p {
-    font-size: 1.5625rem;
-    line-height: 2.5rem;
-    color: #3f3a34;
+    font-family: var(--font-primary);
+    font-size: clamp(1rem, 1.8vw, 1.5625rem);
+    color: var(--text-light);
+    max-width: none;
+    margin: 0 0 3.125rem;
+    text-align: left;
+    line-height: 1.8;
 }
 
 /* Hero Section */
@@ -86,6 +90,11 @@
 }
 
 .category-title:hover {
+    color: #cf132b;
+    text-decoration: underline;
+}
+
+.category-column.active .category-title {
     color: #cf132b;
     text-decoration: underline;
 }
@@ -272,6 +281,92 @@
 }
 .hero-annotations-active .annotation-label-2 {
     animation: annotationLabel 0.3s ease 0.7s both;
+}
+
+/* Food and industrial annotations reuse the same hero stage; only overlay styling differs */
+#hero-img-food,
+#hero-img-industrial {
+    object-fit: contain;
+    transform-origin: center center;
+}
+
+#hero-img-food {
+    transform: scale(2.56);
+}
+
+#hero-img-industrial {
+    transform: scale(2.84) translateX(10%);
+}
+
+/* Stage-width overlays so labels on the left of the product have natural room */
+#hero-annotations-food,
+#hero-annotations-industrial {
+    right: 0;
+}
+
+/* ── SVG covering the full stage ───────────────────────── */
+.annotation-line-food,
+.annotation-line-industrial {
+    position: absolute;
+    inset: 0;
+    overflow: visible;
+    pointer-events: none;
+}
+
+/* ── Food dot / label positions ────────────────────────── */
+/* Top callout sits above-left with a clean elbow into the part */
+.food-dot-1   { top: 3.8%; left: -7%; }
+.food-label-1 {
+    top: calc(3.8% - 0.85rem);
+    left: calc(-7% + 1rem);
+    transform: none;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Bottom callout is anchored lower-left and reads on one line */
+.food-dot-2   { top: 92%; left: 42%; }
+.food-label-2 { top: calc(92% - 0.65rem); left: 45%; white-space: nowrap; }
+
+/* ── Industrial dot / label positions ──────────────────── */
+/* Top callout hugs the upper-left of the part */
+.industrial-dot-1   { top: calc(13% - 0.4rem); left: calc(2% - 0.4rem); }
+.industrial-label-1 { top: calc(13% - 1.05rem); left: 5%; white-space: nowrap; }
+
+/* Bottom callout aligns with the lower-left base of the component */
+.industrial-dot-2   { top: 79%; left: 30%; }
+.industrial-label-2 { top: calc(79% - 0.65rem); left: 33%; white-space: nowrap; }
+
+/* ── Animation triggers ─────────────────────────────────── */
+.hero-annotations-active .food-line-1,
+.hero-annotations-active .industrial-line-1 {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: drawLine 0.4s ease 0.3s forwards;
+}
+.hero-annotations-active .food-line-2,
+.hero-annotations-active .industrial-line-2 {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: drawLine 0.4s ease 0.55s forwards;
+}
+
+.hero-annotations-active .food-dot-1,
+.hero-annotations-active .industrial-dot-1 {
+    animation: annotationDot 0.25s ease 0.4s both;
+}
+.hero-annotations-active .food-dot-2,
+.hero-annotations-active .industrial-dot-2 {
+    animation: annotationDot 0.25s ease 0.65s both;
+}
+
+.hero-annotations-active .food-label-1,
+.hero-annotations-active .industrial-label-1 {
+    animation: annotationLabel 0.3s ease 0.5s both;
+}
+.hero-annotations-active .food-label-2,
+.hero-annotations-active .industrial-label-2 {
+    animation: annotationLabel 0.3s ease 0.75s both;
 }
 
 /* Hero Showcase */
@@ -551,7 +646,7 @@
 }
 
 .cert-iso-label {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 0.5rem;
     font-weight: 700;
     color: var(--primary-color);
@@ -560,7 +655,7 @@
 }
 
 .cert-iso-standard {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 1rem;
     font-weight: 800;
     color: var(--primary-color);
@@ -578,7 +673,7 @@
 }
 
 .cert-sgs-text {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 1.25rem;
     font-weight: 800;
     color: white;
@@ -594,7 +689,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
 }
 
 .section-title-large {
@@ -1152,6 +1247,10 @@
 
 /* ===== Touch Device Overrides ===== */
 @media (pointer: coarse) {
+    .materials {
+        background-attachment: scroll;
+    }
+
     /* Remove frosted overlay so video is visible on touch devices */
     .capability-card::before {
         background: rgba(252, 252, 252, 0.3);
