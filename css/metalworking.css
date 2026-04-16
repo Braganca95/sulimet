@@ -383,9 +383,9 @@
 
 .hero-showcase-image {
     width: 100%;
-    height: 100vh;
-    height: 100dvh;
+    height: clamp(24rem, 45vw, 48rem);
     overflow: hidden;
+    background: #111;
 }
 
 .hero-showcase-image img,
@@ -393,6 +393,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 /* Capabilities Section */
