@@ -45,16 +45,15 @@
 .hero-grid {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    gap: 10rem;
+    grid-template-areas:
+        "title      image"
+        "categories image";
+    column-gap: 10rem;
     align-items: stretch;
 }
 
-.hero-text {
-    display: flex;
-    flex-direction: column;
-}
-
 .hero-title {
+    grid-area: title;
     font-family: var(--font-display);
     font-size: 3.125rem;
     font-weight: 800;
@@ -62,14 +61,18 @@
     margin-bottom: 0;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
+    padding-bottom: 35vh;
+    align-self: start;
 }
 
 /* Category Columns */
 .category-columns {
+    grid-area: categories;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 3rem;
-    margin: 35vh 0 10vh;
+    margin: 0 0 10vh;
+    align-self: end;
 }
 
 .category-column {
@@ -107,6 +110,7 @@
 }
 
 .hero-image {
+    grid-area: image;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -952,13 +956,25 @@
 
     .hero-grid {
         grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "image"
+            "categories";
         gap: 2rem;
         height: auto;
     }
 
+    .hero-title {
+        padding-bottom: 0;
+    }
+
     .hero-image {
-        order: -1;
         min-height: 40vh;
+    }
+
+    .category-columns {
+        align-self: start;
+        margin: 0;
     }
 
     .hero-annotation-stage {
@@ -1085,6 +1101,7 @@
         max-width: none;
         height: auto;
         aspect-ratio: 1015 / 1415;
+        overflow: hidden; /* annotations are hidden at this size; safe to clip scaled images */
     }
 
     .hero-annotations {
@@ -1098,7 +1115,7 @@
     .category-columns {
         grid-template-columns: 1fr;
         gap: 1rem;
-        margin: 2rem 0;
+        margin: 0;
     }
 
     .hero-showcase-image {
