@@ -258,13 +258,13 @@ const translations = {
 
         // About Section
         "about.title": "Sobre Nós",
-        "about.description": "O Grupo Sulimet é composto por <strong>quatro empresas</strong> a operar em <strong>dois países</strong>, <strong>Portugal</strong> e <strong>Marrocos</strong>.<br><br>Especializamo-nos em <strong>cablagens</strong> e <strong>peças metálicas</strong>, servindo mercados como automóvel, alimentar e construção civil.",
+        "about.description": "O Grupo Sulimet é composto por <strong>quatro empresas</strong> que operam em <strong>dois países</strong>, <strong>Portugal</strong> e <strong>Marrocos</strong>.<br><br>Somos especializados em <strong>cablagens elétricas</strong> e <strong>peças metálicas</strong>, servindo mercados como o automóvel, alimentar e da construção.",
         "about.mission.title": "Missão",
-        "about.mission.text": "Conceber, desenvolver e produzir produtos de alta qualidade utilizando conhecimentos tecnológicos avançados, garantindo a satisfação contínua dos nossos clientes em todo o mundo.",
+        "about.mission.text": "Conceber, desenvolver e produzir produtos de elevada qualidade, recorrendo a conhecimento tecnológico avançado, assegurando a satisfação contínua dos nossos clientes em todo o mundo.",
         "about.vision.title": "Visão",
-        "about.vision.text": "Criar valor acrescentado através de soluções industriais avançadas e de alta qualidade que superam as expectativas dos clientes e se adaptam às tecnologias em evolução e aos mercados globais.",
+        "about.vision.text": "Criar valor acrescentado através de soluções industriais avançadas e de elevada qualidade, que superem as expectativas dos clientes e se adaptem às tecnologias em evolução e aos mercados globais.",
         "about.values.title": "Valores",
-        "about.values.text": "Somos guiados pela ética, respeito, humildade, honestidade, profissionalismo, inovação, qualidade e responsabilidade, garantindo práticas sustentáveis e de confiança.",
+        "about.values.text": "Regemo-nos pela ética, respeito, humildade, honestidade, profissionalismo, inovação, qualidade e responsabilidade, assegurando práticas sustentáveis e de confiança.",
 
         // Services Section
         "services.title": "A Nossa História",
