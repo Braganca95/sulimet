@@ -319,18 +319,18 @@
 
 /* ── Food dot / label positions ────────────────────────── */
 /* Top callout sits above-left with a clean elbow into the part */
-.food-dot-1   { top: 3.8%; left: -7%; }
+.food-dot-1   { top: 9%; left: 30%; }
 .food-label-1 {
-    top: calc(3.8% - 3.4cqw);
-    left: calc(-7% + 4cqw);
+    top: calc(7% - 3.4cqw);
+    left: calc(24% + 4cqw);
     transform: none;
     text-align: left;
     white-space: nowrap;
 }
 
 /* Bottom callout is anchored lower-left and reads on one line */
-.food-dot-2   { top: 92%; left: 42%; }
-.food-label-2 { top: calc(92% - 2.6cqw); left: 45%; white-space: nowrap; }
+.food-dot-2   { top: 79%; left: 33%; }
+.food-label-2 { top: calc(82% - 2.6cqw); left: 33%; white-space: nowrap; }
 
 /* ── Industrial dot / label positions ──────────────────── */
 /* Top callout hugs the upper-left of the part */
