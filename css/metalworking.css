@@ -498,7 +498,7 @@
 
 .capability-content h3 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 1.8vw + 0.3rem, 2.1875rem);
     color: #3f3a34;
     margin-bottom: 0.75rem;
     text-transform: uppercase;
@@ -520,7 +520,7 @@
 }
 
 .capability-specs li {
-    font-size: 0.875rem;
+    font-size: clamp(1rem, 1.2vw + 0.1rem, 1.25rem);
     color: #3f3a34;
     line-height: 1.6;
 }
@@ -565,7 +565,7 @@
 .quality-control,
 .welding,
 .printing-3d {
-    padding: 5rem 0;
+    padding: 2.5rem 0;
     background: #fcfcfc;
 }
 
@@ -623,7 +623,7 @@
 
 /* Certification Section */
 .certification {
-    padding: 6rem 0;
+    padding: 2.5rem 0;
     background: #fcfcfc;
 }
 
