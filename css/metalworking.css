@@ -38,7 +38,7 @@
 .metalworking-hero {
     display: flex;
     align-items: flex-start;
-    padding: 11rem 0 2rem;
+    padding: 11rem 0 10vh;
     background: #fcfcfc;
     overflow: hidden;
 }
@@ -72,7 +72,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 3rem;
-    margin: 0 0 10vh;
+    margin: 0 0 8vh;
     align-self: end;
 }
 
@@ -114,7 +114,7 @@
     grid-area: image;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
     height: 100%;
 }
@@ -305,9 +305,8 @@
 
 /* Scale up the food visual so the component reads at a size closer to the
    automotive and industrial parts; image and annotations stay synchronized. */
-#hero-img-food,
-#hero-annotations-food {
-    transform: scale(1.08);
+#hero-img-food {
+    transform: scale(2.16);
 }
 
 /* ── SVG covering the full stage ───────────────────────── */
@@ -498,7 +497,7 @@
 
 .capability-content h3 {
     font-family: var(--font-display);
-    font-size: clamp(1.25rem, 1.8vw + 0.3rem, 2.1875rem);
+    font-size: 1.25rem;
     color: #3f3a34;
     margin-bottom: 0.75rem;
     text-transform: uppercase;
@@ -520,7 +519,7 @@
 }
 
 .capability-specs li {
-    font-size: clamp(1rem, 1.2vw + 0.1rem, 1.25rem);
+    font-size: 0.875rem;
     color: #3f3a34;
     line-height: 1.6;
 }
