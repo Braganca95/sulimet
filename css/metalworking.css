@@ -334,12 +334,12 @@
 
 /* ── Industrial dot / label positions ──────────────────── */
 /* Top callout hugs the upper-left of the part */
-.industrial-dot-1   { top: calc(13% - 10.8cqw); left: 2%; }
-.industrial-label-1 { top: calc(13% - 18cqw); left: 1%; white-space: nowrap; }
+.industrial-dot-1   { top: calc(18% - 10.8cqw); left: -10%; }
+.industrial-label-1 { top: calc(18% - 18cqw); left: -11%; white-space: nowrap; }
 
 /* Bottom callout aligns with the lower-left base of the component */
-.industrial-dot-2   { top: 83%; left: 25%; }
-.industrial-label-2 { top: calc(86% - 2.6cqw); left: 24%; white-space: nowrap; }
+.industrial-dot-2   { top: 83%; left: 15%; }
+.industrial-label-2 { top: calc(86% - 2.6cqw); left: 14%; white-space: nowrap; }
 
 /* ── Animation triggers ─────────────────────────────────── */
 .hero-annotations-active .food-line-1,

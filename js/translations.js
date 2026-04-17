@@ -356,11 +356,11 @@ const translations = {
         "metalworking.hero.title": "Metalomecânica",
         "metalworking.hero.description": "Soluções de metalomecânica de precisão para indústrias exigentes. Da maquinação CNC ao torneamento suíço, entregamos componentes certificados com tolerâncias até \u00b10,01mm.",
         "metalworking.categories.automotive": "Automóvel",
-        "metalworking.categories.automotive.desc": "Componentes de alta precisão, com foco em fiabilidade, durabilidade e segurança para cumprir os padrões mais exigentes do setor.",
+        "metalworking.categories.automotive.desc": "Componentes de alta precisão, com foco na fiabilidade, durabilidade e segurança, cumprindo os padrões mais exigentes do setor.",
         "metalworking.categories.food": "Alimentar",
-        "metalworking.categories.food.desc": "Concebidos para higiene, precisão e durabilidade, cumprindo os rigorosos padrões de segurança e qualidade do setor alimentar.",
+        "metalworking.categories.food.desc": "Concebidos para garantir higiene, precisão e durabilidade, cumprindo os rigorosos requisitos de segurança e qualidade do setor alimentar.",
         "metalworking.categories.industrial": "Industrial",
-        "metalworking.categories.industrial.desc": "Componentes robustos e precisos, concebidos para suportar uso intensivo e condições operacionais exigentes.",
+        "metalworking.categories.industrial.desc": "Componentes robustos e precisos, desenvolvidos para resistir a utilização intensiva e a condições operacionais exigentes.",
 
         // Capabilities
         "metalworking.capabilities.title": "Capacidades",
@@ -380,15 +380,15 @@ const translations = {
 
         // Services
         "metalworking.cadcam.title": "CAD-CAM",
-        "metalworking.cadcam.description": "Os nossos sistemas CAD-CAM avançados integram design e fabrico para fluxos de produção contínuos. Utilizando software de referência, transformamos modelos 3D em componentes maquinados com precisão, fornecendo análise DFM completa para otimizar os designs das peças.",
-        "metalworking.quality.title": "CONTROLO QUALIDADE",
-        "metalworking.quality.description": "Cada componente é submetido a inspeção rigorosa com equipamento avançado de metrologia. O nosso sistema de gestão de qualidade, certificado ISO 9001 e IATF 16949, garante rastreabilidade total e precisão consistente em cada lote de produção.",
-        "metalworking.certification.title": "CERTIFICAÇÃO",
-        "metalworking.certification.subtitle": "As nossas instalações possuem certificação IATF 16949 e ISO 9001:2015 (n.º de aprovação 44 100 170400). Auditadas e aprovadas pela SGS.",
+        "metalworking.cadcam.description": "Os nossos sistemas avançados de CAD-CAM integram o design e o fabrico, garantindo fluxos de produção contínuos e eficientes. Utilizando software de referência no setor, transformamos modelos 3D em componentes maquinados com precisão, realizando análises completas de DFM para otimizar os projetos em termos de produção e custos.",
+        "metalworking.quality.title": "CONTROLO DE QUALIDADE",
+        "metalworking.quality.description": "Cada componente é submetido a uma inspeção rigorosa com recurso a equipamentos de metrologia avançados. O nosso sistema de gestão da qualidade, certificado pelas normas ISO 9001 e IATF 16949, assegura total rastreabilidade e precisão consistente em todos os lotes de produção.",
+        "metalworking.certification.title": "CERTIFICAÇÕES",
+        "metalworking.certification.subtitle": "As nossas instalações cumprem as normas internacionais de qualidade, garantindo uma produção consistente e fiável em todas as nossas unidades em Portugal e Marrocos.",
         "metalworking.welding.title": "SOLDADURA",
-        "metalworking.welding.description": "Oferecemos capacidades de soldadura MIG, TIG e por pontos para conjuntos em aço, aço inoxidável e alumínio. Os nossos soldadores certificados produzem juntas resistentes e limpas que cumprem os requisitos das indústrias automóvel, alimentar e construção.",
+        "metalworking.welding.description": "Dispomos de capacidades de soldadura MIG, TIG e por pontos para conjuntos em aço, aço inoxidável e alumínio. Os nossos soldadores certificados garantem uniões resistentes e de elevada qualidade, cumprindo os requisitos estruturais e estéticos das indústrias automóvel, alimentar e da construção.",
         "metalworking.printing3d.title": "IMPRESSÃO 3D",
-        "metalworking.printing3d.description": "As nossas capacidades de fabrico aditivo permitem prototipagem rápida e produção de curtas séries com geometrias complexas. Utilizamos impressão 3D em metal e polímero para acelerar ciclos de desenvolvimento e reduzir custos de ferramentas.",
+        "metalworking.printing3d.description": "As nossas capacidades de fabrico aditivo permitem a prototipagem rápida e a produção de pequenas séries com geometrias complexas. Utilizamos impressão 3D em metal e polímeros para acelerar os ciclos de desenvolvimento e reduzir os custos de ferramentas para os nossos clientes.",
 
         // Materials
         "metalworking.materials.title": "MATERIAIS",
