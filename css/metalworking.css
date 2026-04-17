@@ -993,39 +993,16 @@
     }
 
     .hero-annotation-stage {
-        max-width: 20rem;
+        max-width: 28rem;
     }
 
-    .hero-annotations {
-        right: -2.5rem;
-    }
-
-    /* Fallback positions at tablet — reset negative offsets */
-    .annotation-bracket-v {
-        left: 1%;
-    }
-
-    .annotation-arm-bottom {
-        top: 70%;
-        left: 1%;
-        width: 20%;
-    }
-
-    .annotation-dot-top {
-        left: calc(1% + 2.5px);
-    }
-
-    .annotation-label-1 {
-        top: 7%;
-        left: 8%;
-        right: auto;
-        text-align: left;
-        white-space: normal;
-    }
-
-    .annotation-label-2 {
-        top: 41%;
-        left: calc(88% + 1rem);
+    /* At tablet, the base cqw rules keep annotations proportional to the stage.
+       food-line-2 / industrial-line-2 polylines use y-coords (>100) calibrated for
+       the taller desktop stage; hide them here to avoid stray segments drawing
+       below the image when the stage aspect ratio shortens. */
+    .food-line-2,
+    .industrial-line-2 {
+        display: none;
     }
 
     .capabilities-grid {
@@ -1112,11 +1089,17 @@
 
     .hero-annotation-stage {
         position: relative;
-        width: 10rem;
-        max-width: none;
+        width: 18rem;
+        max-width: 80vw;
         height: auto;
         aspect-ratio: 1015 / 1415;
-        overflow: hidden; /* annotations are hidden at this size; safe to clip scaled images */
+        overflow: visible;
+    }
+
+    /* At mobile, show food/industrial images in full (no zoom) so they aren't clipped */
+    #hero-img-food,
+    #hero-img-industrial {
+        transform: none;
     }
 
     .hero-annotations {
