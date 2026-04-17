@@ -213,7 +213,7 @@
 }
 
 .electrical-service {
-    padding: 5rem 0;
+    padding: 2.5rem 0;
     background: #fcfcfc;
 }
 
@@ -244,6 +244,14 @@
     letter-spacing: 0.0625rem;
 }
 
+.service-text .service-title {
+    font-size: clamp(1.25rem, 1.8vw + 0.3rem, 2.1875rem);
+}
+
+.service-text .body-title + p {
+    font-size: clamp(1rem, 1.2vw + 0.1rem, 1.25rem);
+}
+
 .service-image {
     width: 100%;
 }
@@ -258,7 +266,7 @@
 
 /* ===== Certifications Section ===== */
 .electrical-certification {
-    padding: 6rem 0;
+    padding: 2.5rem 0;
     background: #fcfcfc;
 }
 
@@ -266,11 +274,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: start;
 }
 
 .certification-text .section-title {
     font-family: var(--font-display);
+    font-size: clamp(1.25rem, 1.8vw + 0.3rem, 2.1875rem);
     font-weight: 800;
     margin-bottom: 1rem;
     text-align: left;
@@ -278,7 +287,7 @@
 }
 
 .certification-text .section-subtitle {
-    font-size: 1.5625rem;
+    font-size: clamp(1rem, 1.2vw + 0.1rem, 1.25rem);
     color: var(--text-color);
     text-align: left;
     line-height: 1.8;
@@ -287,7 +296,7 @@
 .certification-logos {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 3rem;
     transform: scale(0.975);
     transform-origin: center;
