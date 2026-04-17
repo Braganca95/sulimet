@@ -137,6 +137,7 @@
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
 .hero-img.hero-img-active {
@@ -289,21 +290,6 @@
     animation: annotationLabel 0.3s ease 0.7s both;
 }
 
-/* Food and industrial annotations reuse the same hero stage; only overlay styling differs */
-#hero-img-food,
-#hero-img-industrial {
-    object-fit: contain;
-    transform-origin: center center;
-}
-
-#hero-img-food {
-    transform: scale(2.56);
-}
-
-#hero-img-industrial {
-    transform: scale(2.84) translateX(10%);
-}
-
 /* Stage-width overlays so labels on the left of the product have natural room */
 #hero-annotations-food,
 #hero-annotations-industrial {
@@ -389,16 +375,21 @@
 
 /* Hero Showcase */
 .hero-showcase {
+    position: relative;
     width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background: #111;
 }
 
 .hero-showcase-image {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: clamp(24rem, 45vw, 48rem);
-    overflow: hidden;
-    background: #111;
+    height: 100%;
 }
 
 .hero-showcase-image img,
@@ -854,7 +845,7 @@
 
 /* Footer Metalworking */
 .footer-metalworking {
-    background: #fcfcfc;
+    background: #E8E8E8;
     padding: 3rem 0 2rem;
 }
 
@@ -1096,16 +1087,6 @@
         overflow: visible;
     }
 
-    /* At mobile, show food/industrial images in full (no zoom) so they aren't clipped */
-    #hero-img-food,
-    #hero-img-industrial {
-        transform: none;
-    }
-
-    .hero-annotations {
-        display: none;
-    }
-
     .hero-title {
         font-size: 2rem;
     }
@@ -1117,7 +1098,7 @@
     }
 
     .hero-showcase-image {
-        height: 15rem;
+        height: 100%;
     }
 
     .capabilities {

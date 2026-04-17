@@ -177,16 +177,21 @@
 
 /* ===== Showcase / Video Section ===== */
 .hero-showcase-electrical {
+    position: relative;
     width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background: #1a1a1a;
 }
 
 .hero-showcase-electrical-media {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: clamp(24rem, 45vw, 48rem);
-    overflow: hidden;
-    background: #1a1a1a;
+    height: 100%;
 }
 
 .hero-showcase-electrical-media video {
@@ -620,7 +625,7 @@
 
 /* ===== Footer (reuse metalworking footer styles) ===== */
 .footer-metalworking {
-    background: #fcfcfc;
+    background: #E8E8E8;
     padding: 3rem 0 2rem;
 }
 
@@ -786,7 +791,7 @@
     }
 
     .hero-showcase-electrical-media {
-        height: 25rem;
+        height: 100%;
     }
 
     .service-split {
@@ -902,7 +907,7 @@
     }
 
     .hero-showcase-electrical-media {
-        height: 15rem;
+        height: 100%;
     }
 
     .manufacturing-tech {

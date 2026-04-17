@@ -945,11 +945,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Footer ===== */
 .footer {
-    background: #fcfcfc;
+    background: #E8E8E8;
     padding: 5rem 0 1.875rem;
     padding-bottom: max(1.875rem, env(safe-area-inset-bottom));
-    border-top: 0.0625rem solid #e0e0e0;
-    margin: clamp(1rem, 2vw, 2rem) 0;
+    margin: 0;
     width: 100%;
 }
 
@@ -1050,7 +1049,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-bottom {
     padding-top: 1.875rem;
-    border-top: 0.0625rem solid #e0e0e0;
     text-align: center;
 }
 
@@ -1310,7 +1308,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     padding: 1.5rem 0 0;
     margin-top: 1.5rem;
-    border-top: 1px solid #e0e0e0;
     display: flex;
     justify-content: center;
     align-items: center;
