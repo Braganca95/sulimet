@@ -967,6 +967,40 @@
     transform: scale(1.05);
 }
 
+/* ===== Hero stacks earlier (80rem) so the narrow desktop grid does not
+       collapse the image column — which otherwise breaks the food overlay
+       because the image is scaled but the annotations are stage-relative. */
+@media (max-width: 80rem) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "image"
+            "categories";
+        gap: 2rem;
+        height: auto;
+    }
+
+    .hero-title {
+        padding-bottom: 0;
+    }
+
+    .hero-image {
+        min-height: 40vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category-columns {
+        align-self: start;
+        margin: 0;
+    }
+
+    .hero-annotation-stage {
+        max-width: 28rem;
+    }
+}
+
 /* ===== Responsive Design - Tablet ===== */
 @media (max-width: 64rem) {
     .metalworking-hero .container,
@@ -986,33 +1020,6 @@
     .body-title + p {
         font-size: 1.125rem;
         line-height: 1.8rem;
-    }
-
-    .hero-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "title"
-            "image"
-            "categories";
-        gap: 2rem;
-        height: auto;
-    }
-
-    .hero-title {
-        padding-bottom: 0;
-    }
-
-    .hero-image {
-        min-height: 40vh;
-    }
-
-    .category-columns {
-        align-self: start;
-        margin: 0;
-    }
-
-    .hero-annotation-stage {
-        max-width: 28rem;
     }
 
     .capabilities-grid {
@@ -1104,6 +1111,31 @@
         height: auto;
         aspect-ratio: 1015 / 1415;
         overflow: visible;
+    }
+
+    /* Keep the automotive annotation overlay within the stage on mobile so
+       labels anchored to its right edge don't bleed past the viewport. */
+    #hero-annotations {
+        right: 0;
+    }
+
+    /* Allow labels to wrap instead of forcing single-line overflow. */
+    .annotation-label {
+        white-space: normal;
+    }
+
+    /* Right-side automotive label: anchor to stage right and wrap inside a
+       tight box so "Quality assured in every detail" stays on-screen. */
+    .annotation-label-2 {
+        left: auto;
+        right: 0;
+        top: calc(44% - 2cqw);
+        text-align: right;
+        max-width: 32cqw;
+    }
+
+    .annotation-label-1 {
+        max-width: 40cqw;
     }
 
     .hero-title {
