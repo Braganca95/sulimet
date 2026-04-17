@@ -126,6 +126,7 @@
     max-width: 72%;
     aspect-ratio: 1015 / 1415;
     overflow: visible;
+    container-type: inline-size;
 }
 
 .hero-img {
@@ -150,7 +151,7 @@
 .hero-annotations {
     position: absolute;
     inset: 0;
-    right: -6rem; /* extend into container right padding so label clears the image */
+    right: -24cqw; /* extend into container right padding so label clears the image */
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -164,17 +165,17 @@
 .annotation-bracket-v {
     position: absolute;
     top: 7%;
-    left: calc(-3rem - 2.5px); /* moved to align with dot/arm left endpoint at -3rem */
+    left: calc(-12cqw - 0.63cqw); /* moved to align with dot/arm left endpoint at -12cqw */
     width: 0;
     height: 63%;
-    border-left: 5px solid #E84060;
+    border-left: 1.25cqw solid #E84060;
 }
 
 
 .annotation-dot {
     position: absolute;
-    width: 13px;
-    height: 13px;
+    width: 3.3cqw;
+    height: 3.3cqw;
     border-radius: 50%;
     background: #E84060;
     transform: translate(-50%, -50%);
@@ -182,20 +183,20 @@
 
 .annotation-arm {
     position: absolute;
-    border-top: 5px solid #E84060;
+    border-top: 1.25cqw solid #E84060;
 }
 
-/* Bottom arm: extended left so its endpoint aligns with the dot at left:-3rem */
+/* Bottom arm: extended left so its endpoint aligns with the dot at left:-12cqw */
 .annotation-arm-bottom {
     top: 70%;
-    left: -3rem;
-    width: calc(3rem + 18%);
+    left: -12cqw;
+    width: calc(12cqw + 18%);
 }
 
 /* Dot outside image to the LEFT, at bracket-top height */
 .annotation-dot-top {
     top: 7%;
-    left: -3rem;
+    left: -12cqw;
 }
 
 
@@ -203,7 +204,7 @@
 .annotation-label {
     position: absolute;
     font-family: var(--font-primary);
-    font-size: 0.75rem;
+    font-size: 3cqw;
     font-weight: 700;
     color: #3f3a34;
     line-height: 1.5;
@@ -211,8 +212,8 @@
 
 /* Label 1: to the RIGHT of dot, at bracket-top height */
 .annotation-label-1 {
-    top: calc(7% - 1.5rem);
-    left: calc(-3rem + 0.75rem);
+    top: calc(7% - 6cqw);
+    left: calc(-12cqw + 3cqw);
     right: auto;
     text-align: left;
     white-space: nowrap;
@@ -235,10 +236,10 @@
     left: 92%;
 }
 
-/* Label 2: outside image to the RIGHT — 1.5rem gap from dot */
+/* Label 2: outside image to the RIGHT — gap from dot scales with stage */
 .annotation-label-2 {
     top: 41%;
-    left: calc(92% + 1.5rem);
+    left: calc(92% + 6cqw);
 }
 
 /* Annotation entrance animations */
@@ -318,12 +319,24 @@
     pointer-events: none;
 }
 
+/* Proportional stroke widths so lines scale with the stage */
+.annotation-line-2 line {
+    stroke-width: 1.25cqw;
+}
+
+.annotation-line-food line,
+.annotation-line-food polyline,
+.annotation-line-industrial line,
+.annotation-line-industrial polyline {
+    stroke-width: 1cqw;
+}
+
 /* ── Food dot / label positions ────────────────────────── */
 /* Top callout sits above-left with a clean elbow into the part */
 .food-dot-1   { top: 3.8%; left: -7%; }
 .food-label-1 {
-    top: calc(3.8% - 0.85rem);
-    left: calc(-7% + 1rem);
+    top: calc(3.8% - 3.4cqw);
+    left: calc(-7% + 4cqw);
     transform: none;
     text-align: left;
     white-space: nowrap;
@@ -331,16 +344,16 @@
 
 /* Bottom callout is anchored lower-left and reads on one line */
 .food-dot-2   { top: 92%; left: 42%; }
-.food-label-2 { top: calc(92% - 0.65rem); left: 45%; white-space: nowrap; }
+.food-label-2 { top: calc(92% - 2.6cqw); left: 45%; white-space: nowrap; }
 
 /* ── Industrial dot / label positions ──────────────────── */
 /* Top callout hugs the upper-left of the part */
-.industrial-dot-1   { top: calc(13% - 2.7rem); left: 2%; }
-.industrial-label-1 { top: calc(13% - 4.5rem); left: 1%; white-space: nowrap; }
+.industrial-dot-1   { top: calc(13% - 10.8cqw); left: 2%; }
+.industrial-label-1 { top: calc(13% - 18cqw); left: 1%; white-space: nowrap; }
 
 /* Bottom callout aligns with the lower-left base of the component */
 .industrial-dot-2   { top: 83%; left: 25%; }
-.industrial-label-2 { top: calc(86% - 0.65rem); left: 24%; white-space: nowrap; }
+.industrial-label-2 { top: calc(86% - 2.6cqw); left: 24%; white-space: nowrap; }
 
 /* ── Animation triggers ─────────────────────────────────── */
 .hero-annotations-active .food-line-1,
