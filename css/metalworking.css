@@ -296,11 +296,28 @@
     right: 0;
 }
 
+/* Shift the industrial visual (image + annotations) slightly right so the
+   component sits better in the stage; both transforms keep them synchronized. */
+#hero-img-industrial,
+#hero-annotations-industrial {
+    transform: translateX(5%);
+}
+
+/* Scale up the food visual so the component reads at a size closer to the
+   automotive and industrial parts; image and annotations stay synchronized. */
+#hero-img-food,
+#hero-annotations-food {
+    transform: scale(1.08);
+}
+
 /* ── SVG covering the full stage ───────────────────────── */
 .annotation-line-food,
 .annotation-line-industrial {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     overflow: visible;
     pointer-events: none;
 }
@@ -984,15 +1001,6 @@
 
     .hero-annotation-stage {
         max-width: 28rem;
-    }
-
-    /* At tablet, the base cqw rules keep annotations proportional to the stage.
-       food-line-2 / industrial-line-2 polylines use y-coords (>100) calibrated for
-       the taller desktop stage; hide them here to avoid stray segments drawing
-       below the image when the stage aspect ratio shortens. */
-    .food-line-2,
-    .industrial-line-2 {
-        display: none;
     }
 
     .capabilities-grid {
