@@ -72,7 +72,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 3rem;
-    margin: 0 0 8vh;
+    margin: 0;
     align-self: end;
 }
 
@@ -205,7 +205,7 @@
 .annotation-label {
     position: absolute;
     font-family: var(--font-primary);
-    font-size: 3cqw;
+    font-size: 5cqw;
     font-weight: 700;
     color: #3f3a34;
     line-height: 1.5;
@@ -241,6 +241,7 @@
 .annotation-label-2 {
     top: 41%;
     left: calc(92% + 6cqw);
+    white-space: nowrap;
 }
 
 /* Annotation entrance animations */
@@ -304,9 +305,12 @@
 }
 
 /* Scale up the food visual so the component reads at a size closer to the
-   automotive and industrial parts; image and annotations stay synchronized. */
+   automotive and industrial parts. Anchor it to the stage bottom so its base
+   aligns with the automotive/industrial renders instead of floating mid-stage. */
 #hero-img-food {
+    object-position: bottom;
     transform: scale(2.16);
+    transform-origin: bottom center;
 }
 
 /* ── SVG covering the full stage ───────────────────────── */
@@ -335,18 +339,18 @@
 
 /* ── Food dot / label positions ────────────────────────── */
 /* Top callout sits above-left with a clean elbow into the part */
-.food-dot-1   { top: 9%; left: 30%; }
+.food-dot-1   { top: 5%; left: 3%; }
 .food-label-1 {
-    top: calc(7% - 3.4cqw);
-    left: calc(24% + 4cqw);
+    top: calc(3% - 3.4cqw);
+    left: calc(-3% + 4cqw);
     transform: none;
     text-align: left;
     white-space: nowrap;
 }
 
 /* Bottom callout is anchored lower-left and reads on one line */
-.food-dot-2   { top: 79%; left: 33%; }
-.food-label-2 { top: calc(82% - 2.6cqw); left: 33%; white-space: nowrap; }
+.food-dot-2   { top: 90%; left: 42.4%; }
+.food-label-2 { top: calc(92% - 2.6cqw); left: 41%; white-space: nowrap; }
 
 /* ── Industrial dot / label positions ──────────────────── */
 /* Top callout hugs the upper-left of the part */

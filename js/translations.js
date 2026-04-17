@@ -138,7 +138,7 @@ const translations = {
         "metalworking.quality.title": "QUALITY CONTROL",
         "metalworking.quality.description": "Every component undergoes rigorous inspection using advanced metrology equipment. Our quality management system, certified to ISO 9001 and IATF 16949, ensures full traceability and consistent precision across every production run.",
         "metalworking.certification.title": "CERTIFICATION",
-        "metalworking.certification.subtitle": "Our facilities are IATF 16949 and ISO 9001:2015 certified (approval no. 44 100 170400). Audited and approved by SGS.",
+        "metalworking.certification.subtitle": "Our facilities comply with international quality standards, ensuring consistent and reliable production across all our units in Portugal and Morocco.",
         "metalworking.welding.title": "WELDING",
         "metalworking.welding.description": "We offer MIG, TIG and spot welding capabilities for steel, stainless steel and aluminium assemblies. Our certified welders deliver strong, clean joints that meet the structural and aesthetic requirements of the automotive, food and construction industries.",
         "metalworking.printing3d.title": "3D PRINTING",
@@ -181,12 +181,12 @@ const translations = {
         // Electrical Systems Page — Hero
         "electrical.hero.title": "Electrical Systems",
         "electrical.hero.product.title": "Wire Harness",
-        "electrical.hero.product.description": "The companies Sulimet Wiring Harness and Sulimet C\u00e2blage focus on the production of wiring harnesses for both the automotive sector and various industrial applications.",
+        "electrical.hero.product.description": "The companies Sulimet Wiring Harness and Sulimet Cablage focus on the production of wiring harnesses for both the automotive sector and various industrial applications.",
 
         // Capabilities
         "electrical.capabilities.title": "Capabilities",
         "electrical.capabilities.prototyping.title": "PROTOTYPING",
-        "electrical.capabilities.prototyping.description": "Our engineering teams rely on advanced electrical design and simulation tools to develop accurate and reliable wiring solutions. Through a fast and flexible prototyping process, we validate connectivity, fit and functionality, ensuring seamless integration into our clients' production lines.",
+        "electrical.capabilities.prototyping.description": "Our engineering teams rely on advanced electrical design and simulation tools to develop accurate and reliable wiring solutions. Through a fast and flexible prototyping process, we validate connectivity, fit and functionality, ensuring seamless integration into our clients production lines.",
         "electrical.capabilities.quality.title": "QUALITY CONTROL",
         "electrical.capabilities.quality.description": "To ensure maximum reliability, every wiring harness undergoes rigorous inspection and project-specific testing. Our quality laboratories validate new designs by assessing electrical performance, durability and material compliance, ensuring results that meet and often surpass industry standards.",
         "electrical.capabilities.maintenance.title": "MAINTENANCE",
@@ -224,7 +224,7 @@ const translations = {
         "electrical.contacts.title": "CONTACTS",
         "electrical.contacts.portugal.company": "Sulimet Wiring Harness",
         "electrical.contacts.portugal.address": "R. Zona Industrial, 773, Canedo, Aveiro, Portugal, 4525-062",
-        "electrical.contacts.morocco.company": "Sulimet C\u00e2blage",
+        "electrical.contacts.morocco.company": "Sulimet Cablage",
         "electrical.contacts.morocco.address": "Ilot 13 Lot n.\u00b03, Tanger Med Free Zone, Tanger, Tanger-T\u00e9touan-Al Hoce\u00efma, Morocco, 90000",
         "electrical.contacts.sales.title": "Sales Contact",
         "electrical.contacts.sales.name": "António Guedes",
@@ -427,7 +427,7 @@ const translations = {
         // Electrical Systems Page — Hero
         "electrical.hero.title": "Sistemas El\u00e9tricos",
         "electrical.hero.product.title": "Cablagem",
-        "electrical.hero.product.description": "As empresas Sulimet Wiring Harness e Sulimet C\u00e2blage focam-se na produ\u00e7\u00e3o de cablagens para o setor autom\u00f3vel e para diversas aplica\u00e7\u00f5es industriais.",
+        "electrical.hero.product.description": "As empresas Sulimet Wiring Harness e Sulimet Cablage focam-se na produ\u00e7\u00e3o de cablagens para o setor autom\u00f3vel e para diversas aplica\u00e7\u00f5es industriais.",
 
         // Capabilities
         "electrical.capabilities.title": "Capacidades",
@@ -470,7 +470,7 @@ const translations = {
         "electrical.contacts.title": "CONTACTOS",
         "electrical.contacts.portugal.company": "Sulimet Wiring Harness",
         "electrical.contacts.portugal.address": "R. Zona Industrial, 773, Canedo, Aveiro, Portugal, 4525-062",
-        "electrical.contacts.morocco.company": "Sulimet C\u00e2blage",
+        "electrical.contacts.morocco.company": "Sulimet Cablage",
         "electrical.contacts.morocco.address": "Ilot 13 Lot n.\u00b03, Tanger Med Free Zone, Tanger, Tanger-T\u00e9touan-Al Hoce\u00efma, Marrocos, 90000",
         "electrical.contacts.sales.title": "Contacto Comercial",
         "electrical.contacts.sales.name": "António Guedes",
