@@ -309,7 +309,7 @@
    aligns with the automotive/industrial renders instead of floating mid-stage. */
 #hero-img-food {
     object-position: bottom;
-    transform: scale(2.16);
+    transform: scale(2.16) translateY(-4.5%);
     transform-origin: bottom center;
 }
 
@@ -363,17 +363,24 @@
 
 /* ── Animation triggers ─────────────────────────────────── */
 .hero-annotations-active .food-line-1,
-.hero-annotations-active .industrial-line-1 {
+.hero-annotations-active .industrial-line-1,
+.hero-annotations-active .industrial-line-1-stacked {
     stroke-dasharray: 200;
     stroke-dashoffset: 200;
     animation: drawLine 0.4s ease 0.3s forwards;
 }
 .hero-annotations-active .food-line-2,
+.hero-annotations-active .food-line-2-stacked,
 .hero-annotations-active .industrial-line-2 {
     stroke-dasharray: 200;
     stroke-dashoffset: 200;
     animation: drawLine 0.4s ease 0.55s forwards;
 }
+
+/* Stacked-layout polyline variants only render when the hero image sits
+   between the title and the columns (see 80rem rules). */
+.food-line-2-stacked,
+.industrial-line-1-stacked { display: none; }
 
 .hero-annotations-active .food-dot-1,
 .hero-annotations-active .industrial-dot-1 {
@@ -999,6 +1006,67 @@
     .hero-annotation-stage {
         max-width: 28rem;
     }
+
+    .annotation-label-1 {
+        top: calc(-2% - 6cqw);
+        left: calc(-30cqw + 3cqw);
+        right: auto;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    /* When the image stacks between title and columns, the food image
+       (scaled up on desktop) overflows upward. Shrink it and nudge it
+       left+up slightly so it sits correctly in the stacked layout. */
+    #hero-img-food {
+        transform: scale(1.5) translateX(-5%) translateY(-6.5%);
+    }
+
+    /* Swap polylines for their shorter stacked-layout variants. */
+    .food-line-2,
+    .industrial-line-1 { display: none; }
+    .food-line-2-stacked,
+    .industrial-line-1-stacked { display: inline; }
+
+    /* Food annotations: retune positions for the stacked layout so the
+       top callout clears the title and the bottom callout stays on the image. */
+    .food-label-1 {
+        top: calc(2% - 3.4cqw);
+        left: calc(-6% + 4cqw);
+        transform: none;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .food-dot-2 {
+        top: 90%;
+        left: 40.5%;
+    }
+
+    .food-label-2 {
+        top: calc(93% - 2.6cqw);
+        left: 35%;
+        white-space: nowrap;
+    }
+
+    /* Industrial annotations need tighter anchoring in the stacked layout
+       so labels stay on-screen without colliding with the image. */
+    .industrial-dot-1 {
+        top: calc(20% - 10.8cqw);
+        left: -10%;
+    }
+
+    .industrial-label-1 {
+        top: calc(18% - 18cqw);
+        left: -40%;
+        white-space: nowrap;
+    }
+
+    .industrial-label-2 {
+        top: calc(86% - 2.6cqw);
+        left: -20%;
+        white-space: nowrap;
+    }
 }
 
 /* ===== Responsive Design - Tablet ===== */
@@ -1124,18 +1192,14 @@
         white-space: normal;
     }
 
-    /* Right-side automotive label: anchor to stage right and wrap inside a
-       tight box so "Quality assured in every detail" stays on-screen. */
+    /* Right-side automotive label: anchor slightly outside the stage right edge
+       and wrap inside a tight box so "Quality assured in every detail" stays on-screen. */
     .annotation-label-2 {
         left: auto;
-        right: 0;
+        right: -15%;
         top: calc(44% - 2cqw);
         text-align: right;
         max-width: 32cqw;
-    }
-
-    .annotation-label-1 {
-        max-width: 40cqw;
     }
 
     .hero-title {

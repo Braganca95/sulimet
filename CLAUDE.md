@@ -45,7 +45,7 @@ Each page loads `translations.js` first, then its own page-specific script. Page
 - Brand text color: `#3f3a34` (used in value cards, stats, body text)
 - Sections alternate between `--bg-light` (#f8f9fa) and white backgrounds
 - Responsive breakpoints: 64rem/1024px (tablets), 48rem/768px (mobile landscape), 30rem/480px (mobile portrait)
-- Fonts: Microgramma (local, `assets/fonts/`) for headings (`--font-display`), Montserrat + Michroma from Google Fonts for body (`--font-primary`)
+- Fonts: Microgramma (local, `assets/fonts/`) for headings (`--font-display`), Montserrat from Google Fonts for body (`--font-primary`)
 - Metalworking page uses `.body-title` class for section H2s (red, `3.125rem`) with adjacent `p` styling
 
 **i18n System:**
