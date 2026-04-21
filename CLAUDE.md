@@ -23,7 +23,7 @@ No build step, no tests, no linter. Verification is manual browser testing.
 
 ## Deployment
 
-GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`). Deploys on push to `main`. The workflow handles Git LFS checkout for `.mp4` video files (tracked in `.gitattributes`).
+GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`). Deploys on push to `main`. Video assets (`.mp4`) are hosted as GitHub release assets on the `v1-assets` tag and referenced by absolute URL — they are not in the repo.
 
 ## Architecture
 
@@ -87,8 +87,8 @@ Each page loads `translations.js` first, then its own page-specific script. Page
 - `sitemap.xml` and `robots.txt` at root
 - Language variants use `?lang=pt` query parameter in hreflang
 
-**Git LFS:**
-`.mp4` video files are tracked via Git LFS (`.gitattributes`). The deploy workflow verifies LFS files are actual binaries, not pointers.
+**Video Assets:**
+`.mp4` files are hosted as GitHub release assets (tag `v1-assets`) to avoid Git LFS bandwidth costs. HTML `<source>` tags reference them via `https://github.com/Braganca95/sulimet/releases/download/v1-assets/<name>.mp4`. To add or replace a video, upload to the release with `gh release upload v1-assets <file>` and update HTML src accordingly.
 
 **Non-web files at root:**
 `meltaworking.pdf`, `meltaworking_compressed.pdf`, `cablagens_compressed.pdf`, and `item_description.txt` are reference/source documents — not served as part of the site and not linked from any HTML page. Do not remove them, but do not add links to them without explicit instruction.
