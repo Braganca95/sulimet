@@ -78,16 +78,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const video = card.querySelector('video');
         if (!video) return;
         video.pause();
+        // iOS Safari blocks .play() under Low Power Mode; swallow the promise rejection.
+        const safePlay = () => video.play().catch(() => {});
         if (isTouchDevice) {
             const videoObserver = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) { video.play(); }
+                    if (entry.isIntersecting) { safePlay(); }
                     else { video.pause(); video.currentTime = 0; }
                 });
             }, { threshold: 0.5 });
             videoObserver.observe(card);
         } else {
-            card.addEventListener('mouseenter', () => video.play());
+            card.addEventListener('mouseenter', safePlay);
             card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
         }
     });

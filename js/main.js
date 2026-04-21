@@ -427,6 +427,19 @@ if (heroBg && !window.matchMedia('(pointer: coarse)').matches) {
     }, { passive: true });
 }
 
+// ===== Hero autoplay fallback (iOS Low Power Mode / cellular may block autoplay) =====
+// If a hero video is paused after load, retry on first user gesture.
+const heroVideos = document.querySelectorAll('.hero-bg video');
+if (heroVideos.length) {
+    const retryHeroPlayback = () => {
+        heroVideos.forEach(v => { if (v.paused) v.play().catch(() => {}); });
+    };
+    window.addEventListener('load', retryHeroPlayback);
+    ['touchstart', 'click'].forEach(evt => {
+        document.addEventListener(evt, retryHeroPlayback, { once: true, passive: true });
+    });
+}
+
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', () => {
     // Initial header check
