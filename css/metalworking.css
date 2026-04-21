@@ -974,6 +974,18 @@
     transform: scale(1.05);
 }
 
+/* ===== Full HD (≥100rem / 1600px): at these widths the left column of the
+       3fr/1fr grid grows wider than the title/categories need, shrinking the
+       shared grid-row height and leaving the stage shorter than at 1280–1470
+       widths. Force a taller stage so the annotation items fall in the same
+       stage-relative positions as at narrower desktop viewports — all other
+       overrides are handled by the existing %/cqw-based rules. */
+@media (min-width: 100rem) {
+    .hero-annotation-stage {
+        height: 85%;
+    }
+}
+
 /* ===== Hero stacks earlier (80rem) so the narrow desktop grid does not
        collapse the image column — which otherwise breaks the food overlay
        because the image is scaled but the annotations are stage-relative. */
