@@ -186,12 +186,14 @@ function resetServicesAutoPlay() {
     servicesAutoPlayResumeTimeout = setTimeout(startServicesAutoPlay, SERVICES_AUTOPLAY_MS);
 }
 
-// Initialize services carousel
-window.addEventListener('load', () => {
-    updateServiceItemsPerView();
-    startServicesAutoPlay();
-});
-window.addEventListener('resize', updateServiceItemsPerView);
+// Initialize services carousel (only on pages that have it)
+if (servicesTrack && servicesCarouselDots) {
+    window.addEventListener('load', () => {
+        updateServiceItemsPerView();
+        startServicesAutoPlay();
+    });
+    window.addEventListener('resize', updateServiceItemsPerView);
+}
 
 // ===== Counter Animation =====
 function animateCounters() {
@@ -428,15 +430,21 @@ if (heroBg && !window.matchMedia('(pointer: coarse)').matches) {
 }
 
 // ===== Hero autoplay fallback (iOS Low Power Mode / cellular may block autoplay) =====
-// If a hero video is paused after load, retry on first user gesture.
+// Retry on load, canplay, first user gesture, and tab-return.
+// Pause when tab is hidden to conserve battery (muted videos don't auto-pause on hide).
 const heroVideos = document.querySelectorAll('.hero-bg video');
 if (heroVideos.length) {
     const retryHeroPlayback = () => {
         heroVideos.forEach(v => { if (v.paused) v.play().catch(() => {}); });
     };
     window.addEventListener('load', retryHeroPlayback);
+    heroVideos.forEach(v => v.addEventListener('canplay', retryHeroPlayback));
     ['touchstart', 'click'].forEach(evt => {
         document.addEventListener(evt, retryHeroPlayback, { once: true, passive: true });
+    });
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) heroVideos.forEach(v => v.pause());
+        else retryHeroPlayback();
     });
 }
 

@@ -47,26 +47,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setActiveCategory('automotive');
 
-    // Capability card videos: pause by default, play on hover/touch
-    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+    // Hero-showcase video: retry play on load, canplay, tab-return, first gesture.
+    // iOS Low Power Mode blocks autoplay silently; desktop Safari/Chrome don't auto-pause
+    // muted videos when the tab is hidden so we do it manually to save battery.
+    const showcaseVideos = document.querySelectorAll('.hero-showcase video');
+    if (showcaseVideos.length) {
+        const retryShowcase = () => {
+            showcaseVideos.forEach(v => { if (v.paused) v.play().catch(() => {}); });
+        };
+        window.addEventListener('load', retryShowcase);
+        showcaseVideos.forEach(v => v.addEventListener('canplay', retryShowcase));
+        ['touchstart', 'click'].forEach(evt => {
+            document.addEventListener(evt, retryShowcase, { once: true, passive: true });
+        });
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) showcaseVideos.forEach(v => v.pause());
+            else retryShowcase();
+        });
+    }
+
+    // Capability card videos: autoplay when scrolled into view on all devices.
+    // Avoid setting currentTime=0 — iOS Safari can stick in a seeking state that never resolves.
+    // iOS Safari blocks .play() under Low Power Mode; swallow the promise rejection.
+    const capabilityVideoObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const video = entry.target.querySelector('video');
+            if (!video) return;
+            if (entry.isIntersecting) video.play().catch(() => {});
+            else video.pause();
+        });
+    }, { threshold: 0.25, rootMargin: '-10% 0px' });
     document.querySelectorAll('.capability-card').forEach(card => {
-        const video = card.querySelector('video');
-        if (!video) return;
-        video.pause();
-        // iOS Safari blocks .play() under Low Power Mode; swallow the promise rejection.
-        const safePlay = () => video.play().catch(() => {});
-        if (isTouchDevice) {
-            const videoObserver = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) { safePlay(); }
-                    else { video.pause(); video.currentTime = 0; }
-                });
-            }, { threshold: 0.5 });
-            videoObserver.observe(card);
-        } else {
-            card.addEventListener('mouseenter', safePlay);
-            card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
-        }
+        if (card.querySelector('video')) capabilityVideoObserver.observe(card);
     });
 
     // Fade-in animations for capability cards

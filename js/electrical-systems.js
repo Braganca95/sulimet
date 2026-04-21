@@ -72,26 +72,19 @@ document.addEventListener('DOMContentLoaded', () => {
         startTimer();
     }
 
-    // ===== Manufacturing video cards: play on hover/touch =====
-    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+    // ===== Manufacturing video cards: autoplay when scrolled into view =====
+    // Avoid video.currentTime = 0 — iOS Safari can hang on seek.
+    // iOS Safari blocks .play() under Low Power Mode; swallow the promise rejection.
+    const capabilityVideoObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const video = entry.target.querySelector('video');
+            if (!video) return;
+            if (entry.isIntersecting) video.play().catch(() => {});
+            else video.pause();
+        });
+    }, { threshold: 0.25, rootMargin: '-10% 0px' });
     document.querySelectorAll('.manufacturing-videos-grid .capability-card').forEach(card => {
-        const video = card.querySelector('video');
-        if (!video) return;
-        video.pause();
-        // iOS Safari blocks .play() under Low Power Mode; swallow the promise rejection.
-        const safePlay = () => video.play().catch(() => {});
-        if (isTouchDevice) {
-            const videoObserver = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) { safePlay(); }
-                    else { video.pause(); video.currentTime = 0; }
-                });
-            }, { threshold: 0.5 });
-            videoObserver.observe(card);
-        } else {
-            card.addEventListener('mouseenter', safePlay);
-            card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
-        }
+        if (card.querySelector('video')) capabilityVideoObserver.observe(card);
     });
 
     // ===== Fade-in animations =====
