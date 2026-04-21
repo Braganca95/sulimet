@@ -25,4 +25,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.sulimet.com/downloads.html" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.sulimet.com/downloads.html?lang=pt" />
   </url>
+  <url>
+    <loc>https://www.sulimet.com/privacy-policy.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sulimet.com/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.sulimet.com/privacy-policy.html?lang=pt" />
+  </url>
 </urlset>

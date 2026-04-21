@@ -246,6 +246,10 @@ const translations = {
         "electrical.footer.info.contact": "Contact us",
         "electrical.footer.info.downloads": "Downloads",
 
+        // Privacy Policy Page
+        "privacy.hero.title": "Privacy Policy",
+        "privacy.hero.tagline": "How we protect your personal data",
+
         // Downloads Page
         "downloads.title": "Downloads",
         "downloads.tagline": "Precision in every detail",
@@ -507,6 +511,10 @@ const translations = {
         "electrical.footer.info.compete": "Compete 2030",
         "electrical.footer.info.contact": "Contacte-nos",
         "electrical.footer.info.downloads": "Downloads",
+
+        // Privacy Policy Page
+        "privacy.hero.title": "Política de Privacidade",
+        "privacy.hero.tagline": "Como protegemos os seus dados pessoais",
 
         // Downloads Page
         "downloads.title": "Downloads",

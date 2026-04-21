@@ -1,0 +1,239 @@
+/* ============================================================
+   Privacy Policy Page
+   Extends css/styles.css. Depends on CSS variables defined
+   in :root of the base stylesheet.
+   ============================================================ */
+
+/* ----- Page hero strip ----- */
+.privacy-hero {
+    background: linear-gradient(90deg, #CF132B 0%, #7B0B1A 100%);
+    color: #fff;
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    text-align: center;
+}
+
+.privacy-hero h1 {
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.1;
+}
+
+.privacy-hero .privacy-tagline {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    font-weight: 300;
+}
+
+/* ----- Content article ----- */
+.privacy-content {
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    color: #3f3a34;
+}
+
+.privacy-content .container {
+    max-width: 52rem;
+    padding: 0 1.5rem;
+}
+
+.privacy-content h2 {
+    color: #CF132B;
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 2.25vw, 1.75rem);
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    margin: 2.75rem 0 1rem 0;
+}
+
+.privacy-content h2:first-child {
+    margin-top: 0;
+}
+
+.privacy-content p,
+.privacy-content li {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.privacy-content p {
+    margin: 0 0 1rem 0;
+}
+
+.privacy-content .privacy-intro {
+    font-size: 1.0625rem;
+}
+
+.privacy-content .privacy-intro + h2 {
+    margin-top: 3rem;
+}
+
+.privacy-content ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.privacy-content li {
+    margin: 0.25rem 0;
+}
+
+.privacy-content a {
+    color: #CF132B;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.privacy-content a:hover,
+.privacy-content a:focus-visible {
+    border-bottom-color: #CF132B;
+}
+
+/* ----- Language toggle keyed on html lang attribute ----- */
+html[lang="en"] .lang-content[data-lang="pt"] {
+    display: none;
+}
+
+html[lang="pt"] .lang-content[data-lang="en"] {
+    display: none;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 48rem) {
+    .privacy-content h2 {
+        margin-top: 2.25rem;
+    }
+
+    .privacy-content p,
+    .privacy-content li {
+        font-size: 0.9375rem;
+    }
+}
+
+/* ============================================================
+   Footer (mirrors metalworking.html footer layout).
+   Duplicated here because privacy-policy.html does not load
+   css/metalworking.css or css/electrical-systems.css.
+   ============================================================ */
+.footer-metalworking {
+    background: #E8E8E8;
+    padding: 3rem 0 2rem;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.footer-column a {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.footer-column a:hover {
+    color: var(--primary-color);
+    padding-left: 0.25rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.footer-social a {
+    width: 2rem;
+    height: 2rem;
+    background: var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--primary-gradient);
+    transform: translateY(-0.125rem);
+}
+
+.footer-social svg {
+    width: 1rem;
+    height: 1rem;
+    color: var(--text-white);
+    fill: var(--text-white);
+}
+
+.footer-certifications {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+
+.footer-certifications img {
+    height: 3rem;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-certifications img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+@media (max-width: 64rem) {
+    .footer-columns {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .footer-columns {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-certifications {
+        gap: 1rem;
+    }
+
+    .footer-certifications img {
+        height: 2rem;
+    }
+}
