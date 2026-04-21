@@ -94,13 +94,11 @@
     outline-offset: 2px;
 }
 
-.file-prefix {
-    color: #6b6b6b;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.75rem;
-    font-weight: 600;
+.file-icon {
+    width: 1.75rem;
+    height: auto;
     flex-shrink: 0;
+    display: block;
 }
 
 .file-sep {

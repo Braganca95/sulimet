@@ -258,8 +258,8 @@ const translations = {
         "downloads.files.quality_env": "Quality & Environmental Certificate",
         "downloads.files.iso9001_elec_1": "ISO 9001 Certificate",
         "downloads.files.iatf16949_1": "IATF 16949 Certificate",
-        "downloads.files.iso9001_elec_2": "ISO 9001 Certificate (2)",
-        "downloads.files.iatf16949_2": "IATF 16949 Certificate (2)",
+        "downloads.files.iso9001_elec_2": "ISO 9001 Certificate",
+        "downloads.files.iatf16949_2": "IATF 16949 Certificate",
         "downloads.files.prr_datasheet": "PRR Project Technical Datasheet"
     },
     pt: {
@@ -520,8 +520,8 @@ const translations = {
         "downloads.files.quality_env": "Certificado de Qualidade e Ambiente",
         "downloads.files.iso9001_elec_1": "Certificado ISO 9001",
         "downloads.files.iatf16949_1": "Certificado IATF 16949",
-        "downloads.files.iso9001_elec_2": "Certificado ISO 9001 (2)",
-        "downloads.files.iatf16949_2": "Certificado IATF 16949 (2)",
+        "downloads.files.iso9001_elec_2": "Certificado ISO 9001",
+        "downloads.files.iatf16949_2": "Certificado IATF 16949",
         "downloads.files.prr_datasheet": "Ficha Técnica do Projeto PRR"
     }
 };
