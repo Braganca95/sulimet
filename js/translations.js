@@ -244,7 +244,23 @@ const translations = {
         "electrical.footer.info.privacy": "Privacy policy",
         "electrical.footer.info.compete": "Compete 2030",
         "electrical.footer.info.contact": "Contact us",
-        "electrical.footer.info.downloads": "Downloads"
+        "electrical.footer.info.downloads": "Downloads",
+
+        // Downloads Page
+        "downloads.title": "Downloads",
+        "downloads.tagline": "Precision in every detail",
+        "downloads.prefix": "Downloads",
+        "downloads.section.metalworking": "Metalworking",
+        "downloads.section.electrical": "Electrical Systems",
+        "downloads.section.prr": "PRR",
+        "downloads.files.iso9001_en": "ISO 9001 Certificate (EN)",
+        "downloads.files.iso9001_pt": "ISO 9001 Certificate (PT)",
+        "downloads.files.quality_env": "Quality & Environmental Certificate",
+        "downloads.files.iso9001_elec_1": "ISO 9001 Certificate",
+        "downloads.files.iatf16949_1": "IATF 16949 Certificate",
+        "downloads.files.iso9001_elec_2": "ISO 9001 Certificate (2)",
+        "downloads.files.iatf16949_2": "IATF 16949 Certificate (2)",
+        "downloads.files.prr_datasheet": "PRR Project Technical Datasheet"
     },
     pt: {
         // Navigation
@@ -490,7 +506,23 @@ const translations = {
         "electrical.footer.info.privacy": "Pol\u00edtica de privacidade",
         "electrical.footer.info.compete": "Compete 2030",
         "electrical.footer.info.contact": "Contacte-nos",
-        "electrical.footer.info.downloads": "Downloads"
+        "electrical.footer.info.downloads": "Downloads",
+
+        // Downloads Page
+        "downloads.title": "Downloads",
+        "downloads.tagline": "Precisão em cada detalhe",
+        "downloads.prefix": "Downloads",
+        "downloads.section.metalworking": "Metalomecânica",
+        "downloads.section.electrical": "Sistemas Elétricos",
+        "downloads.section.prr": "PRR",
+        "downloads.files.iso9001_en": "Certificado ISO 9001 (EN)",
+        "downloads.files.iso9001_pt": "Certificado ISO 9001 (PT)",
+        "downloads.files.quality_env": "Certificado de Qualidade e Ambiente",
+        "downloads.files.iso9001_elec_1": "Certificado ISO 9001",
+        "downloads.files.iatf16949_1": "Certificado IATF 16949",
+        "downloads.files.iso9001_elec_2": "Certificado ISO 9001 (2)",
+        "downloads.files.iatf16949_2": "Certificado IATF 16949 (2)",
+        "downloads.files.prr_datasheet": "Ficha Técnica do Projeto PRR"
     }
 };
 
