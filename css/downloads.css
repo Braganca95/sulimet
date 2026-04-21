@@ -1,0 +1,143 @@
+/* ============================================================
+   Downloads Page
+   Extends css/styles.css. Depends on CSS variables defined
+   in :root of the base stylesheet.
+   ============================================================ */
+
+/* ----- Page hero strip ----- */
+.downloads-hero {
+    background: linear-gradient(90deg, #CF132B 0%, #7B0B1A 100%);
+    color: #fff;
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    text-align: center;
+}
+
+.downloads-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.1;
+}
+
+.downloads-hero .downloads-tagline {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    font-weight: 300;
+}
+
+/* ----- Section blocks ----- */
+.downloads-section {
+    padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.downloads-section.bg-light {
+    background-color: var(--bg-light, #f8f9fa);
+}
+
+.downloads-section h2.body-title {
+    color: #CF132B;
+    font-family: var(--font-display);
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin: 0 0 0.75rem 0;
+}
+
+.downloads-section .section-divider {
+    display: block;
+    width: 4rem;
+    height: 2px;
+    background-color: #CF132B;
+    border: 0;
+    margin: 0 0 2rem 0;
+}
+
+/* ----- File list ----- */
+.download-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.download-row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.download-row:last-child {
+    border-bottom: 0;
+}
+
+.download-row a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.download-row a:hover {
+    background-color: rgba(207, 19, 43, 0.03);
+}
+
+.download-row a:hover .file-title,
+.download-row a:focus-visible .file-title {
+    color: #CF132B;
+}
+
+.download-row a:focus-visible {
+    outline: 2px solid #CF132B;
+    outline-offset: 2px;
+}
+
+.file-prefix {
+    color: #6b6b6b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.file-sep {
+    color: #c6c6c6;
+    flex-shrink: 0;
+}
+
+.file-title {
+    color: #3f3a34;
+    font-weight: 500;
+    font-size: 1.0625rem;
+    transition: color 0.2s ease;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 48rem) {
+    .downloads-section h2.body-title {
+        font-size: 2rem;
+    }
+
+    .download-row a {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        padding: 0.875rem 0.5rem;
+    }
+
+    .file-sep {
+        display: none;
+    }
+}
+
+@media (max-width: 30rem) {
+    .download-row a {
+        padding: 0.75rem 0.25rem;
+    }
+
+    .file-title {
+        font-size: 0.95rem;
+    }
+}
