@@ -24,3 +24,8 @@ node_modules/
 *.tmp
 *.log
 nul
+
+# Visual-verification screenshots and Playwright MCP output
+# (root-level only — assets/images/*.png are real site assets)
+/*.png
+.playwright-mcp/
