@@ -6,10 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Sulimet is a static corporate website for an industrial solutions company (metalurgy/machining). Built with vanilla HTML, CSS, and JavaScript—no build tools, bundlers, or package managers.
 
-**Three Pages:**
+**Six Pages:**
 - `index.html` - Main homepage with hero, about, services/history timeline, global presence, contact
 - `metalworking.html` - Dedicated metalworking services page with capabilities, certifications, materials
 - `electrical-systems.html` - Dedicated electrical systems/wiring harnesses page with hero crossfade slider
+- `downloads.html` - Certificate/document downloads page (links PDFs from `assets/downloads/`)
+- `privacy-policy.html` - GDPR/RGPD privacy policy page (bilingual, static content)
+- `contacts.html` - Aggregated contacts page (Portugal + Morocco × Metalworking + Electrical Systems). Header nav `nav.contact` and footer Info-column `footer.info.contact` link here from every page; per-page `#contacts` sections in `metalworking.html` and `electrical-systems.html` are intentionally kept as in-page anchors
 
 ## Development
 
@@ -30,16 +33,26 @@ GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`). Deploys on pus
 **Script Load Order (Critical):**
 Scripts must load in this exact order — `translations.js` defines globals that other scripts depend on:
 1. `js/translations.js` — i18n system, defines `translations` object, `t()`, `switchLanguage()`, `updateTranslations()`
-2. `js/main.js` — index.html only: carousel, counters, contact form, parallax, notifications
-3. `js/metalworking.js` — metalworking.html only: staggered fade-in, smooth scroll
-4. `js/electrical-systems.js` — electrical-systems.html only: hero crossfade slider, fade-in animations
+2. One page-specific script (never more than one per page):
+   - `js/main.js` — index.html: carousel, counters, contact form, parallax, notifications
+   - `js/metalworking.js` — metalworking.html: staggered fade-in, smooth scroll, category column toggling
+   - `js/electrical-systems.js` — electrical-systems.html: hero crossfade slider, fade-in animations
+   - `js/downloads.js` — downloads.html: staggered fade-in observer + applies stored language
+   - `js/contacts.js` — contacts.html: staggered fade-in observer + applies stored language
+   - `js/privacy-policy.js` — privacy-policy.html: only applies stored language on load
 
 Each page loads `translations.js` first, then its own page-specific script. Page scripts are never loaded together.
+
+**Always wrap `video.play()` in `.catch()`.** iOS Safari rejects the play() promise under Low Power Mode; unhandled rejections freeze the capability-card videos on the first frame.
 
 **CSS Architecture:**
 - CSS variables defined in `:root` in `css/styles.css` — colors, fonts, transitions, shadows
 - `css/metalworking.css` extends `styles.css` for the metalworking page
 - `css/electrical-systems.css` extends `styles.css` for the electrical systems page
+- `css/downloads.css` extends `styles.css` for the downloads page
+- `css/privacy-policy.css` extends `styles.css` for the privacy policy page
+- `css/contacts.css` extends `styles.css` for the contacts page (also clones the contact-card rules from `metalworking.css` so contacts.html does not need to load metalworking.css)
+- `downloads.html`, `contacts.html`, and `privacy-policy.html` reuse `.footer-metalworking` markup/styles (defined in `metalworking.css`) — editing that footer affects five pages, not one
 - All sizing uses `rem` units (not `px`), with `clamp()` for fluid responsive values
 - Primary brand gradient: `linear-gradient(90deg, #CF132B 0%, #7B0B1A 100%)`
 - Brand text color: `#3f3a34` (used in value cards, stats, body text)
@@ -82,16 +95,21 @@ Each page loads `translations.js` first, then its own page-specific script. Page
 - No dedicated `assets/electrical-systems/` directory — images referenced directly from `assets/images/`
 
 **SEO Setup:**
-- All three pages have Open Graph, Twitter Card, and hreflang meta tags
-- JSON-LD structured data: Organization on index, Service + BreadcrumbList on metalworking and electrical-systems
+- All pages have Open Graph, Twitter Card, and hreflang meta tags
+- JSON-LD structured data: Organization on index; Service + BreadcrumbList on metalworking and electrical-systems; BreadcrumbList on downloads and privacy-policy
 - `sitemap.xml` and `robots.txt` at root
 - Language variants use `?lang=pt` query parameter in hreflang
+- When adding any new page, always update `sitemap.xml` in the same change.
 
 **Video Assets:**
 `.mp4` files are hosted as GitHub release assets (tag `v1-assets`) to avoid Git LFS bandwidth costs. HTML `<source>` tags reference them via `https://github.com/Braganca95/sulimet/releases/download/v1-assets/<name>.mp4`. To add or replace a video, upload to the release with `gh release upload v1-assets <file>` and update HTML src accordingly.
 
-**Non-web files at root:**
-`meltaworking.pdf`, `meltaworking_compressed.pdf`, `cablagens_compressed.pdf`, and `item_description.txt` are reference/source documents — not served as part of the site and not linked from any HTML page. Do not remove them, but do not add links to them without explicit instruction.
+**PDFs:**
+- `assets/downloads/*.pdf` — served and linked from `downloads.html` (IATF 16949 / ISO 9001 certificates). Add new public PDFs here.
+- Root-level `meltaworking.pdf`, `meltaworking_compressed.pdf`, `cablagens_compressed.pdf`, and `item_description.txt` are reference/source documents — not linked from any HTML page. Do not remove them, but do not add links to them without explicit instruction.
+
+**Deployment artifact scope:**
+`deploy.yml` uploads the entire repo (`path: "."`) to GitHub Pages, so anything committed at root ships to production. The repo currently contains 200+ screenshot PNGs at root from past visual-verification runs — they are deployed as-is. Don't add screenshots/scratch files at root without gitignoring them.
 
 ## Adding New Content
 

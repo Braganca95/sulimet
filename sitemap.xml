@@ -18,6 +18,22 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.sulimet.com/metalworking.html?lang=pt" />
   </url>
   <url>
+    <loc>https://www.sulimet.com/electrical-systems.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sulimet.com/electrical-systems.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.sulimet.com/electrical-systems.html?lang=pt" />
+  </url>
+  <url>
+    <loc>https://www.sulimet.com/contacts.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sulimet.com/contacts.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.sulimet.com/contacts.html?lang=pt" />
+  </url>
+  <url>
     <loc>https://www.sulimet.com/downloads.html</loc>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>

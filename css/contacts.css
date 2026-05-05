@@ -1,18 +1,18 @@
 /* ============================================================
-   Downloads Page
+   Contacts Page
    Extends css/styles.css. Depends on CSS variables defined
    in :root of the base stylesheet.
    ============================================================ */
 
 /* ----- Page hero strip ----- */
-.downloads-hero {
+.contacts-hero {
     background: linear-gradient(90deg, #CF132B 0%, #7B0B1A 100%);
     color: #fff;
     padding: clamp(4rem, 8vw, 6rem) 0;
     text-align: center;
 }
 
-.downloads-hero h1 {
+.contacts-hero h1 {
     color: #fff;
     font-family: var(--font-display);
     font-size: clamp(2.5rem, 5vw, 4rem);
@@ -22,7 +22,7 @@
     line-height: 1.1;
 }
 
-.downloads-hero .downloads-tagline {
+.contacts-hero .contacts-tagline {
     font-size: 1.125rem;
     color: rgba(255, 255, 255, 0.85);
     margin: 0;
@@ -30,15 +30,15 @@
 }
 
 /* ----- Section blocks ----- */
-.downloads-section {
+.contacts-section {
     padding: clamp(3rem, 6vw, 5rem) 0;
 }
 
-.downloads-section.bg-light {
+.contacts-section.bg-light {
     background-color: var(--bg-light, #f8f9fa);
 }
 
-.downloads-section h2.body-title {
+.contacts-section h2.body-title {
     color: #CF132B;
     font-family: var(--font-display);
     font-size: clamp(1.625rem, 2.5vw + 0.5rem, 3rem);
@@ -48,101 +48,150 @@
     margin: 0 0 0.75rem 0;
 }
 
-.downloads-section .section-divider {
+.contacts-section .section-divider {
     display: block;
     width: 4rem;
     height: 2px;
     background-color: #CF132B;
     border: 0;
-    margin: 0 0 2rem 0;
+    margin: 0 0 2.5rem 0;
 }
 
-/* ----- File list ----- */
-.download-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* ----- Contacts grid + cards
+   (cloned from css/metalworking.css so this page does not need
+   to load metalworking.css)
+   ----- */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.0625rem 1fr;
+    gap: 4rem;
+    align-items: start;
+    position: relative;
 }
 
-.download-row {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+.contacts-grid::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 0.125rem;
+    background: #CF132B;
+    transform: translateX(-50%);
 }
 
-.download-row:last-child {
-    border-bottom: 0;
+.contact-block {
+    padding: 0 2rem;
 }
 
-.download-row a {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 0.5rem;
-    text-decoration: none;
-    color: inherit;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.download-row a:hover {
-    background-color: rgba(207, 19, 43, 0.03);
-}
-
-.download-row a:hover .file-title,
-.download-row a:focus-visible .file-title {
+.contact-company {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
     color: #CF132B;
+    margin: 0 0 1.5rem 0;
+    text-transform: uppercase;
 }
 
-.download-row a:focus-visible {
-    outline: 2px solid #CF132B;
-    outline-offset: 2px;
+.contact-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
-.file-icon {
-    width: 1.75rem;
-    height: auto;
-    flex-shrink: 0;
-    display: block;
-}
-
-.file-sep {
-    color: #c6c6c6;
-    flex-shrink: 0;
-}
-
-.file-title {
+.contact-details-list p {
+    font-size: 1.125rem;
     color: #3f3a34;
-    font-weight: 500;
-    font-size: 1.0625rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contact-details-list a {
+    color: #3f3a34;
+    text-decoration: none;
     transition: color 0.2s ease;
 }
 
+.contact-details-list a:hover {
+    color: #CF132B;
+}
+
+.contact-address {
+    margin-top: 0.5rem !important;
+    color: #6b6660 !important;
+}
+
+.sales-contact {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.sales-contact h4 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #CF132B;
+    text-transform: uppercase;
+    margin: 0 0 0.75rem 0;
+    letter-spacing: 0.05rem;
+}
+
+.sales-name {
+    font-weight: 600;
+    color: #3f3a34 !important;
+}
+
+.sales-contact p {
+    font-size: 1.125rem;
+    color: #3f3a34;
+    margin: 0 0 0.5rem;
+    line-height: 1.6;
+}
+
+.sales-contact a {
+    color: #3f3a34;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.sales-contact a:hover {
+    color: #CF132B;
+}
+
 /* ----- Responsive ----- */
-@media (max-width: 48rem) {
-    .download-row a {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.25rem;
-        padding: 0.875rem 0.5rem;
+@media (max-width: 64rem) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
 
-    .file-sep {
+    .contacts-grid::before {
         display: none;
     }
 }
 
-@media (max-width: 30rem) {
-    .download-row a {
-        padding: 0.75rem 0.25rem;
+@media (max-width: 48rem) {
+    .contact-block {
+        padding: 0;
     }
 
-    .file-title {
-        font-size: 0.95rem;
+    .contact-company {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    .contact-details-list p,
+    .sales-contact p {
+        font-size: 1rem;
     }
 }
 
 /* ============================================================
    Footer (shared layout mirroring metalworking.html footer).
    These rules live in metalworking.css / electrical-systems.css
-   on those pages; duplicated here because downloads.html does
+   on those pages; duplicated here because contacts.html does
    not load either of those stylesheets.
    ============================================================ */
 .footer-metalworking {

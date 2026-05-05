@@ -1234,6 +1234,11 @@
         margin: 0;
     }
 
+    .hero-showcase {
+        min-height: 45vh;
+        min-height: 45dvh;
+    }
+
     .hero-showcase-image {
         height: 100%;
     }
@@ -1313,7 +1318,9 @@
     }
 
     .footer-columns {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: row;
         gap: 2rem;
         text-align: center;
     }

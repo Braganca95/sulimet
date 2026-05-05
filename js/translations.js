@@ -264,7 +264,13 @@ const translations = {
         "downloads.files.iatf16949_1": "IATF 16949 Certificate",
         "downloads.files.iso9001_elec_2": "ISO 9001 Certificate",
         "downloads.files.iatf16949_2": "IATF 16949 Certificate",
-        "downloads.files.prr_datasheet": "PRR Project Technical Datasheet"
+        "downloads.files.prr_datasheet": "PRR Project Technical Datasheet",
+
+        // Contacts Page
+        "contacts.title": "Contacts",
+        "contacts.tagline": "Talk to us.",
+        "contacts.section.metalworking": "Metalworking",
+        "contacts.section.electrical": "Electrical Systems"
     },
     pt: {
         // Navigation
@@ -447,7 +453,7 @@ const translations = {
         // Electrical Systems Page — Hero
         "electrical.hero.title": "Sistemas El\u00e9tricos",
         "electrical.hero.product.title": "Cablagem",
-        "electrical.hero.product.description": "As empresas Sulimet Wiring Harness e Sulimet Cablage focam-se na produ\u00e7\u00e3o de cablagens para o setor autom\u00f3vel e para diversas aplica\u00e7\u00f5es industriais.",
+        "electrical.hero.product.description": "As empresas Sulimet Wiring Harness e Sulimet Cablage concentram-se na produ\u00e7\u00e3o de cablagens el\u00e9tricas tanto para o setor autom\u00f3vel como para diversas aplica\u00e7\u00f5es industriais.",
 
         // Capabilities
         "electrical.capabilities.title": "Capacidades",
@@ -530,7 +536,13 @@ const translations = {
         "downloads.files.iatf16949_1": "Certificado IATF 16949",
         "downloads.files.iso9001_elec_2": "Certificado ISO 9001",
         "downloads.files.iatf16949_2": "Certificado IATF 16949",
-        "downloads.files.prr_datasheet": "Ficha Técnica do Projeto PRR"
+        "downloads.files.prr_datasheet": "Ficha Técnica do Projeto PRR",
+
+        // Contacts Page
+        "contacts.title": "Contactos",
+        "contacts.tagline": "Fale connosco.",
+        "contacts.section.metalworking": "Metalomecânica",
+        "contacts.section.electrical": "Sistemas Elétricos"
     }
 };
 
