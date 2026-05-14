@@ -8,8 +8,13 @@
 .downloads-hero {
     background: linear-gradient(90deg, #CF132B 0%, #7B0B1A 100%);
     color: #fff;
-    padding: clamp(4rem, 8vw, 6rem) 0;
+    /* extra top padding compensates for the fixed site header so the
+       title appears vertically centered in the visible (non-header) area */
+    padding: calc(clamp(4rem, 8vw, 6rem) + 4rem) 0 clamp(4rem, 8vw, 6rem);
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .downloads-hero h1 {
