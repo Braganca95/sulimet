@@ -265,6 +265,7 @@ const translations = {
         "downloads.files.iso9001_elec_2": "ISO 9001 Certificate",
         "downloads.files.iatf16949_2": "IATF 16949 Certificate",
         "downloads.files.prr_datasheet": "PRR Project Technical Datasheet",
+        "downloads.files.compete2030_datasheet": "COMPETE 2030 Operation Sheet",
 
         // Contacts Page
         "contacts.title": "Contacts",
@@ -537,6 +538,7 @@ const translations = {
         "downloads.files.iso9001_elec_2": "Certificado ISO 9001",
         "downloads.files.iatf16949_2": "Certificado IATF 16949",
         "downloads.files.prr_datasheet": "Ficha Técnica do Projeto PRR",
+        "downloads.files.compete2030_datasheet": "Ficha de Operação COMPETE 2030",
 
         // Contacts Page
         "contacts.title": "Contactos",
