@@ -26,7 +26,7 @@ No build step, no tests, no linter. Verification is manual browser testing.
 
 ## Deployment
 
-GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`). Deploys on push to `main`. Video assets (`.mp4`) are hosted as GitHub release assets on the `v1-assets` tag and referenced by absolute URL — they are not in the repo.
+GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`). Deploys on push to `main`. Custom domain `www.sulimet.com` is bound via the root `CNAME` file (must ship with every deploy — don't gitignore it). Video assets (`.mp4`) are hosted as GitHub release assets on the `v1-assets` tag and referenced by absolute URL — they are not in the repo.
 
 ## Architecture
 
@@ -105,11 +105,15 @@ Each page loads `translations.js` first, then its own page-specific script. Page
 `.mp4` files are hosted as GitHub release assets (tag `v1-assets`) to avoid Git LFS bandwidth costs. HTML `<source>` tags reference them via `https://github.com/Braganca95/sulimet/releases/download/v1-assets/<name>.mp4`. To add or replace a video, upload to the release with `gh release upload v1-assets <file>` and update HTML src accordingly.
 
 **PDFs:**
-- `assets/downloads/*.pdf` — served and linked from `downloads.html` (IATF 16949 / ISO 9001 certificates). Add new public PDFs here.
+- `assets/downloads/*.pdf` — certification PDFs (IATF 16949 / ISO 9001) served and linked from `downloads.html`. Add new public certificates here.
+- `assets/financiamentos.pdf`, `assets/ficha-projeto-prr.pdf`, `assets/Ficha_de_OperacaoA4.pdf` — EU/PRR/COMPETE 2030 funding documentation (footer "PRR" link + `downloads.html` PRR section on every page). Add new funding-scheme PDFs at `assets/` root, not `assets/downloads/`.
 - Root-level `meltaworking.pdf`, `meltaworking_compressed.pdf`, `cablagens_compressed.pdf`, and `item_description.txt` are reference/source documents — not linked from any HTML page. Do not remove them, but do not add links to them without explicit instruction.
 
+**EU/PRR Funding Bar (footer, every page):**
+Every page footer includes two `.funding-bar` blocks displaying co-financing logos — `assets/images/barra-logos.png` (PRR/NextGenerationEU) and `assets/images/compete2030-logos.png` (COMPETE 2030/Portugal 2030). This is mandated compliance content, not decorative — don't remove or resize without explicit instruction. Adding a new funding-scheme document means updating the footer link/logo, the `downloads.html` PRR section, and both `translations.en`/`translations.pt` on all six pages.
+
 **Deployment artifact scope:**
-`deploy.yml` uploads the entire repo (`path: "."`) to GitHub Pages, so anything committed at root ships to production. The repo currently contains 200+ screenshot PNGs at root from past visual-verification runs — they are deployed as-is. Don't add screenshots/scratch files at root without gitignoring them.
+`deploy.yml` uploads the entire repo (`path: "."`) to GitHub Pages, so anything committed at root ships to production. `.gitignore` excludes root-level `*.png` (visual-verification screenshots) going forward, but ~45 screenshots committed before that rule was added remain tracked and deployed as-is. Don't `git add` new screenshots/scratch files at root — they should already be caught by `.gitignore`, but double-check with `git status` if adding one manually.
 
 ## Adding New Content
 
